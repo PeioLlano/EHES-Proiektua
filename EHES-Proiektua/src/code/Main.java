@@ -1,8 +1,13 @@
 package code;
+import java.nio.file.FileSystems;
 
 import code.PreProcessTrain;
 
 public class Main {
+	
+	//relative2absolute
+	String absolutePath = FileSystems.getDefault().getPath("src/files/froga.txt").normalize().toAbsolutePath().toString();
+	
 	public static void main(String[] args) throws Exception {
 		
 		//1. Pausua --> Lortu: train.arff
@@ -13,5 +18,6 @@ public class Main {
 			//Non gordetzen da test.arff? files/test.arff
 		
 		//...
+			
 	}
 }
