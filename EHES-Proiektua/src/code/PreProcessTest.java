@@ -10,7 +10,21 @@ import weka.filters.unsupervised.attribute.Remove;
 
 public class PreProcessTest {
 
-	public static void preProcess(Instances dataTrain, Instances dataTest) throws Exception {
+	public static Instances preProcess(Instances dataTrain, String dataTestPath) throws Exception {
+		PreProcessTest ppt = new PreProcessTest();
+		
+		// Textu gordina izanik dataTest
+		Instances dataTest = ppt.raw2arff(dataTestPath);
+		dataTest = ppt.goiburuBateratu(dataTrain, dataTest);
+		
+		return dataTest;
+	}
+	
+	public Instances raw2arff(String dataTest) {
+		return null;
+	}
+	
+	public Instances goiburuBateratu(Instances dataTrain, Instances dataTest) throws Exception {
 		
 		//ECLIPSE-tik FILE-era pasatzeaz arduratuko den 'stremer'-a.
 		FileOutputStream os = new FileOutputStream("------Donde queramos dejarlo-----");
@@ -56,5 +70,7 @@ public class PreProcessTest {
 		//Beharreko atributuak dituen test-erako datu sorta gorde.
 		ps.print(newData);
 		ps.close();
+		
+		return newData;
 	}
 }

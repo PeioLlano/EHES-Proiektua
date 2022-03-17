@@ -1,20 +1,29 @@
 package code;
 
-public class PreProcessTrain {
+import weka.core.Instances;
 
-	public void raw2arff() {
+public class PreProcessTrain {
+	
+	public static Instances preProcess(String dataPath) {
+		PreProcessTrain ppt = new PreProcessTrain();
 		
+		Instances dataTrain = ppt.raw2arff(dataPath);
+		dataTrain = ppt.bow(dataTrain);
+		dataTrain = ppt.fss(dataTrain);
+		
+		return dataTrain;
+	}
+
+	public Instances raw2arff(String dataPath) {
+		return null;
 	}
 	
-	public void bow() {
-		
+	public Instances bow(Instances data) {
+		return null;
 	}
 	
-	public void fss() {
-		
+	public Instances fss(Instances data) {
+		return null;
 	}
 	
-	public static void preProcess() {
-		
-	}
 }
