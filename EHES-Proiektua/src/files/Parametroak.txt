@@ -1,4 +1,4 @@
-MULTILAYER PERCEPTRON ATTRIBUTES:
+MULTILAYER PERCEPTRON PARAMETERS:
 
 seed -- Seed used to initialise the random number generator.Random numbers are used for setting the initial weights of the connections between nodes, and also for shuffling the training data.
 

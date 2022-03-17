@@ -1,8 +1,11 @@
 package code;
 
+import weka.classifiers.functions.MultilayerPerceptron;
+import weka.core.Instances;
+
 public class ParametroEkorketa {
 
-	public static void parametroakEkortu() {
-		
+	public static MultilayerPerceptron parametroakEkortu(Instances dataTrain) {
+		return null;
 	}
 }
