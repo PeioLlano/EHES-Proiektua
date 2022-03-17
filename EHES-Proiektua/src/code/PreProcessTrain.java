@@ -1,9 +1,15 @@
 package code;
 
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+
 import weka.attributeSelection.BestFirst;
 import weka.attributeSelection.CfsSubsetEval;
 import weka.core.Instances;
+import weka.core.converters.ArffSaver;
+import weka.core.converters.CSVLoader;
 import weka.filters.Filter;
 import weka.filters.supervised.attribute.AttributeSelection;
 
@@ -39,4 +45,27 @@ public class PreProcessTrain {
 		
 	}
 	
-}
+	public void csv2arff(String unekoa, String path, String karpetaBerria) throws IOException {
+		System.out.println(path+"/"+unekoa);
+		String csvfitx=unekoa;
+		// CSV-a kargatu
+		CSVLoader loader = new CSVLoader();
+		//Loader.setSource(new File(args[0]))
+		loader.setSource(new File(path +"/"+csvfitx));
+		//Instantzien objektua lortu
+		Instances data = loader.getDataSet();
+		//ARFF-a gorde
+		ArffSaver saver = new ArffSaver();
+		//Bihurtu nahi dugun dataset-a lortu
+		saver.setInstances(data);
+		//ARFF moduan gorde
+		saver.setFile(new File(karpetaBerria+"/"+unekoa+".arff"));
+		saver.setDestination(new File(karpetaBerria+"/"+unekoa+".arff"));
+		saver.writeBatch();
+		System.out.println(".arff FITXATEGIA: "+csvfitx);
+		}
+	}
+	
+	
+	
+
