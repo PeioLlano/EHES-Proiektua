@@ -11,7 +11,7 @@ import weka.core.Instances;
 public class IragarpenSortzailea {
 
 	public static void eginIragarpenak(Instances dataTest, NaiveBayes nb) throws Exception {
-		//prueba jon
+		//prueba jon numero 756
 		//ECLIPSE-tik FILE-era pasatzeaz arduratuko den 'stremer'-a.
 		FileOutputStream fos = new FileOutputStream(" -------------Non doan jarri behar da-------------");
 		PrintStream ps = new PrintStream(fos);
