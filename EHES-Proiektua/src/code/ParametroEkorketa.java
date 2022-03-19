@@ -12,6 +12,7 @@ import weka.filters.unsupervised.instance.RemovePercentage;
 public class ParametroEkorketa {
 
 	public static MultilayerPerceptron parametroakEkortu(Instances dataTrain) throws Exception {
+		//Azalpena:
 		//Kasu honetan ekortzeko logika gehien duen parametroa pertzeptroiak izango dituen izkutatutako geruzak izango da.
 		//Enuntziatuan bi parametro ekortu behar direla ipintzen du, gure kasuan oso zentzuzkoa izango
 		//litzateke izkutatutako geruza bakoitzak izango dituen neurona kopurua ekortzea baina ez dago metodorik
