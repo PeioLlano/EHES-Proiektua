@@ -1,5 +1,6 @@
 package code;
 
+import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.nio.file.FileSystems;
 
@@ -33,8 +34,14 @@ public class LagMethods {
     public static Instances path2instances(String path) throws Exception {
         DataSource ds = new DataSource(path);
         Instances data = ds.getDataSet();
-        data.setClassIndex(0);
         return data;
+    }
+    
+    public static void saver(String path, Object gordetzeke) throws Exception {
+    	FileOutputStream os = new FileOutputStream(path);
+		PrintStream ps = new PrintStream(os);
+		ps.print(gordetzeke);
+		ps.close();
     }
     
     public static Instances holdOut(String mode, Instances data, Double percent, Integer seed) throws Exception {

@@ -2,13 +2,10 @@ package code;
 
 
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.PrintStream;
-import java.util.ArrayList;
 
-import weka.attributeSelection.BestFirst;
-import weka.attributeSelection.CfsSubsetEval;
+import weka.attributeSelection.InfoGainAttributeEval;
+import weka.attributeSelection.Ranker;
 import weka.core.Instances;
 import weka.core.converters.ArffSaver;
 import weka.core.converters.CSVLoader;
@@ -23,7 +20,8 @@ public class PreProcessTrain {
 		
 		Instances dataTrain = ppt.raw2arff(dataPath);
 		dataTrain = ppt.bow(dataTrain);
-		dataTrain = ppt.fss(dataTrain);
+		dataTrain = ppt.fss(dataTrain); //Hemendik atributuarekin amaieran atera
+		ppt.bow(dataTrain); // --> Metodo hau soilik hiztegia eguneratzeko 
 		
 		return dataTrain;
 	}
@@ -56,6 +54,7 @@ public class PreProcessTrain {
         Instances dataTrainBoW = Filter.useFilter(data,str2vector);
         dataTrainBoW.setClassIndex(0);
 		
+//      LagMethods.saver("path", dataTrainBoW);
 //      FileOutputStream os = new FileOutputStream(args[2]);
 //		PrintStream ps = new PrintStream(os);
 //      ps.print(dataTrainBoW);
@@ -67,15 +66,27 @@ public class PreProcessTrain {
 	}
 	
 	public Instances fss(Instances data) throws Exception {
-		AttributeSelection aSelection = new AttributeSelection();
-		CfsSubsetEval cfsSubsetEval = new CfsSubsetEval();
-		BestFirst bFirst = new BestFirst();
-		aSelection.setEvaluator(cfsSubsetEval);
-		aSelection.setSearch(bFirst);
-		aSelection.setInputFormat(data);
-		Instances selectedData = Filter.useFilter(data, aSelection);
-		return (selectedData);
 		
+		// A supervised attribute filter that can be used to select attributes. It is very flexible and allows various search and evaluation methods to be combined.
+		AttributeSelection at = new AttributeSelection();
+		
+		//Evaluates the worth of an attribute by measuring the information gain with respect to the class.
+			//InfoGain(Class,Attribute) = H(Class) - H(Class | Attribute).
+        InfoGainAttributeEval infoG = new InfoGainAttributeEval();
+        
+        //Ranks attributes by their individual evaluations. Use in conjunction with attribute evaluators
+        Ranker rank = new Ranker();
+	        //threshold -- Set threshold by which attributes can be discarded. Default value results in no attributes being discarded. Use either this option or numToSelect to reduce the attribute set.
+	        //umbral: establece el umbral por el cual se pueden descartar los atributos. El valor predeterminado da como resultado que no se descarten atributos. Utilice esta opción o numToSelect para reducir el conjunto de atributos.
+        	rank.setOptions(new String[] { "-T", "0.00000001" });
+        
+        at.setInputFormat(data);
+        at.setEvaluator(infoG);
+        at.setSearch(rank);
+        Instances selectedData = Filter.useFilter(data, at);
+        selectedData.setClassIndex(data.numAttributes()-1);
+        
+        return (selectedData);
 	}
 	
 	public void csv2arff(String unekoa, String path, String karpetaBerria) throws IOException {
