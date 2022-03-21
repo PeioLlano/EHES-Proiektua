@@ -2,7 +2,9 @@ package code;
 
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
 import weka.attributeSelection.BestFirst;
@@ -32,8 +34,36 @@ public class PreProcessTrain {
 	
 	public Instances bow(Instances data) throws Exception {
 		
+		//################################################################ TRAIN BOW ################################################################
 		
-		return null;
+		StringToWordVector str2vector = new StringToWordVector();
+		
+		String[] options = new String[11];
+        options[0] = "-R";
+        options[1] = "first-last";
+        options[2] = "-W";
+        options[3] = "2000";
+        options[4] = "-prune-rate";
+        options[5] = "-1.0";
+        options[6] = "-N";
+        options[7] = "0";
+        options[8] = "-L";
+        options[9] = "-dictionary";
+        options[10] = LagMethods.relative2absolute("src/files/Dictionary.txt");
+        
+        str2vector.setOptions(options);
+        str2vector.setInputFormat(data);
+        Instances dataTrainBoW = Filter.useFilter(data,str2vector);
+        dataTrainBoW.setClassIndex(0);
+		
+//      FileOutputStream os = new FileOutputStream(args[2]);
+//		PrintStream ps = new PrintStream(os);
+//      ps.print(dataTrainBoW);
+//		ps.close();
+		
+		//################################################################ TRAIN BOW ################################################################
+		
+		return dataTrainBoW;
 	}
 	
 	public Instances fss(Instances data) throws Exception {
