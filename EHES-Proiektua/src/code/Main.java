@@ -21,7 +21,7 @@ public class Main {
 		
 		//4. Pausua --> Iragarpenak egitea
 			//Non gordetzen dira iragarpenak? files/iragarpenak.txt
-			IragarpenSortzailea.eginIragarpenak(dataTest, model);	
+			IragarpenSortzailea.eginIragarpenak(dataTest, model, "Path");	
 			
 	}
 
