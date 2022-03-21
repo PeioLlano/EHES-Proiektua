@@ -3,6 +3,7 @@ package code;
 import java.io.PrintStream;
 import java.nio.file.FileSystems;
 
+import weka.classifiers.Evaluation;
 import weka.core.Instances;
 import weka.core.converters.ConverterUtils.DataSource;
 import weka.filters.Filter;
@@ -59,6 +60,13 @@ public class LagMethods {
 
 		return dataEdit;
     }
+    
+    public static void printResults(PrintStream ps, Evaluation ev, String name) throws Exception {
+		ps.println("\n#########################  " + name + "  #########################");
+		ps.println("\n"+ev.toClassDetailsString());
+		ps.println(ev.toSummaryString("\n" + name + " SUMMARY", false));
+		ps.println(ev.toMatrixString("\n" + name + " CONFUSSION MATIX"));
+	}
     
     
 }

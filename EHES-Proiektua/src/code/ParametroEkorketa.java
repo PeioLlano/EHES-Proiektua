@@ -68,7 +68,7 @@ public class ParametroEkorketa {
 				rptrain.setPercentage(70);
 				rptrain.setInvertSelection(true);
 				Instances dataRandomTrain = Filter.useFilter(rdata, rptrain);
-				//Instances dataRandomTest = LagMethods.holdOut("train", dataTrain, 70.0, 1);
+				//Instances dataRandomTrain = LagMethods.holdOut("train", dataTrain, 70.0, 1);
 				
 				Evaluation eval = new Evaluation(dataRandomTrain);
 				eval.evaluateModel(mp, dataRandomTest);

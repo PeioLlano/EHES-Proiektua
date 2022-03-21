@@ -31,21 +31,9 @@ public class PreProcessTrain {
 	}
 	
 	public Instances bow(Instances data) throws Exception {
-		StringToWordVector stwv = new StringToWordVector();
-		//wordsToKeep -- The number of words (per class if there is a class attribute assigned) to attempt to keep.
-		stwv.setWordsToKeep(1000);
-		//outputWordCounts -- Output word counts rather than boolean 0 or 1(indicating presence or absence of a word)
-		stwv.setOutputWordCounts(true);
-		//lowerCaseTokens -- If set then all the word tokens are converted to lower case before being added to the dictionary.
-		stwv.setLowerCaseTokens(true);
-		//Datu sortaren formatua esleitu
-		stwv.setInputFormat(data);
-		//Set the dictionary file to save the dictionary to.
-		stwv.setDictionaryFileToSaveTo(new File(LagMethods.relative2absolute("/src/files/dictionary.txt")));
-		//Filtroa erabili datarekin
-		Instances dataBoW = Filter.useFilter(data, stwv);
 		
-		return dataBoW;
+		
+		return null;
 	}
 	
 	public Instances fss(Instances data) throws Exception {
