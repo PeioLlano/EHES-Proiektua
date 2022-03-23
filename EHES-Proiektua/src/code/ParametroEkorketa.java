@@ -1,9 +1,12 @@
 package code;
 
+import java.util.concurrent.TimeUnit;
+
 import weka.classifiers.Evaluation;
 import weka.classifiers.functions.MultilayerPerceptron;
 import weka.core.Instances;
 import weka.core.Utils;
+import weka.core.converters.ConverterUtils.DataSource;
 import weka.filters.Filter;
 import weka.filters.unsupervised.instance.Randomize;
 import weka.filters.unsupervised.instance.RemovePercentage;
@@ -11,93 +14,141 @@ import weka.filters.unsupervised.instance.RemovePercentage;
 public class ParametroEkorketa {
 
 	public static MultilayerPerceptron parametroakEkortu(Instances dataTrain) throws Exception {
-		//Azalpena:
-		//-------------
-		//Kasu honetan ekortzeko logika gehien duen parametroa pertzeptroiak izango dituen izkutatutako geruzak izango da.
-		//Enuntziatuan bi parametro ekortu behar direla ipintzen du, gure kasuan oso zentzuzkoa izango
-		//litzateke izkutatutako geruza bakoitzak izango dituen neurona kopurua ekortzea baina ez dago metodorik
-		//Multilayer Perceptron klasean hori ekortzeko (set egiteko). Baina badago hau:
-		
-		//h - A string with a comma seperated list of numbers. Each number is the number of nodes to be on a hidden layer. 
-		
-		//Ekorketa hold-outekin klase minoritarioaren f-measure-a ekortzeko egin behar da:
-		int minoritarioa = Utils.minIndex(dataTrain.attributeStats(dataTrain.classIndex()).nominalCounts);
-		
-		//Setter-a egiteko aukerak jarriko ditugu:
-		String[] layerAukerak = {"0", "a", "i", "o", "t"};
-		//p
-		//	zergatik goiko aukera horiek? weka.sourceforge:
-		//  Note to have no hidden units, just put a single 0, 
-		//	Any more 0's will indicate that the string is badly formed and make it unaccepted. 
-		//	Negative numbers, and floats will do the same. 
-		//	There are also some wildcards. 
-		//	These are 'a' = (number of attributes + number of classes) / 2, 
-		//	'i' = number of attributes, 
-		//	'o' = number of classes, 
-		//	and 't' = number of attributes + number of classes.
-		
-		//konputazionalki oso kostu handi-handiak, errepasatu beharko dut!!!!
-		
-		
-		
-		double fm = 0;
-		MultilayerPerceptron mp = new MultilayerPerceptron();
-		String layer1 = "";
-		String layer2 = "";
-		String m = "";
-		mp.setBatchSize("32");
-		
-			for (int i = 0; i < layerAukerak.length; i++) {
-				for (int k = 0; k < layerAukerak.length; k++) {
-					mp.setHiddenLayers(layerAukerak[i]+" , "+layerAukerak[k]);
-					System.out.println("Geruza kopurua iterazio honetan: "+mp.getHiddenLayers());
-					
-					
-					//hold-out %70
-					Randomize rd = new Randomize();
-					rd.setInputFormat(dataTrain);
-					rd.setRandomSeed(i);
-					Instances rdata = Filter.useFilter(dataTrain, rd);
-					
-					RemovePercentage rptest = new RemovePercentage();
-					rptest.setInputFormat(rdata);
-					rptest.setPercentage(70);
-					Instances dataRandomTest = Filter.useFilter(rdata, rptest);
-					//Instances dataRandomTest = LagMethods.holdOut("test", dataTrain, 70.0, 1);
-					
-					RemovePercentage rptrain = new RemovePercentage();
-					rptrain.setInputFormat(rdata);
-					rptrain.setPercentage(70);
-					rptrain.setInvertSelection(true);
-					Instances dataRandomTrain = Filter.useFilter(rdata, rptrain);
-					//Instances dataRandomTrain = LagMethods.holdOut("train", dataTrain, 70.0, 1);
-					
-					Evaluation eval = new Evaluation(dataRandomTrain);
-					eval.evaluateModel(mp, dataRandomTest);
-					
-					if (eval.fMeasure(minoritarioa)>fm) {
-						fm = eval.fMeasure(minoritarioa);
-						layer1 = layerAukerak[i];
-						layer2 = layerAukerak[k];
-						m = eval.toMatrixString("####### NAHASMEN MATRIZEA ######");
+		 if(dataTrain.classIndex()==-1) {
+			 dataTrain.setClassIndex(dataTrain.numAttributes()-1);
+		 }
+		 
+		 
+		long inicio = System.currentTimeMillis();
+				 
+			 //Azalpena:
+			//-------------
+			//Kasu honetan ekortzeko logika gehien duen parametroa pertzeptroiak izango dituen izkutatutako geruzak izango da.
+			//Enuntziatuan bi parametro ekortu behar direla ipintzen du, gure kasuan oso zentzuzkoa izango
+			//litzateke izkutatutako geruza bakoitzak izango dituen neurona kopurua ekortzea baina ez dago metodorik
+			//Multilayer Perceptron klasean hori ekortzeko (set egiteko). Baina badago hau:
+			
+			//h - A string with a comma seperated list of numbers. Each number is the number of nodes to be on a hidden layer. 
+			
+			//Ekorketa hold-outekin klase minoritarioaren f-measure-a ekortzeko egin behar da:
+			int minoritarioa = Utils.minIndex(dataTrain.attributeStats(dataTrain.classIndex()).nominalCounts);
+			
+			//Setter-a egiteko aukerak jarriko ditugu:
+			String[] layerAukerak = {"0", "a", "i", "o", "t"};
+			//p
+			//	zergatik goiko aukera horiek? weka.sourceforge:
+			//  Note to have no hidden units, just put a single 0, 
+			//	Any more 0's will indicate that the string is badly formed and make it unaccepted. 
+			//	Negative numbers, and floats will do the same. 
+			//	There are also some wildcards. 
+			//	These are 'a' = (number of attributes + number of classes) / 2, 
+			//	'i' = number of attributes, 
+			//	'o' = number of classes, 
+			//	and 't' = number of attributes + number of classes.
+			
+			//konputazionalki oso kostu handi-handiak, errepasatu beharko dut!!!!
+			
+			
+			
+			double fm = 0;
+			MultilayerPerceptron mp = new MultilayerPerceptron();
+			
+			String layer1 = "";
+			String layer2 = "";
+			String m = "";
+			mp.setBatchSize("32");
+			int it =0;
+				for (int i = 0; i < layerAukerak.length; i++) {
+					for (int k = 0; k < layerAukerak.length; k++) {
+						mp.setHiddenLayers(layerAukerak[i]+" , "+layerAukerak[k]);
+						System.out.println("################ "+it+" iterazioa:"+" ################");
+						if (mp.getHiddenLayers().length()<2) {
+							System.out.println("Nodo kopurua iterazio honetan: \nLehen geruza: "
+									+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[0], dataTrain)+"\nBigarren geruza: ez erabilita"
+									);
+						}else {
+							System.out.println("Nodo kopurua iterazio honetan: \nLehen geruza: "
+									+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[0], dataTrain)+"\nBigarren geruza: "
+									+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[1], dataTrain));
+									
+							
+						}
+						System.out.println("\nF-measure iterazio honetan: "+fm);
+						
+						
+						//hold-out %70
+						Randomize rd = new Randomize();
+						rd.setInputFormat(dataTrain);
+						rd.setRandomSeed(i);
+						Instances rdata = Filter.useFilter(dataTrain, rd);
+						
+						RemovePercentage rptest = new RemovePercentage();
+						rptest.setInputFormat(rdata);
+						rptest.setPercentage(70);
+						Instances dataRandomTest = Filter.useFilter(rdata, rptest);
+						//Instances dataRandomTest = LagMethods.holdOut("test", dataTrain, 70.0, 1);
+						
+						RemovePercentage rptrain = new RemovePercentage();
+						rptrain.setInputFormat(rdata);
+						rptrain.setPercentage(70);
+						rptrain.setInvertSelection(true);
+						Instances dataRandomTrain = Filter.useFilter(rdata, rptrain);
+						
+						//Instances dataRandomTrain = LagMethods.holdOut("train", dataTrain, 70.0, 1);
+						
+						mp.buildClassifier(dataRandomTrain);
+						
+						Evaluation eval = new Evaluation(dataRandomTrain);
+						
+						eval.evaluateModel(mp, dataRandomTest);
+						
+						if (eval.fMeasure(minoritarioa)>fm) {
+							fm = eval.fMeasure(minoritarioa);
+							layer1 = layerAukerak[i];
+							layer2 = layerAukerak[k];
+							m = eval.toMatrixString("####### NAHASMEN MATRIZEA ######");
+							
+						}
+						
+						it++;
 						
 					}
 					
+					
 				}
 				
+				System.out.println("\n!!!!!!!!!!!!!!!!!!! EMAITZAK !!!!!!!!!!!!!!!!!!!\n");
+				String layerAzalpena = layerTypeToExplanation(layer1, dataTrain);
+				String layerAzalpena2 = layerTypeToExplanation(layer2, dataTrain);
+				System.out.println("Lehenengo geruzako nodo kopurua: "+layerAzalpena+"\n");
+				System.out.println("BIgarren geruzako nodo kopurua: "+layerAzalpena2+"\n");
+
+				System.out.println("Klase minoritarioaren f-measure optimoa: "+fm+"\n");
+				System.out.println(m+"\n");
+				System.out.println();
+				long finalizacion = System.currentTimeMillis();
 				
-			}
-			String layerAzalpena = layerTypeToExplanation(layer1);
-			String layerAzalpena2 = layerTypeToExplanation(layer2);
-			System.out.println("Lehenengo geruzako azalpena: "+layerAzalpena+"\n");
-			System.out.println("Lehenengo geruzako azalpena: "+layerAzalpena2+"\n");
-
-			System.out.println("Klase minoritarioaren f-measure optimoa: "+fm+"\n");
-			System.out.println(m);
-	
-
-			return mp;
-		}
+				long milliseconds = finalizacion - inicio;
+				
+				
+				 
+		        // This method uses this formula :minutes =
+		        // (milliseconds / 1000) / 60;
+		        long minutes
+		            = TimeUnit.MILLISECONDS.toMinutes(milliseconds);
+		 
+		        // This method uses this formula seconds =
+		        // (milliseconds / 1000);
+		        long seconds
+		            = (TimeUnit.MILLISECONDS.toSeconds(milliseconds)
+		               % 60);
+		 
+		        // Print the answer
+		        System.out.format(" Exekuzio denbora = "+milliseconds+" ms = "
+		                          + minutes + " minutu eta "+seconds+  " segundu");
+		        
+		        return mp;
+	}
 		
 		
 		
@@ -108,19 +159,20 @@ public class ParametroEkorketa {
 		
 	
 
-	private static String layerTypeToExplanation(String layer) {
+	private static String layerTypeToExplanation(String layer, Instances data) {
 		// TODO Auto-generated method stub
 		String erantzuna = "None";
 		if (layer.equals("0")) {
-			erantzuna = "No hidden units.";
+			erantzuna = "No hidden units. = 0";
 		} else if (layer.equals("a")) {
-			erantzuna = "(Number of attributes + Number of classes) / 2";
+			erantzuna = "(Number of attributes + Number of classes) / 2 = " +(data.numAttributes()+data.numClasses())/2;
 		} else if (layer.equals("i")) {
-			erantzuna = "Number of attributes";
+			erantzuna = "Number of attributes = " + data.numAttributes();
 		} else if (layer.equals("o")) {
-			erantzuna = "Number of classes";
+			erantzuna = "Number of classes = " + data.numAttributes();
 		} else if (layer.equals("t")) {
-			erantzuna = "Number of attributes + Number of classes"; 
+			erantzuna = "Number of attributes + Number of classes = " + (data.numAttributes()+data.numClasses()); 
+		
 		} else {
 			erantzuna = "Not specified";
 		}
