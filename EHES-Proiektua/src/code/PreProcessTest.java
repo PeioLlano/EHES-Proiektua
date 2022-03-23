@@ -1,8 +1,6 @@
 package code;
 
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
 
 import weka.core.Instances;
 import weka.filters.Filter;
@@ -21,8 +19,12 @@ public class PreProcessTest {
 		return dataTest;
 	}
 	
-	public Instances raw2arff(String dataTest) {
-		return null;
+	public Instances raw2arff(String dataTest) throws Exception {
+		String input = LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind.txt");
+		String output = LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind_raw.arff");
+		Instances data = LagMethods.txt2Intances(input,output);
+		
+		return data;
 	}
 	
 	public Instances fixedDictionaryStringToWordVector(Instances dataTest) throws Exception {
@@ -58,6 +60,7 @@ public class PreProcessTest {
         
         dataTestBoW.setClassIndex(0);
 
+        LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind.arff"), dataTestBoW);
 //      FileOutputStream osTest = new FileOutputStream(args[3]);
 //		PrintStream psTest = new PrintStream(osTest);
 //		psTest.print(dataTestBoW);

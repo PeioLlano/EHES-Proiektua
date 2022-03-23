@@ -11,6 +11,8 @@ public class Main {
 			//Non gordetzen da train.arff? files/train.arff
 			Instances dataTrain = PreProcessTrain.preProcess(LagMethods.relative2absolute("src/files/train.txt"));
 			
+			System.exit(0);
+			
 		//2. Pausua --> Test eta train bateragarri egitea, test.arff lortu
 			//Non gordetzen da test.arff? files/test.arff
 			Instances dataTest = PreProcessTest.preProcess(dataTrain, LagMethods.relative2absolute("src/files/test.txt"));

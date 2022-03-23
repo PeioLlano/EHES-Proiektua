@@ -1,8 +1,13 @@
 package code;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.nio.file.FileSystems;
+import java.util.ArrayList;
 
 import weka.classifiers.Evaluation;
 import weka.core.Instances;
@@ -75,5 +80,43 @@ public class LagMethods {
 		ps.println(ev.toMatrixString("\n" + name + " CONFUSSION MATIX"));
 	}
     
+    public static Instances txt2Intances(String pathInput, String pathOutput) throws Exception {
+		//String name = path.split("\\")[path.split("\\").length-1];
+		StringBuilder report = new StringBuilder();
+	    report.append("@relation SMS_SpamCollection\n");
+    	report.append("\n");
+	    report.append("@attribute klasea {spam, ham}\n");
+	    report.append("@attribute testua string\n");
+    	report.append("\n");
+	    
+	    BufferedReader br = new BufferedReader(new FileReader(pathInput));
+	     String sCurrentLine;
+	     
+		report.append("@data\n");
+	    while ((sCurrentLine = br.readLine()) != null) {
+	    	String klasea = sCurrentLine.split("\t")[0];
+	    	String textua = sCurrentLine.split("\t")[1];
+	    	ArrayList<Integer> list = new ArrayList<>();
+	    	int index = textua.indexOf("\"");
+	    	while (index >= 0) {
+	    		list.add(index);
+	    		index = textua.indexOf("\"", index + 1);
+	    	}
+
+	    	Integer i = 0; 
+	    	for (Integer integer : list) {
+	    		textua = textua.substring(0, integer+i) + "\\" + textua.substring(integer+i);
+	    		i++;
+			}
+		    report.append(klasea + ", \"" + textua + "\"\n");
+	    }
+	    
+	    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(pathOutput)));
+		writer.write(report.toString());
+		writer.close();
+	    br.close();
+	    
+	    return path2instances(pathOutput);
+	}
     
 }

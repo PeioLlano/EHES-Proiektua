@@ -1,14 +1,18 @@
 package code;
 
 
-import java.io.File;
-import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.OutputStreamWriter;
+import java.util.HashMap;
 
 import weka.attributeSelection.InfoGainAttributeEval;
 import weka.attributeSelection.Ranker;
+import weka.core.Attribute;
 import weka.core.Instances;
-import weka.core.converters.ArffSaver;
-import weka.core.converters.CSVLoader;
 import weka.filters.Filter;
 import weka.filters.supervised.attribute.AttributeSelection;
 import weka.filters.unsupervised.attribute.StringToWordVector;
@@ -21,13 +25,16 @@ public class PreProcessTrain {
 		Instances dataTrain = ppt.raw2arff(dataPath);
 		dataTrain = ppt.bow(dataTrain);
 		dataTrain = ppt.fss(dataTrain); //Hemendik atributuarekin amaieran atera
-		ppt.bow(dataTrain); // --> Metodo hau soilik hiztegia eguneratzeko 
-		
+		ppt.hiztegiaEguneratu(dataTrain, LagMethods.relative2absolute("src/files/Dictionary.txt"), LagMethods.relative2absolute("src/files/DictionaryFSS.txt")); // --> Metodo hau soilik hiztegia eguneratzeko 
 		return dataTrain;
 	}
 
-	public Instances raw2arff(String dataPath) {
-		return null;
+	public Instances raw2arff(String dataTest) throws Exception {
+		String input = LagMethods.relative2absolute("src/files/SMS_SpamCollection.train.txt");
+		String output = LagMethods.relative2absolute("src/files/SMS_SpamCollection.train_raw.arff");
+		Instances data = LagMethods.txt2Intances(input,output);
+		
+		return data;
 	}
 	
 	public Instances bow(Instances data) throws Exception {
@@ -82,6 +89,7 @@ public class PreProcessTrain {
         Instances dataTrainBoW = Filter.useFilter(data,str2vector);
         dataTrainBoW.setClassIndex(0);
 		
+        LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.train.arff"), dataTrainBoW);
 //      LagMethods.saver("path", dataTrainBoW);
 //      FileOutputStream os = new FileOutputStream(args[2]);
 //		PrintStream ps = new PrintStream(os);
@@ -112,31 +120,53 @@ public class PreProcessTrain {
         at.setEvaluator(infoG);
         at.setSearch(rank);
         Instances selectedData = Filter.useFilter(data, at);
-        selectedData.setClassIndex(data.numAttributes()-1);
+        selectedData.setClassIndex(selectedData.numAttributes()-1);
+        LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.train_FSS.arff"), selectedData);
         
         return (selectedData);
 	}
 	
-	public void csv2arff(String unekoa, String path, String karpetaBerria) throws IOException {
-		System.out.println(path+"/"+unekoa);
-		String csvfitx=unekoa;
-		// CSV-a kargatu
-		CSVLoader loader = new CSVLoader();
-		//Loader.setSource(new File(args[0]))
-		loader.setSource(new File(path +"/"+csvfitx));
-		//Instantzien objektua lortu
-		Instances data = loader.getDataSet();
-		//ARFF-a gorde
-		ArffSaver saver = new ArffSaver();
-		//Bihurtu nahi dugun dataset-a lortu
-		saver.setInstances(data);
-		//ARFF moduan gorde
-		saver.setFile(new File(karpetaBerria+"/"+unekoa+".arff"));
-		saver.setDestination(new File(karpetaBerria+"/"+unekoa+".arff"));
-		saver.writeBatch();
-		System.out.println(".arff FITXATEGIA: "+csvfitx);
-		}
+	public void hiztegiaEguneratu(Instances data, String inputHizt, String outputHizt) throws Exception, FileNotFoundException {
+		
+		StringBuilder report = new StringBuilder();
+		
+		report.append("@@@numDocs="+data.numInstances()+"@@@\n");
+		HashMap<String, Integer> hizt = new HashMap<String, Integer>();
+
+        for(int i=0;i<data.numAttributes()-1;i++) {
+            Attribute atr = data.attribute(i);
+            hizt.put(atr.name(),1);
+        }
+
+        BufferedReader br = new BufferedReader(new FileReader(inputHizt));
+        String sCurrentLine = br.readLine();
+        sCurrentLine = br.readLine();
+		while (sCurrentLine != null) {
+			String atr = "";
+            Integer freq;
+			if(sCurrentLine.split(",").length==2) {
+	            atr = sCurrentLine.split(",")[0];
+	            freq = Integer.parseInt(sCurrentLine.split(",")[1]);
+			}
+			else {
+				int luzera = sCurrentLine.split(",").length;
+				for(int i=0;i<luzera-2;i++) {
+					atr = atr + sCurrentLine.split(",")[i];
+				}
+	            freq = Integer.parseInt(sCurrentLine.split(",")[luzera-1]);
+			}
+            if(hizt.containsKey(atr)){
+            	report.append(atr+","+freq+"\n");
+            }
+            sCurrentLine = br.readLine();
+        }
+	    
+		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputHizt)));
+		writer.write(report.toString());
+		writer.close();
+		br.close();
 	}
+}
 	
 	
 	
