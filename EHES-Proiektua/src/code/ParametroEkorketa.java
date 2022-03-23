@@ -3,7 +3,6 @@ package code;
 import weka.classifiers.Evaluation;
 import weka.classifiers.functions.MultilayerPerceptron;
 import weka.core.Instances;
-import weka.core.Randomizable;
 import weka.core.Utils;
 import weka.filters.Filter;
 import weka.filters.unsupervised.instance.Randomize;
@@ -13,6 +12,7 @@ public class ParametroEkorketa {
 
 	public static MultilayerPerceptron parametroakEkortu(Instances dataTrain) throws Exception {
 		//Azalpena:
+		//-------------
 		//Kasu honetan ekortzeko logika gehien duen parametroa pertzeptroiak izango dituen izkutatutako geruzak izango da.
 		//Enuntziatuan bi parametro ekortu behar direla ipintzen du, gure kasuan oso zentzuzkoa izango
 		//litzateke izkutatutako geruza bakoitzak izango dituen neurona kopurua ekortzea baina ez dago metodorik
@@ -25,7 +25,7 @@ public class ParametroEkorketa {
 		
 		//Setter-a egiteko aukerak jarriko ditugu:
 		String[] layerAukerak = {"0", "a", "i", "o", "t"};
-		
+		//p
 		//	zergatik goiko aukera horiek? weka.sourceforge:
 		//  Note to have no hidden units, just put a single 0, 
 		//	Any more 0's will indicate that the string is badly formed and make it unaccepted. 
@@ -39,66 +39,74 @@ public class ParametroEkorketa {
 		//konputazionalki oso kostu handi-handiak, errepasatu beharko dut!!!!
 		
 		
-		//Alicia me dijo el viernes que ekortuara hasta MÁXIMO 8 layers, pero no admite números
 		
 		double fm = 0;
 		MultilayerPerceptron mp = new MultilayerPerceptron();
-		String layer = "";
+		String layer1 = "";
+		String layer2 = "";
 		String m = "";
-		for (int i = 0; i < dataTrain.numInstances(); i++) {
-			for (int j = 0; j < layerAukerak.length; j++) {
-				mp.setHiddenLayers(layerAukerak[j]);
-				System.out.println("Geruza kopurua iterazio honetan: "+mp.getHiddenLayers());
-				
-				
-				//hold-out %70
-				Randomize rd = new Randomize();
-				rd.setInputFormat(dataTrain);
-				rd.setRandomSeed(i);
-				Instances rdata = Filter.useFilter(dataTrain, rd);
-				
-				RemovePercentage rptest = new RemovePercentage();
-				rptest.setInputFormat(rdata);
-				rptest.setPercentage(70);
-				Instances dataRandomTest = Filter.useFilter(rdata, rptest);
-				//Instances dataRandomTest = LagMethods.holdOut("test", dataTrain, 70.0, 1);
-				
-				RemovePercentage rptrain = new RemovePercentage();
-				rptrain.setInputFormat(rdata);
-				rptrain.setPercentage(70);
-				rptrain.setInvertSelection(true);
-				Instances dataRandomTrain = Filter.useFilter(rdata, rptrain);
-				//Instances dataRandomTrain = LagMethods.holdOut("train", dataTrain, 70.0, 1);
-				
-				Evaluation eval = new Evaluation(dataRandomTrain);
-				eval.evaluateModel(mp, dataRandomTest);
-				
-				if (eval.fMeasure(minoritarioa)>fm) {
-					fm = eval.fMeasure(minoritarioa);
-					layer = layerAukerak[j];
-					m = eval.toMatrixString("####### NAHASMEN MATRIZEA ######");
+		mp.setBatchSize("32");
+		
+			for (int i = 0; i < layerAukerak.length; i++) {
+				for (int k = 0; k < layerAukerak.length; k++) {
+					mp.setHiddenLayers(layerAukerak[i]+" , "+layerAukerak[k]);
+					System.out.println("Geruza kopurua iterazio honetan: "+mp.getHiddenLayers());
+					
+					
+					//hold-out %70
+					Randomize rd = new Randomize();
+					rd.setInputFormat(dataTrain);
+					rd.setRandomSeed(i);
+					Instances rdata = Filter.useFilter(dataTrain, rd);
+					
+					RemovePercentage rptest = new RemovePercentage();
+					rptest.setInputFormat(rdata);
+					rptest.setPercentage(70);
+					Instances dataRandomTest = Filter.useFilter(rdata, rptest);
+					//Instances dataRandomTest = LagMethods.holdOut("test", dataTrain, 70.0, 1);
+					
+					RemovePercentage rptrain = new RemovePercentage();
+					rptrain.setInputFormat(rdata);
+					rptrain.setPercentage(70);
+					rptrain.setInvertSelection(true);
+					Instances dataRandomTrain = Filter.useFilter(rdata, rptrain);
+					//Instances dataRandomTrain = LagMethods.holdOut("train", dataTrain, 70.0, 1);
+					
+					Evaluation eval = new Evaluation(dataRandomTrain);
+					eval.evaluateModel(mp, dataRandomTest);
+					
+					if (eval.fMeasure(minoritarioa)>fm) {
+						fm = eval.fMeasure(minoritarioa);
+						layer1 = layerAukerak[i];
+						layer2 = layerAukerak[k];
+						m = eval.toMatrixString("####### NAHASMEN MATRIZEA ######");
+						
+					}
 					
 				}
 				
 				
 			}
-			
-			
+			String layerAzalpena = layerTypeToExplanation(layer1);
+			String layerAzalpena2 = layerTypeToExplanation(layer2);
+			System.out.println("Lehenengo geruzako azalpena: "+layerAzalpena+"\n");
+			System.out.println("Lehenengo geruzako azalpena: "+layerAzalpena2+"\n");
+
+			System.out.println("Klase minoritarioaren f-measure optimoa: "+fm+"\n");
+			System.out.println(m);
+	
+
+			return mp;
 		}
 		
-		String layerAzalpena = layerTypeToExplanation(layer);
-		
-		System.out.println("Aukeratutako layer (geruza) kopurua: "+layerAzalpena+"\n");
-		System.out.println("Klase minoritarioaren f-measure optimoa: "+fm+"\n");
-		System.out.println(m);
 		
 		
 		
 		
 		
 		
-		return mp;
-	}
+		
+	
 
 	private static String layerTypeToExplanation(String layer) {
 		// TODO Auto-generated method stub
@@ -111,8 +119,10 @@ public class ParametroEkorketa {
 			erantzuna = "Number of attributes";
 		} else if (layer.equals("o")) {
 			erantzuna = "Number of classes";
-		} else {
+		} else if (layer.equals("t")) {
 			erantzuna = "Number of attributes + Number of classes"; 
+		} else {
+			erantzuna = "Not specified";
 		}
 			
 		return erantzuna;
@@ -120,3 +130,4 @@ public class ParametroEkorketa {
 		
 	}
 }
+
