@@ -32,11 +32,24 @@ public class PreProcessTest {
         FixedDictionaryStringToWordVector fixedDictionary = new FixedDictionaryStringToWordVector();
         
         String[] testOptions = new String[5];
+        
+      //-R <index1,index2-index4,...>
+		  //Specify list of string attributes to convert to words (as weka Range).
         testOptions[0] = "-R";
         testOptions[1] = "first-last";
-        testOptions[2] = "-dictionary";
-        testOptions[3] = "Dictionary.txt";
-        testOptions[4] = "-L";
+        
+//      -L
+//  		Convert all tokens to lowercase before adding to the dictionary.
+//    		Convierta todos los tokens a minúsculas antes de agregarlos al diccionario.
+//  	Hiztegian sartu baino lehen, izki guztiak letra xehean jarri.
+        testOptions[2] = "-L";
+        
+//      -dictionary <path to save to>
+	//  	The file to save the dictionary to.
+	//  	(default is not to save the dictionary)
+        testOptions[3] = "-dictionary";
+        testOptions[4] = "Dictionary.txt";
+
         
         fixedDictionary.setOptions(testOptions);
         fixedDictionary.setDictionaryFile(new File(LagMethods.relative2absolute("src/files/Dictionary.txt")));

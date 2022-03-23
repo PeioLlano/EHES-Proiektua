@@ -37,15 +37,43 @@ public class PreProcessTrain {
 		StringToWordVector str2vector = new StringToWordVector();
 		
 		String[] options = new String[11];
+		
+		//Ia guztia defaut balioak dira baina ziurtatzeko da bide batean.
+		
+		//-R <index1,index2-index4,...>
+		  //Specify list of string attributes to convert to words (as weka Range).
         options[0] = "-R";
         options[1] = "first-last";
+        
+        //-W <number of words to keep>
+	        //Specify approximate number of word fields to create.
+	        //Surplus words will be discarded..
+	        //(default: 1000)
         options[2] = "-W";
         options[3] = "2000";
+        
+//      -prune-rate <rate as a percentage of dataset>
+//      	Specify the rate (e.g., every 10% of the input dataset) at which to periodically prune the dictionary.
+//      	-W prunes after creating a full dictionary. You may not have enough memory for this approach.
+//      	(default: no periodic pruning)
         options[4] = "-prune-rate";
         options[5] = "-1.0";
+        
+//      -N
+//      	Whether to 0=not normalize/1=normalize all data/2=normalize test data only
+//          to average length of training documents (default 0=don't normalize)
         options[6] = "-N";
         options[7] = "0";
+        
+//      -L
+//      	Convert all tokens to lowercase before adding to the dictionary.
+//        	Convierta todos los tokens a minúsculas antes de agregarlos al diccionario.
+//      Hiztegian sartu baino lehen, izki guztiak letra xehean jarri.
         options[8] = "-L";
+        
+//      -dictionary <path to save to>
+//      	The file to save the dictionary to.
+//      	(default is not to save the dictionary)
         options[9] = "-dictionary";
         options[10] = LagMethods.relative2absolute("src/files/Dictionary.txt");
         
