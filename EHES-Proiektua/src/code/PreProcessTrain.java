@@ -155,9 +155,16 @@ public class PreProcessTrain {
 	            freq = Integer.parseInt(sCurrentLine.split(",")[luzera-1]);
 			}
             if(hizt.containsKey(atr)){
-            	report.append(atr+","+freq+"\n");
+            	hizt.put(atr,freq);;
             }
             sCurrentLine = br.readLine();
+        }
+		
+		for(int i=0; i<data.numAttributes()-1;i++){
+            String atr = data.attribute(i).name();
+            if(hizt.containsKey(atr)){
+            	report.append(atr+","+hizt.get(atr)+"\n");
+            }
         }
 	    
 		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputHizt)));

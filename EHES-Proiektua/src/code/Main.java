@@ -11,12 +11,14 @@ public class Main {
 			//Non gordetzen da train.arff? files/train.arff
 			Instances dataTrain = PreProcessTrain.preProcess(LagMethods.relative2absolute("src/files/SMS_SpamCollection.train.txt"));
 			
-			System.exit(0);
 			
 		//2. Pausua --> Test eta train bateragarri egitea, test.arff lortu
 			//Non gordetzen da test.arff? files/test.arff
 			Instances dataTest = PreProcessTest.preProcess(dataTrain, LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind.txt"));
 		
+			System.out.println("Goiburuak berdina dira? " + dataTest.equalHeaders(dataTrain));
+			
+			System.exit(0);
 		//3. Pausua --> Parametro ekorketa
 			//Non gordetzen da classifier.model? files/classifier.model
 			MultilayerPerceptron model = ParametroEkorketa.parametroakEkortu(dataTrain);
