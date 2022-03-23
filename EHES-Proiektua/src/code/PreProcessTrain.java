@@ -29,10 +29,9 @@ public class PreProcessTrain {
 		return dataTrain;
 	}
 
-	public Instances raw2arff(String dataTest) throws Exception {
-		String input = LagMethods.relative2absolute("src/files/SMS_SpamCollection.train.txt");
+	public Instances raw2arff(String dataPath) throws Exception {
 		String output = LagMethods.relative2absolute("src/files/SMS_SpamCollection.train_raw.arff");
-		Instances data = LagMethods.txt2Intances(input,output);
+		Instances data = LagMethods.txt2Intances(dataPath,output);
 		
 		return data;
 	}

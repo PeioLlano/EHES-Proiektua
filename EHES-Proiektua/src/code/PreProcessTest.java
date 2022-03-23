@@ -19,10 +19,9 @@ public class PreProcessTest {
 		return dataTest;
 	}
 	
-	public Instances raw2arff(String dataTest) throws Exception {
-		String input = LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind.txt");
+	public Instances raw2arff(String dataPath) throws Exception {
 		String output = LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind_raw.arff");
-		Instances data = LagMethods.txt2Intances(input,output);
+		Instances data = LagMethods.txt2Intances(dataPath,output);
 		
 		return data;
 	}
