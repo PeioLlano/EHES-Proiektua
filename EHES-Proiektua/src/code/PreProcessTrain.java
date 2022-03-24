@@ -22,9 +22,13 @@ public class PreProcessTrain {
 	public static Instances preProcess(String dataPath) throws Exception {
 		PreProcessTrain ppt = new PreProcessTrain();
 		
+		// Textu gordina izanik DataTrain lortu
 		Instances dataTrain = ppt.raw2arff(dataPath);
+		// DataTrain izanik, StringToWordVector filtroa aplikatu
 		dataTrain = ppt.bow(dataTrain);
-		dataTrain = ppt.fss(dataTrain); //Hemendik atributuarekin amaieran atera
+		// Aurreko filtroarekin lortutako atributu baliagarriak kentzeko nahirekin AttributeSelection aplikatuko dugu.
+		dataTrain = ppt.fss(dataTrain); //Hemendik klase atributuarekin amaieran atera
+		// AttributeSelection eta gero StringToWordVector aplikatu eta gero bueltatu diguten hiztegia moldatuko dugu soilik oraingo atributuak (hitzak) egon daitezen.
 		ppt.hiztegiaEguneratu(dataTrain, LagMethods.relative2absolute("src/files/Dictionary.txt"), LagMethods.relative2absolute("src/files/DictionaryFSS.txt")); // --> Metodo hau soilik hiztegia eguneratzeko 
 		return dataTrain;
 	}
@@ -38,10 +42,10 @@ public class PreProcessTrain {
 	
 	public Instances bow(Instances data) throws Exception {
 		
-		//################################################################ TRAIN BOW ################################################################
-		
+		// Converts string attributes into a set of numeric attributes representing word occurrence information from the text contained in the strings.
 		StringToWordVector str2vector = new StringToWordVector();
 		
+        //Aukerak izango dituen zerrenda hasieratu.
 		String[] options = new String[11];
 		
 		//Ia guztia defaut balioak dira baina ziurtatzeko da bide batean.
@@ -83,19 +87,16 @@ public class PreProcessTrain {
         options[9] = "-dictionary";
         options[10] = LagMethods.relative2absolute("src/files/Dictionary.txt");
         
+        //Pasatutako aukera zerrenda, filtroaren aukera bezala esleitu.
         str2vector.setOptions(options);
+		//Sets the format of the input instances.
         str2vector.setInputFormat(data);
+		//Erabili filtroa.
         Instances dataTrainBoW = Filter.useFilter(data,str2vector);
+        //0 posizioko atributua klase bezala esleitu.
         dataTrainBoW.setClassIndex(0);
 		
         LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.train.arff"), dataTrainBoW);
-//      LagMethods.saver("path", dataTrainBoW);
-//      FileOutputStream os = new FileOutputStream(args[2]);
-//		PrintStream ps = new PrintStream(os);
-//      ps.print(dataTrainBoW);
-//		ps.close();
-		
-		//################################################################ TRAIN BOW ################################################################
 		
 		return dataTrainBoW;
 	}
@@ -115,51 +116,81 @@ public class PreProcessTrain {
 	        //umbral: establece el umbral por el cual se pueden descartar los atributos. El valor predeterminado da como resultado que no se descarten atributos. Utilice esta opción o numToSelect para reducir el conjunto de atributos.
         	rank.setOptions(new String[] { "-T", "0.00000001" });
         
+    	//Sets the format of the input instances.
         at.setInputFormat(data);
+        // set the attribute/subset evaluator
         at.setEvaluator(infoG);
+        // set the search method
         at.setSearch(rank);
+		//Erabili filtroa.
         Instances selectedData = Filter.useFilter(data, at);
+        
+        //Data sortaren azken posizioko atributua klase bezala esleitu.
         selectedData.setClassIndex(selectedData.numAttributes()-1);
+		//Gorde jarritako fitxategian.
         LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.train_FSS.arff"), selectedData);
         
         return (selectedData);
 	}
 	
 	public void hiztegiaEguneratu(Instances data, String inputHizt, String outputHizt) throws Exception, FileNotFoundException {
-		
+    	
+		//StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters.
 		StringBuilder report = new StringBuilder();
 		
+    	//Hiztegiko goiburua sartu.
 		report.append("@@@numDocs="+data.numInstances()+"@@@\n");
+		
+		// Hiztegiko hitzak eta hauen maiztasuna gordetzeko HashMap-a
 		HashMap<String, Integer> hizt = new HashMap<String, Integer>();
 
+		// HashMap-a data-sortaren atributuekin (hitzekin) hasieratu
         for(int i=0;i<data.numAttributes()-1;i++) {
             Attribute atr = data.attribute(i);
             hizt.put(atr.name(),1);
         }
 
-        BufferedReader br = new BufferedReader(new FileReader(inputHizt));
-        String sCurrentLine = br.readLine();
+        //Java BufferedReader is a public Java class that reads text, using buffering to enable large reads 
+    	//at a time for efficiency, storing what is not needed immediately in memory for later use.
+	    BufferedReader br = new BufferedReader(new FileReader(inputHizt));
+	    //Uneko ilara
+	    String sCurrentLine = br.readLine();
+	    //Lehenengoa ilara baztertuko dugu, ez dugulako nahi: @@@numDocs="+data.numInstances()+"@@@ formatua duena da.
         sCurrentLine = br.readLine();
+	    //Uneko ilara null ez den bitartean...
 		while (sCurrentLine != null) {
+			//Erabiliko ditugun parametroak hasieratu eta izendatu.
 			String atr = "";
             Integer freq;
+            
+            //(Hurrengoa textuak ',' baldin badauka arazorik ez emateko da.)
+	    	//Uneko ilara ',' batengatik banatzean bi zati baldin badaude...
 			if(sCurrentLine.split(",").length==2) {
+		    	//Lehenengo zatia atributua (hitza) izango da.
 	            atr = sCurrentLine.split(",")[0];
+		    	//Bigarren zatia maiztasuna izango da.
 	            freq = Integer.parseInt(sCurrentLine.split(",")[1]);
 			}
 			else {
 				int luzera = sCurrentLine.split(",").length;
-				for(int i=0;i<luzera-2;i++) {
-					atr = atr + sCurrentLine.split(",")[i];
+				atr = atr + sCurrentLine.split(",")[0];
+				for(int i=1;i<luzera-2;i++) {
+			    	//Azkena kenduta zati guztien konkatenazioa atributua (hitza) izango da.
+					atr = atr + "," + sCurrentLine.split(",")[i];
 				}
+		    	//Azken zatia maiztasuna izango da.
 	            freq = Integer.parseInt(sCurrentLine.split(",")[luzera-1]);
 			}
+			//Data sortaren atributua eta hiztegi zaharraren hitza bat badatoz
             if(hizt.containsKey(atr)){
+            	//Maiztasuna eguneratu
             	hizt.put(atr,freq);;
             }
+            //Hurrengo ilara hartu
             sCurrentLine = br.readLine();
         }
 		
+		// HashMap-an dagoen maiztasunarekin, data-sortaren atributuekin (hitzekin) hiztegia eraiki
 		for(int i=0; i<data.numAttributes()-1;i++){
             String atr = data.attribute(i).name();
             if(hizt.containsKey(atr)){
@@ -167,6 +198,7 @@ public class PreProcessTrain {
             }
         }
 	    
+	    //Gorde sortutakoa fitzategi batean.
 		BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputHizt)));
 		writer.write(report.toString());
 		writer.close();

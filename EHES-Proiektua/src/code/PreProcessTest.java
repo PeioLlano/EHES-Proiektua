@@ -19,9 +19,11 @@ public class PreProcessTest {
 	public static Instances preProcess(Instances dataTrain, String dataTestPath) throws Exception {
 		PreProcessTest ppt = new PreProcessTest();
 		
-		// Textu gordina izanik dataTest
+		// Textu gordina izanik DataTest lortu
 		Instances dataTest = ppt.raw2arff(dataTestPath);
+		// DataTest eta dataTrain-en preprocess bukatu onderen lortutako hiztegia izanik,  fixedDictionaryStringToWordVector filtroa aplikatu
 		dataTest = ppt.fixedDictionaryStringToWordVector(dataTest);
+		// Aurreko filtroak klase atributua hasieran jartzen du, hurrengo honekin amaieran jarriko dugu.
 		dataTest = ppt.reorderClass(dataTest);
 		return dataTest;
 	}
@@ -29,20 +31,33 @@ public class PreProcessTest {
 	public Instances raw2arff(String dataPath) throws Exception {
 		String output = LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind_raw.arff");
 		
+    	//StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters.
 		StringBuilder report = new StringBuilder();
-	    report.append("@relation SMS_SpamCollection\n");
-    	report.append("\n");
-	    report.append("@attribute klasea {spam, ham}\n");
-	    report.append("@attribute testua string\n");
-    	report.append("\n");
+    	//Goiburuak sortuko dugun ARFF-ak zentzua izan dezan.
+			//ARFF-aren 'izenburua'
+		    report.append("@relation SMS_SpamCollection\n");
+	    	report.append("\n");
+	    	
+	    	//ARFF-aren atibutuen moten definizioa
+		    report.append("@attribute klasea {spam, ham}\n");
+		    report.append("@attribute testua string\n");
+	    	report.append("\n");
 	    
+    	//Java BufferedReader is a public Java class that reads text, using buffering to enable large reads 
+    	//at a time for efficiency, storing what is not needed immediately in memory for later use.    
 	    BufferedReader br = new BufferedReader(new FileReader(dataPath));
-	     String sCurrentLine;
-	     
+	    //Uneko ilara
+	    String sCurrentLine;
+	    //Data sorta hasten dela definitu
 		report.append("@data\n");
+		//Uneko ilara null ez den bitartean...
 	    while ((sCurrentLine = br.readLine()) != null) {
+	    	//Uneko ilara banatu tabulazioa ikusten duen unean.
+	    	//Klasea beti '?' izango da.
 	    	String klasea = "?";
+	    	//Ilara osoa textua izango da.
 	    	String textua = sCurrentLine;
+	    	//Textua "-rik dagoen bilatu (arazoak ematen dituzte string-a bukatu dela pentsatzen baitu)
 	    	ArrayList<Integer> list = new ArrayList<>();
 	    	int index = textua.indexOf("\"");
 	    	while (index >= 0) {
@@ -50,14 +65,17 @@ public class PreProcessTest {
 	    		index = textua.indexOf("\"", index + 1);
 	    	}
 
+	    	//Behin "-ren posizioa jakinda '\' bat jarriko diogu aurrean textu irakurketan ez erratzeko
 	    	Integer i = 0; 
 	    	for (Integer integer : list) {
 	    		textua = textua.substring(0, integer+i) + "\\" + textua.substring(integer+i);
 	    		i++;
 			}
+	    	//ARFF formatua jarraituz ilara gorde, hau da: klasea, textua
 		    report.append(klasea + ", \"" + textua + "\"\n");
 	    }
 	    
+	    //Gorde sortutakoa fitzategi batean.
 	    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(output)));
 		writer.write(report.toString());
 		writer.close();
@@ -67,11 +85,11 @@ public class PreProcessTest {
 	}
 	
 	public Instances fixedDictionaryStringToWordVector(Instances dataTest) throws Exception {
-		
-//################################################################ TEST BOW ################################################################
-        
+		        
+		//Converts String attributes into a set of attributes representing word occurrence (depending on the tokenizer) information from the text contained in the strings.
         FixedDictionaryStringToWordVector fixedDictionary = new FixedDictionaryStringToWordVector();
         
+        //Aukerak izango dituen zerrenda hasieratu.
         String[] testOptions = new String[5];
         
       //-R <index1,index2-index4,...>
@@ -91,30 +109,35 @@ public class PreProcessTest {
         testOptions[3] = "-dictionary";
         testOptions[4] = "DictionaryFSS.txt";
 
-        
+        //Pasatutako aukera zerrenda, filtroaren aukera bezala esleitu.
         fixedDictionary.setOptions(testOptions);
+        //Set the dictionary file to read from
         fixedDictionary.setDictionaryFile(new File(LagMethods.relative2absolute("src/files/DictionaryFSS.txt")));
+		//Sets the format of the input instances.
         fixedDictionary.setInputFormat(dataTest);
+		//Erabili filtroa.
         Instances dataTestBoW = Filter.useFilter(dataTest,fixedDictionary);
         
+        //0 posizioko atributua klase bezala esleitu.
         dataTestBoW.setClassIndex(0);
 
+		//Gorde jarritako fitxategian.
+
         LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind.arff"), dataTestBoW);
-//      FileOutputStream osTest = new FileOutputStream(args[3]);
-//		PrintStream psTest = new PrintStream(osTest);
-//		psTest.print(dataTestBoW);
-//		psTest.close();
-		
-		//################################################################ TEST BOW ################################################################
-		
+				
 		return dataTestBoW;
 	}
 	
 	public Instances reorderClass(Instances data) throws Exception {
+		//A filter that generates output with a new order of the attributes.
 		Reorder reorder = new Reorder();
-		reorder.setAttributeIndices("2-last,1"); //2-atributu kop, 1.  2-atributu kop bitarteko atributuak goian jarriko dira eta 1 atributua (klasea dena) amaieran.
+		//2-atributu kop, 1.  2-atributu kop bitarteko atributuak goian jarriko dira eta 1 atributua (klasea dena) amaieran.
+		reorder.setAttributeIndices("2-last,1"); 
+		//Sets the format of the input instances.
 		reorder.setInputFormat(data);
+		//Erabili filtroa.
 		data = Filter.useFilter(data,reorder);
+		//Gorde jarritako fitxategian.
 		LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind_shorted.arff"), data);
 		return data;
 	}

@@ -7,6 +7,8 @@ public class Main {
 	
 	public static void main(String[] args) throws Exception {
 		
+		LagMethods.printHeader(System.out);
+		
 		//1. Pausua --> Lortu: train.arff
 			//Non gordetzen da train.arff? files/train.arff
 			Instances dataTrain = PreProcessTrain.preProcess(LagMethods.relative2absolute("src/files/SMS_SpamCollection.train.txt"));

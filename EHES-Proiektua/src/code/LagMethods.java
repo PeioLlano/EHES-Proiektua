@@ -74,43 +74,61 @@ public class LagMethods {
     }
     
     public static void printResults(PrintStream ps, Evaluation ev, String name) throws Exception {
-		ps.println("\n#########################  " + name + "  #########################");
+		//
+    	ps.println("\n#########################  " + name + "  #########################");
 		ps.println("\n"+ev.toClassDetailsString());
 		ps.println(ev.toSummaryString("\n" + name + " SUMMARY", false));
 		ps.println(ev.toMatrixString("\n" + name + " CONFUSSION MATIX"));
 	}
     
     public static Instances txt2Intances(String pathInput, String pathOutput) throws Exception {
-		//String name = path.split("\\")[path.split("\\").length-1];
-		StringBuilder report = new StringBuilder();
-	    report.append("@relation SMS_SpamCollection\n");
-    	report.append("\n");
-	    report.append("@attribute klasea {spam, ham}\n");
-	    report.append("@attribute testua string\n");
-    	report.append("\n");
+
+    	//StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters.
+    	StringBuilder report = new StringBuilder();
+    	//Goiburuak sortuko dugun ARFF-ak zentzua izan dezan.
+    		//ARFF-aren 'izenburua'
+	    	report.append("@relation SMS_SpamCollection\n");
+	    	report.append("\n");
+	    	
+	    	//ARFF-aren atibutuen moten definizioa
+		    report.append("@attribute klasea {spam, ham}\n");
+		    report.append("@attribute testua string\n");
+	    	report.append("\n");
 	    
+	    //Java BufferedReader is a public Java class that reads text, using buffering to enable large reads 
+    	//at a time for efficiency, storing what is not needed immediately in memory for later use.
 	    BufferedReader br = new BufferedReader(new FileReader(pathInput));
-	     String sCurrentLine;
-	     
+	    //Uneko ilara
+	    String sCurrentLine;
+	    //Data sorta hasten dela definitu
 		report.append("@data\n");
+	    //Uneko ilara null ez den bitartean...
 	    while ((sCurrentLine = br.readLine()) != null) {
+	    	//Uneko ilara banatu tabulazioa ikusten duen unean.
+	    	//Lehenengo zatia klasea izango da.
 	    	String klasea = sCurrentLine.split("\t")[0];
+	    	//Bigarren zatia textua izango da.
 	    	String textua = sCurrentLine.split("\t")[1];
+	    	//Textua "-rik dagoen bilatu (arazoak ematen dituzte string-a bukatu dela pentsatzen baitu)
 	    	ArrayList<Integer> list = new ArrayList<>();
 	    	int index = textua.indexOf("\"");
 	    	while (index >= 0) {
 	    		list.add(index);
 	    		index = textua.indexOf("\"", index + 1);
 	    	}
-
+	    	
+	    	//Behin "-ren posizioa jakinda \ bat jarriko diogu aurrean textu irakurketan ez erratzeko
 	    	Integer i = 0; 
 	    	for (Integer integer : list) {
 	    		textua = textua.substring(0, integer+i) + "\\" + textua.substring(integer+i);
 	    		i++;
 			}
+	    	
+	    	//ARFF formatua jarraituz ilara gorde, hau da: klasea, textua
 		    report.append(klasea + ", \"" + textua + "\"\n");
 	    }
 	    
+	    //Gorde sortutakoa fitzategi batean.
 	    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(pathOutput)));
 		writer.write(report.toString());
 		writer.close();
