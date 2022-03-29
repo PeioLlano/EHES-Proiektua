@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JSplitPane;
 import java.awt.Font;
 import java.awt.Color;
@@ -63,10 +64,10 @@ public class Interfazea extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblIdatziHemenZure = new JLabel("Idatzi hemen zure SMS edo e-mail-a:");
+		JLabel lblIdatziHemenZure = new JLabel("Idatzi hemen zure SMS-a:");
 		lblIdatziHemenZure.setForeground(new Color(255, 153, 0));
 		lblIdatziHemenZure.setFont(new Font("Source Serif Pro", Font.PLAIN, 14));
-		lblIdatziHemenZure.setBounds(10, 49, 232, 14);
+		lblIdatziHemenZure.setBounds(23, 57, 232, 14);
 		contentPane.add(lblIdatziHemenZure);
 		
 		JLabel lblSpamEdoHam = new JLabel("SPAM edo HAM?");
@@ -75,16 +76,7 @@ public class Interfazea extends JFrame {
 		lblSpamEdoHam.setBounds(60, -15, 311, 75);
 		contentPane.add(lblSpamEdoHam);
 		
-		JButton btnIragarri = new JButton("");
-		btnIragarri.setIcon(new ImageIcon(Interfazea.class.getResource("/view/IRAGARRI.png")));
-		btnIragarri.setBorder(null);
-		btnIragarri.setFont(new Font("Source Serif Pro", Font.PLAIN, 12));
-		btnIragarri.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
-		btnIragarri.setBounds(158, 180, 118, 23);
-		contentPane.add(btnIragarri);
+		
 		
 		JLabel lblEmaitza = new JLabel("");
 		lblEmaitza.setForeground(new Color(255, 153, 0));
@@ -103,5 +95,23 @@ public class Interfazea extends JFrame {
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(0, 195, 403, -110);
 		contentPane.add(scrollPane);
+		
+		JButton btnIragarri = new JButton("");
+		btnIragarri.setIcon(new ImageIcon(Interfazea.class.getResource("/view/IRAGARRI.png")));
+		btnIragarri.setBorder(null);
+		btnIragarri.setFont(new Font("Source Serif Pro", Font.PLAIN, 12));
+		btnIragarri.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String nulltxt ="";
+				if (email_sms.getText().equals(nulltxt)) {
+					JOptionPane.showMessageDialog(null,"Idatzi SMS-ren bat mesedez.");
+					email_sms.requestFocus();
+				}
+			}
+		});
+		
+
+		btnIragarri.setBounds(158, 180, 118, 23);
+		contentPane.add(btnIragarri);
 	}
 }
