@@ -6,9 +6,29 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JSplitPane;
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.JComboBox;
+import javax.swing.JTextPane;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextArea;
+import javax.swing.border.MatteBorder;
+import java.awt.ScrollPane;
+import java.awt.TextArea;
+
+import javax.swing.JScrollPane;
+import java.awt.Component;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.ImageIcon;
+import javax.swing.UIManager;
 
 public class Interfazea extends JFrame {
 
+	
 	private JPanel contentPane;
 
 	/**
@@ -31,12 +51,57 @@ public class Interfazea extends JFrame {
 	 * Create the frame.
 	 */
 	public Interfazea() {
+		setTitle("SPAM sailkatzailea");
+		setForeground(Color.WHITE);
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
+		contentPane.setForeground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblIdatziHemenZure = new JLabel("Idatzi hemen zure SMS edo e-mail-a:");
+		lblIdatziHemenZure.setForeground(new Color(255, 153, 0));
+		lblIdatziHemenZure.setFont(new Font("Source Serif Pro", Font.PLAIN, 14));
+		lblIdatziHemenZure.setBounds(10, 49, 232, 14);
+		contentPane.add(lblIdatziHemenZure);
+		
+		JLabel lblSpamEdoHam = new JLabel("SPAM edo HAM?");
+		lblSpamEdoHam.setForeground(new Color(255, 153, 0));
+		lblSpamEdoHam.setFont(new Font("Source Serif Pro", Font.BOLD | Font.ITALIC, 40));
+		lblSpamEdoHam.setBounds(60, -15, 311, 75);
+		contentPane.add(lblSpamEdoHam);
+		
+		JButton btnIragarri = new JButton("");
+		btnIragarri.setIcon(new ImageIcon(Interfazea.class.getResource("/view/IRAGARRI.png")));
+		btnIragarri.setBorder(null);
+		btnIragarri.setFont(new Font("Source Serif Pro", Font.PLAIN, 12));
+		btnIragarri.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnIragarri.setBounds(158, 180, 118, 23);
+		contentPane.add(btnIragarri);
+		
+		JLabel lblEmaitza = new JLabel("");
+		lblEmaitza.setForeground(new Color(255, 153, 0));
+		lblEmaitza.setFont(new Font("Source Serif Pro", Font.BOLD | Font.ITALIC, 36));
+		lblEmaitza.setBounds(158, 200, 146, 50);
+		contentPane.add(lblEmaitza);
+		setLocationRelativeTo(null);
+		
+		TextArea email_sms = new TextArea();
+		email_sms.setFont(UIManager.getFont("ToolBar.font"));
+		email_sms.setForeground(Color.BLACK);
+		email_sms.setBackground(Color.WHITE);
+		email_sms.setBounds(23, 77, 380, 102);
+		contentPane.add(email_sms);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(0, 195, 403, -110);
+		contentPane.add(scrollPane);
 	}
-
 }
