@@ -17,7 +17,6 @@ import weka.filters.unsupervised.instance.Randomize;
 import weka.filters.unsupervised.instance.RemovePercentage;
 
 public class LagMethods {
-	
 
 	public static void printHeader(PrintStream ps) {
 		ps.println("#############################################################################################################################################");
@@ -76,8 +75,8 @@ public class LagMethods {
     public static void printResults(PrintStream ps, Evaluation ev, String name) throws Exception {
 		//
     	ps.println("\n#########################  " + name + "  #########################");
-		ps.println("\n"+ev.toClassDetailsString());
 		ps.println(ev.toSummaryString("\n" + name + " SUMMARY", false));
+		ps.println("\n"+ev.toClassDetailsString());
 		ps.println(ev.toMatrixString("\n" + name + " CONFUSSION MATIX"));
 	}
     

@@ -3,10 +3,13 @@ package code;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 import weka.attributeSelection.InfoGainAttributeEval;
@@ -22,81 +25,215 @@ public class PreProcessTrain {
 	public static Instances preProcess(String dataPath) throws Exception {
 		PreProcessTrain ppt = new PreProcessTrain();
 		
-		// Textu gordina izanik DataTrain lortu
-		Instances dataTrain = ppt.raw2arff(dataPath);
-		// DataTrain izanik, StringToWordVector filtroa aplikatu
-		dataTrain = ppt.bow(dataTrain);
-		// Aurreko filtroarekin lortutako atributu baliagarriak kentzeko nahirekin AttributeSelection aplikatuko dugu.
-		dataTrain = ppt.fss(dataTrain); //Hemendik klase atributuarekin amaieran atera
+		Instances dataTrain = null;
+		Double fMesOptimoa = 0.0;
+		Instances dataSortaOpt = null;
+		String garbitzeStringOpt = null;
+		File hiztOpt = null;
+		String[] string2vectorOptionsOpt = null;
+
+	//AURREPROZESAMENDUA
+		
+		String[] garbiketa = {".,/?:-#&Â¼”â*|·~¬¨çºªÃœ"};
+
+		String[][] string2vectorOptions = ppt.getOptionsStringToVector();
+		
+		Integer i = 1;
+		for (String gabitzeString : garbiketa) {
+			
+			String garbitutaPath = ppt.garbituTXTdataPath(dataPath, gabitzeString);
+			
+			for (int j=0; j<string2vectorOptions.length;j++) {
+				System.out.println("\n--------------" + i + ". ITERAZIOA --------------");
+				
+				// Textu gordina izanik DataTrain lortu
+				dataTrain = ppt.raw2arff(garbitutaPath);
+				// DataTrain izanik, StringToWordVector filtroa aplikatu
+				System.out.println("Num atributes: " + dataTrain.numAttributes());
+
+				dataTrain = ppt.stringToVector(dataTrain, string2vectorOptions[j]);
+				System.out.println("Num atributes: " + dataTrain.numAttributes());
+
+				LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/"+i+".arff"), dataTrain);
+
+				// Aurreko filtroarekin lortutako atributu baliagarriak kentzeko nahirekin AttributeSelection aplikatuko dugu.
+				dataTrain = ppt.fss(dataTrain); //Hemendik klase atributuarekin amaieran atera
+				
+				ArrayList<Double> arrLag = BaselineModel.getBaselineFmeasure(dataTrain);
+				Double fMes = arrLag.get(0);
+				Double uncPct = arrLag.get(1);
+
+				System.out.println("\n--------------" + i + ". EMAITZAK --------------");
+				System.out.println("\nNum atributes: " + dataTrain.numAttributes());
+				System.out.println("Num instances: " + dataTrain.numInstances());
+				System.out.println("f-Measure: " + fMes);
+				System.out.println("Unclassified percentage: " + uncPct);
+				System.out.println("Garbitu-path: " + garbitutaPath);
+
+				if(fMesOptimoa < fMes && uncPct < 50.0) {
+					fMesOptimoa = fMes;
+					dataSortaOpt = dataTrain;
+					hiztOpt = new File(LagMethods.relative2absolute("src/outputFiles/Dictionary.txt"));
+					garbitzeStringOpt = gabitzeString;
+					string2vectorOptionsOpt = string2vectorOptions[j];
+					
+				}
+				i++;
+			}
+		}
+		
+		LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.train.arff"), dataSortaOpt);
 		// AttributeSelection eta gero StringToWordVector aplikatu eta gero bueltatu diguten hiztegia moldatuko dugu soilik oraingo atributuak (hitzak) egon daitezen.
-		ppt.hiztegiaEguneratu(dataTrain, LagMethods.relative2absolute("src/files/Dictionary.txt"), LagMethods.relative2absolute("src/files/DictionaryFSS.txt")); // --> Metodo hau soilik hiztegia eguneratzeko 
-		return dataTrain;
+		ppt.hiztegiaEguneratu(dataSortaOpt, hiztOpt, LagMethods.relative2absolute("src/outputFiles/DictionaryFSS.txt")); // --> Metodo hau soilik hiztegia eguneratzeko 
+		
+		System.out.println("\n-------------- OPTIMOA --------------");
+		System.out.print("Garbiketa: " + garbitzeStringOpt + "   |  S2V aukerak: " + Arrays.toString(string2vectorOptionsOpt));
+		System.out.println("\nNum atributes: " + dataSortaOpt.numAttributes());
+		System.out.println("Num instances: " + dataSortaOpt.numInstances());
+		System.out.println("f-Measure: " + fMesOptimoa);
+		
+		return dataSortaOpt;
+	}
+
+	private String garbituTXTdataPath(String path, String ezabatzekoak) throws Exception {
+	    char[] chList = ezabatzekoak.toCharArray();
+	    
+		String output = path.split(".txt")[0] + "_garbi.txt";
+		//StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters.
+		StringBuilder report = new StringBuilder();
+		
+		//Java BufferedReader is a public Java class that reads text, using buffering to enable large reads 
+    	//at a time for efficiency, storing what is not needed immediately in memory for later use.
+	    BufferedReader br = new BufferedReader(new FileReader(path));
+	    //Uneko ilara
+	    String sCurrentLine;
+	    //Uneko ilara null ez den bitartean...
+	    while ((sCurrentLine = br.readLine()) != null) {
+	    	for (char c : chList) {
+		    	ArrayList<Integer> list = new ArrayList<>();
+	    		int index = sCurrentLine.indexOf(c);
+		    	while (index >= 0) {
+		    		list.add(index);
+		    		index = sCurrentLine.indexOf(c, index + 1);
+		    	}
+
+		    	//Behin "-ren posizioa jakinda ' ' bat jarriko diogu zegoenaren ordez
+		    	for (Integer integer : list) {
+		    		sCurrentLine = sCurrentLine.substring(0, integer) + " " + sCurrentLine.substring(integer+1);
+				}
+			}
+	    	report.append(sCurrentLine + "\n");
+	    }
+	    
+	    //Gorde sortutakoa fitzategi batean.
+	    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(output)));
+		writer.write(report.toString());
+		writer.close();
+		br.close();
+		
+		return output;
 	}
 
 	public Instances raw2arff(String dataPath) throws Exception {
-		String output = LagMethods.relative2absolute("src/files/SMS_SpamCollection.train_raw.arff");
+		String output = LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.train_raw.arff");
 		Instances data = LagMethods.txt2Intances(dataPath,output);
-		
+		data.setClassIndex(0);
 		return data;
 	}
 	
-	public Instances bow(Instances data) throws Exception {
+	public String[][] getOptionsStringToVector() {
 		
-		// Converts string attributes into a set of numeric attributes representing word occurrence information from the text contained in the strings.
-		StringToWordVector str2vector = new StringToWordVector();
 		
-        //Aukerak izango dituen zerrenda hasieratu.
-		String[] options = new String[11];
-		
-		//Ia guztia defaut balioak dira baina ziurtatzeko da bide batean.
+		String[] optionsBOW = new String[11];
 		
 		//-R <index1,index2-index4,...>
 		  //Specify list of string attributes to convert to words (as weka Range).
-        options[0] = "-R";
-        options[1] = "first-last";
+		optionsBOW[0] = "-R";
+		optionsBOW[1] = "first-last";
         
         //-W <number of words to keep>
 	        //Specify approximate number of word fields to create.
 	        //Surplus words will be discarded..
 	        //(default: 1000)
-        options[2] = "-W";
-        options[3] = "2000";
+		optionsBOW[2] = "-W";
+		optionsBOW[3] = "2000";
         
-//      -prune-rate <rate as a percentage of dataset>
-//      	Specify the rate (e.g., every 10% of the input dataset) at which to periodically prune the dictionary.
-//      	-W prunes after creating a full dictionary. You may not have enough memory for this approach.
-//      	(default: no periodic pruning)
-        options[4] = "-prune-rate";
-        options[5] = "-1.0";
+//	    -prune-rate <rate as a percentage of dataset>
+//	     Specify the rate (e.g., every 10% of the input dataset) at which to periodically prune the dictionary.
+//	      	-W prunes after creating a full dictionary. You may not have enough memory for this approach.
+//	      	(default: no periodic pruning)
+		optionsBOW[4] = "-prune-rate";
+		optionsBOW[5] = "-1.0";
         
-//      -N
-//      	Whether to 0=not normalize/1=normalize all data/2=normalize test data only
-//          to average length of training documents (default 0=don't normalize)
-        options[6] = "-N";
-        options[7] = "0";
+//	      -N
+//	      	Whether to 0=not normalize/1=normalize all data/2=normalize test data only
+//	          to average length of training documents (default 0=don't normalize)
+		optionsBOW[6] = "-N";
+		optionsBOW[7] = "0";
         
-//      -L
-//      	Convert all tokens to lowercase before adding to the dictionary.
-//        	Convierta todos los tokens a minúsculas antes de agregarlos al diccionario.
-//      Hiztegian sartu baino lehen, izki guztiak letra xehean jarri.
-        options[8] = "-L";
+//	      -L
+//	      	Convert all tokens to lowercase before adding to the dictionary.
+//	        	Convierta todos los tokens a minúsculas antes de agregarlos al diccionario.
+//	      Hiztegian sartu baino lehen, izki guztiak letra xehean jarri.
+		optionsBOW[8] = "-L";
         
-//      -dictionary <path to save to>
-//      	The file to save the dictionary to.
-//      	(default is not to save the dictionary)
-        options[9] = "-dictionary";
-        options[10] = LagMethods.relative2absolute("src/files/Dictionary.txt");
+//	      -dictionary <path to save to>
+//	      	The file to save the dictionary to.
+//	      	(default is not to save the dictionary)
+		optionsBOW[9] = "-dictionary";
+		optionsBOW[10] = LagMethods.relative2absolute("src/outputFiles/Dictionary.txt");
+			
+		String[] optionsTFIDF = new String[13];
+		
+		optionsTFIDF[0] = "-R";
+        optionsTFIDF[1] = "first-last";
+        optionsTFIDF[2] = "-W";
+        optionsTFIDF[3] = "2000";
+        optionsTFIDF[4] = "-prune-rate";
+        optionsTFIDF[5] = "-1.0";
         
+        //TF
+        //Sets whether if the word frequencies in a document should be transformed into:
+        //fij*log(num of Docs/num of Docs with word i)
+        //where fij is the frequency of word i in document(instance) j.
+        optionsTFIDF[6] = "-T";
+        
+        //TFIDF
+	    //Sets whether if the word frequencies should be transformed into log(1+fij) where fij is the
+	    //frequency of word i in document(instance) j.
+        optionsTFIDF[7] = "-I";
+        
+        optionsTFIDF[8] = "-N";
+        optionsTFIDF[9] = "0";
+        optionsTFIDF[10] = "-L";
+        optionsTFIDF[11] = "-dictionary";
+        optionsTFIDF[12] = LagMethods.relative2absolute("src/outputFiles/Dictionary.txt");
+        
+		System.out.println("TF-IDF: " + Arrays.toString(optionsTFIDF));
+		System.out.println("BOW: " + Arrays.toString(optionsBOW));
+		
+		String[][] emaitza = {optionsBOW, optionsTFIDF};
+		
+		System.out.print("EMAITZA: ");
+		for (String[] row : emaitza) System.out.print(Arrays.toString(row));
+		System.out.println(" ");
+		
+		return emaitza;
+	}
+	public Instances stringToVector(Instances data, String[] options) throws Exception {
+		
+		// Converts string attributes into a set of numeric attributes representing word occurrence information from the text contained in the strings.
+		StringToWordVector str2vector = new StringToWordVector();
         //Pasatutako aukera zerrenda, filtroaren aukera bezala esleitu.
         str2vector.setOptions(options);
 		//Sets the format of the input instances.
         str2vector.setInputFormat(data);
-		//Erabili filtroa.
+        //Erabili filtroa.
         Instances dataTrainBoW = Filter.useFilter(data,str2vector);
         //0 posizioko atributua klase bezala esleitu.
         dataTrainBoW.setClassIndex(0);
 		
-        LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.train.arff"), dataTrainBoW);
+        //LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.train.arff"), dataTrainBoW);
 		
 		return dataTrainBoW;
 	}
@@ -128,12 +265,12 @@ public class PreProcessTrain {
         //Data sortaren azken posizioko atributua klase bezala esleitu.
         selectedData.setClassIndex(selectedData.numAttributes()-1);
 		//Gorde jarritako fitxategian.
-        LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.train_FSS.arff"), selectedData);
+        //LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.train_FSS.arff"), selectedData);
         
         return (selectedData);
 	}
 	
-	public void hiztegiaEguneratu(Instances data, String inputHizt, String outputHizt) throws Exception, FileNotFoundException {
+	public void hiztegiaEguneratu(Instances data, File inputHizt, String outputHizt) throws Exception, FileNotFoundException {
     	
 		//StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters.
 		StringBuilder report = new StringBuilder();

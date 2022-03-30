@@ -1,6 +1,5 @@
 package view;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,22 +7,19 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JSplitPane;
 import java.awt.Font;
 import java.awt.Color;
-import javax.swing.JComboBox;
-import javax.swing.JTextPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JTextArea;
-import javax.swing.border.MatteBorder;
-import java.awt.ScrollPane;
+
+import code.SmsIragarriApp;
+import weka.classifiers.Classifier;
+import weka.core.SerializationHelper;
+
 import java.awt.TextArea;
 
 import javax.swing.JScrollPane;
-import java.awt.Component;
-import javax.swing.ScrollPaneConstants;
 import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 
@@ -34,12 +30,16 @@ public class Interfazea extends JFrame {
 
 	/**
 	 * Launch the application.
+	 * @throws Exception 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
+		//MultilayerPerceptron mp = (MultilayerPerceptron) SerializationHelper.read(args[0]);
+		Classifier cl = (Classifier) SerializationHelper.read("src/files/nb.model");
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Interfazea frame = new Interfazea();
+					Interfazea frame = new Interfazea(cl);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -51,7 +51,7 @@ public class Interfazea extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Interfazea() {
+	public Interfazea(Classifier cl) {
 		setTitle("SPAM sailkatzailea");
 		setForeground(Color.WHITE);
 		
@@ -106,6 +106,14 @@ public class Interfazea extends JFrame {
 				if (email_sms.getText().equals(nulltxt)) {
 					JOptionPane.showMessageDialog(null,"Idatzi SMS-ren bat mesedez.");
 					email_sms.requestFocus();
+				}
+				else {
+					try {
+						String iragarpena = SmsIragarriApp.smsIragarri(email_sms.getText(), cl);
+						lblEmaitza.setText(iragarpena);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
 				}
 			}
 		});

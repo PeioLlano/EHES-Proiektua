@@ -84,7 +84,7 @@ public class PreProcessTest {
 	    return  LagMethods.path2instances(output);
 	}
 	
-	public Instances fixedDictionaryStringToWordVector(Instances dataTest) throws Exception {
+	public static Instances fixedDictionaryStringToWordVector(Instances dataTest) throws Exception {
 		        
 		//Converts String attributes into a set of attributes representing word occurrence (depending on the tokenizer) information from the text contained in the strings.
         FixedDictionaryStringToWordVector fixedDictionary = new FixedDictionaryStringToWordVector();
@@ -123,12 +123,12 @@ public class PreProcessTest {
 
 		//Gorde jarritako fitxategian.
 
-        LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind.arff"), dataTestBoW);
+        //LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind.arff"), dataTestBoW);
 				
 		return dataTestBoW;
 	}
 	
-	public Instances reorderClass(Instances data) throws Exception {
+	public static Instances reorderClass(Instances data) throws Exception {
 		//A filter that generates output with a new order of the attributes.
 		Reorder reorder = new Reorder();
 		//2-atributu kop, 1.  2-atributu kop bitarteko atributuak goian jarriko dira eta 1 atributua (klasea dena) amaieran.
@@ -138,7 +138,7 @@ public class PreProcessTest {
 		//Erabili filtroa.
 		data = Filter.useFilter(data,reorder);
 		//Gorde jarritako fitxategian.
-		LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind_shorted.arff"), data);
+		//LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind_shorted.arff"), data);
 		return data;
 	}
 }

@@ -1,5 +1,7 @@
 package code;
 
+import java.util.ArrayList;
+
 import weka.classifiers.Evaluation;
 import weka.classifiers.bayes.NaiveBayes;
 import weka.core.Instances;
@@ -23,7 +25,8 @@ public class BaselineModel {
         KalitatearenEstimazioa.kalitateaEstimatu(data, getBaselineModel(data), "Path to save");
   	}
 	
-	public static Double getBaselineFmeasure(Instances data) throws Exception {
+	public static ArrayList<Double> getBaselineFmeasure(Instances data) throws Exception {
+		ArrayList<Double> emaitza = new ArrayList<>();
 		
 		int minoritarioa = Utils.minIndex(data.attributeStats(data.classIndex()).nominalCounts);
 		NaiveBayes nb = getBaselineModel(data);
@@ -40,7 +43,12 @@ public class BaselineModel {
 		
 		//Modeloa ebaluatu.
 		evHO.evaluateModel(nb, dataTest);
+		LagMethods.printResults(System.out, evHO, "BASELINE");
         
-        return evHO.fMeasure(minoritarioa);
+		emaitza.add(evHO.fMeasure(minoritarioa));
+		emaitza.add(evHO.pctUnclassified());
+
+        return emaitza;
   	}
+
 }
