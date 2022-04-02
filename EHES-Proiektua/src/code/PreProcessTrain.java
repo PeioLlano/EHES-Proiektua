@@ -20,8 +20,20 @@ import weka.filters.Filter;
 import weka.filters.supervised.attribute.AttributeSelection;
 import weka.filters.unsupervised.attribute.StringToWordVector;
 
+
+/**
+ * Date: Mar 30-2022
+ * @author Peio Llano, Jon Blanco, Gorka del Rio
+ * Klase honek train datu sortaren aurreprozesamendua aplikatuko dut, 'txt' motako fitxategia izatetik 'arff' motako fitxategi bat izateko.
+ *
+ */
 public class PreProcessTrain {
-	//hola
+
+	/**
+	 * Spam eta ham motako SMS-ak dituen fitzategia jaso eta Intances motako datu sorta bueltatzen dut 'PreProcess'-aren metodo guztiak aplikatu ondoren.
+	 * @param dataPath Fitxategia dagoen path-a.
+	 * @return PreProcess osoa aplikatu ondorengo Instances motako data sorta.
+	 */
 	public static Instances preProcess(String dataPath) throws Exception {
 		PreProcessTrain ppt = new PreProcessTrain();
 		
@@ -95,6 +107,13 @@ public class PreProcessTrain {
 		return dataSortaOpt;
 	}
 
+	
+	/**
+	 * Hasierako textu fitxategia eta karaktere zehatz batzuk jasota fitxategiak zituen karaktere horiek ezabatu ondoren fitxategi garbia gorde eta horren 'path'-a bueltatuko da.
+	 * @param path Hasietako textu fitxategia egongo den 'path'-a.
+	 * @param ezabatzekoak String bat, karaktereen zerrenda bezala, ezabatu nahi diren karaktereak izango ditu.
+	 * @return Garbitutako fitxategiaren 'path'-a.
+	 */
 	private String garbituTXTdataPath(String path, String ezabatzekoak) throws Exception {
 	    char[] chList = ezabatzekoak.toCharArray();
 	    
@@ -134,6 +153,12 @@ public class PreProcessTrain {
 		return output;
 	}
 
+	
+	/**
+	 * Textu fitxategi garbia jasota arff formatura pasatu gorde eta Java-ko Instances motako datu sorta moduan bueltatuko du.
+	 * @param dataPath Textu fitxategi garbia egongo den 'path'-a.
+	 * @return Textuan zegoen fitxategia Instances motako datu sorta moduan.
+	 */
 	public Instances raw2arff(String dataPath) throws Exception {
 		String output = LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.train_raw.arff");
 		Instances data = LagMethods.txt2Intances(dataPath,output);
@@ -141,6 +166,11 @@ public class PreProcessTrain {
 		return data;
 	}
 	
+	
+	/**
+	 * StringToWordVector filtroaren aukeren zerrendak sortu eta aukera moten zerrenda buletatuko du.
+	 * @return StringToWordVector filtroaren aukera moten zerrenda.
+	 */
 	public String[][] getOptionsStringToVector() {
 		
 		
@@ -220,6 +250,14 @@ public class PreProcessTrain {
 		
 		return emaitza;
 	}
+	
+	
+	/**
+	 * Lehenengo arff fitxategia eta filtroaren aukerak jasota datu sorta horri atibuetuekiko ez-gainbegiratutako 'String to Word Vector' textu mehatzaritza filtroa aplikatuko zaio eta moldatutako datu sorta bueltatuko da.
+	 * @param Data 'raw'-tik 'arff'-ra pasatutako datu sorta, Intances motako objektua.
+	 * @param Options StringToWordVector filtroaren aukerak.
+	 * @return Filtroa aplikatu ondorengo datu sorta.
+	 */
 	public Instances stringToVector(Instances data, String[] options) throws Exception {
 		
 		// Converts string attributes into a set of numeric attributes representing word occurrence information from the text contained in the strings.
@@ -238,6 +276,11 @@ public class PreProcessTrain {
 		return dataTrainBoW;
 	}
 	
+	/**
+	 * StringToWordVector aplikatu ondorengo datu sorta jasota, atributuekiko gainbegiratutako AttributeSelection filtroa aplikatuko zaio datu sortari eta aplikatu ondorengo datu sorta bueltatuko da.
+	 * @param data StringToWordVector aplikatu ondorengo datu sorta.
+	 * @return Filtroa aplikatu ondorengo datu sorta.
+	 */
 	public Instances fss(Instances data) throws Exception {
 		
 		// A supervised attribute filter that can be used to select attributes. It is very flexible and allows various search and evaluation methods to be combined.
@@ -270,6 +313,13 @@ public class PreProcessTrain {
         return (selectedData);
 	}
 	
+	/**
+	 * @param data
+	 * @param inputHizt
+	 * @param outputHizt
+	 * @throws Exception
+	 * @throws FileNotFoundException
+	 */
 	public void hiztegiaEguneratu(Instances data, File inputHizt, String outputHizt) throws Exception, FileNotFoundException {
     	
 		//StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters.
