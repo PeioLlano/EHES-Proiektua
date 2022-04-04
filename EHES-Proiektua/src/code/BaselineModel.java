@@ -10,7 +10,7 @@ import weka.core.Utils;
 
 /**
  * Proiektuan zehar kalkulu azkarra atera ahal izateko Baseline-a kudeatuko duen klasea.
- * 
+ * <p>
  * Date: Mar 30-2022
  * 
  * @author Peio Llano

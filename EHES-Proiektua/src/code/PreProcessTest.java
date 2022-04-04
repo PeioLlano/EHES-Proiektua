@@ -15,7 +15,7 @@ import weka.filters.unsupervised.attribute.Reorder;
 
 /**
  * Klase honek test datu sortaren aurreprozesamendua aplikatuko dut, 'txt' motako fitxategia izatetik 'arff' motako fitxategi bat izatera.
- * 
+ * <p>
  * Date: Mar 30-2022
  * 
  * @author Peio Llano
@@ -34,7 +34,7 @@ public class PreProcessTest {
 		PreProcessTest ppt = new PreProcessTest();
 		
 		// Textu gordina izanik DataTest lortu
-		Instances dataTest = ppt.raw2arff(dataTestPath);
+		Instances dataTest = ppt.text2raw(dataTestPath);
 		// DataTest eta dataTrain-en preprocess bukatu onderen lortutako hiztegia izanik,  fixedDictionaryStringToWordVector filtroa aplikatu
 		dataTest = ppt.fixedDictionaryStringToWordVector(dataTest);
 		// Aurreko filtroak klase atributua hasieran jartzen du, hurrengo honekin amaieran jarriko dugu.
@@ -48,7 +48,7 @@ public class PreProcessTest {
 	 * @param dataPath Textu fitxategi garbia egongo den 'path'-a.
 	 * @return Textuan zegoen fitxategia Instances motako datu sorta moduan.
 	 */
-	public Instances raw2arff(String dataPath) throws Exception {
+	public Instances text2raw(String dataPath) throws Exception {
 		String output = LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind_raw.arff");
 		
     	//StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters.

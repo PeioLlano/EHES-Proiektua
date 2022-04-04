@@ -4,6 +4,8 @@ import java.util.concurrent.TimeUnit;
 
 import weka.classifiers.Evaluation;
 import weka.classifiers.functions.MultilayerPerceptron;
+import weka.core.Attribute;
+import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.Utils;
 import weka.core.converters.ConverterUtils.DataSource;
@@ -13,7 +15,7 @@ import weka.filters.unsupervised.instance.RemovePercentage;
 
 public class ParametroEkorketa {
 
-	public static MultilayerPerceptron parametroakEkortu(Instances dataTrain) throws Exception {
+	public static MultilayerPerceptron parametroakEkortu(Instances dataTrain, Instances dataDev) throws Exception {
 		 if(dataTrain.classIndex()==-1) {
 			 dataTrain.setClassIndex(dataTrain.numAttributes()-1);
 		 }
@@ -58,109 +60,161 @@ public class ParametroEkorketa {
 			String m = "";
 			mp.setBatchSize("32");
 			int it =0;
-				for (int i = 0; i < layerAukerak.length; i++) {
-					for (int k = 0; k < layerAukerak.length; k++) {
-						mp.setHiddenLayers(layerAukerak[i]+" , "+layerAukerak[k]);
-						System.out.println("################ "+it+" iterazioa:"+" ################");
-						if (mp.getHiddenLayers().length()<2) {
-							System.out.println("Nodo kopurua iterazio honetan: \nLehen geruza: "
-									+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[0], dataTrain)+"\nBigarren geruza: ez erabilita"
-									);
-						}else {
-							System.out.println("Nodo kopurua iterazio honetan: \nLehen geruza: "
-									+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[0], dataTrain)+"\nBigarren geruza: "
-									+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[1], dataTrain));
-									
-							
-						}
-						System.out.println("\nF-measure iterazio honetan: "+fm);
+			for (int i = 0; i < layerAukerak.length; i++) {
+				for (int k = 0; k < layerAukerak.length; k++) {
+					mp.setHiddenLayers(layerAukerak[i]+" , "+layerAukerak[k]);
+					System.out.println("################ "+it+" iterazioa:"+" ################");
+					if (mp.getHiddenLayers().length()<2) {
+						System.out.println("Nodo kopurua iterazio honetan: \nLehen geruza: "
+								+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[0], dataTrain)+"\nBigarren geruza: ez erabilita"
+								);
+					}else {
+						System.out.println("Nodo kopurua iterazio honetan: \nLehen geruza: "
+								+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[0], dataTrain)+"\nBigarren geruza: "
+								+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[1], dataTrain));
+								
 						
-						
-						//hold-out %70
-						Randomize rd = new Randomize();
-						rd.setInputFormat(dataTrain);
-						rd.setRandomSeed(i);
-						Instances rdata = Filter.useFilter(dataTrain, rd);
-						
-						RemovePercentage rptest = new RemovePercentage();
-						rptest.setInputFormat(rdata);
-						rptest.setPercentage(70);
-						Instances dataRandomTest = Filter.useFilter(rdata, rptest);
-						//Instances dataRandomTest = LagMethods.holdOut("test", dataTrain, 70.0, 1);
-						
-						RemovePercentage rptrain = new RemovePercentage();
-						rptrain.setInputFormat(rdata);
-						rptrain.setPercentage(70);
-						rptrain.setInvertSelection(true);
-						Instances dataRandomTrain = Filter.useFilter(rdata, rptrain);
-						
-						//Instances dataRandomTrain = LagMethods.holdOut("train", dataTrain, 70.0, 1);
-						
-						mp.buildClassifier(dataRandomTrain);
-						
-						Evaluation eval = new Evaluation(dataRandomTrain);
-						
-						eval.evaluateModel(mp, dataRandomTest);
-						
-						if (eval.fMeasure(minoritarioa)>fm) {
-							fm = eval.fMeasure(minoritarioa);
-							layer1 = layerAukerak[i];
-							layer2 = layerAukerak[k];
-							m = eval.toMatrixString("####### NAHASMEN MATRIZEA ######");
-							
-						}
-						
-						it++;
+					}
+					System.out.println("\nF-measure iterazio honetan: "+fm);
+					
+					
+					//hold-out %70
+					Randomize rd = new Randomize();
+					rd.setInputFormat(dataTrain);
+					rd.setRandomSeed(i);
+					Instances rdata = Filter.useFilter(dataTrain, rd);
+					
+					RemovePercentage rptest = new RemovePercentage();
+					rptest.setInputFormat(rdata);
+					rptest.setPercentage(70);
+					Instances dataRandomTest = Filter.useFilter(rdata, rptest);
+					//Instances dataRandomTest = LagMethods.holdOut("test", dataTrain, 70.0, 1);
+					
+					RemovePercentage rptrain = new RemovePercentage();
+					rptrain.setInputFormat(rdata);
+					rptrain.setPercentage(70);
+					rptrain.setInvertSelection(true);
+					Instances dataRandomTrain = Filter.useFilter(rdata, rptrain);
+					
+					//Instances dataRandomTrain = LagMethods.holdOut("train", dataTrain, 70.0, 1);
+					
+					mp.buildClassifier(dataRandomTrain);
+					
+					Evaluation eval = new Evaluation(dataRandomTrain);
+					
+					eval.evaluateModel(mp, dataRandomTest);
+					
+					if (eval.fMeasure(minoritarioa)>fm) {
+						fm = eval.fMeasure(minoritarioa);
+						layer1 = layerAukerak[i];
+						layer2 = layerAukerak[k];
+						m = eval.toMatrixString("####### NAHASMEN MATRIZEA ######");
 						
 					}
 					
+					it++;
 					
 				}
 				
-				System.out.println("\n!!!!!!!!!!!!!!!!!!! EMAITZAK !!!!!!!!!!!!!!!!!!!\n");
-				String layerAzalpena = layerTypeToExplanation(layer1, dataTrain);
-				String layerAzalpena2 = layerTypeToExplanation(layer2, dataTrain);
-				System.out.println("Lehenengo geruzako nodo kopurua: "+layerAzalpena+"\n");
-				System.out.println("BIgarren geruzako nodo kopurua: "+layerAzalpena2+"\n");
+				
+			}
+			
+			System.out.println("\n!!!!!!!!!!!!!!!!!!! EMAITZAK !!!!!!!!!!!!!!!!!!!\n");
+			String layerAzalpena = layerTypeToExplanation(layer1, dataTrain);
+			String layerAzalpena2 = layerTypeToExplanation(layer2, dataTrain);
+			System.out.println("Lehenengo geruzako nodo kopurua: "+layerAzalpena+"\n");
+			System.out.println("BIgarren geruzako nodo kopurua: "+layerAzalpena2+"\n");
 
-				System.out.println("Klase minoritarioaren f-measure optimoa: "+fm+"\n");
-				System.out.println(m+"\n");
-				System.out.println();
-				long finalizacion = System.currentTimeMillis();
-				
-				long milliseconds = finalizacion - inicio;
-				
-				
-				 
-		        // This method uses this formula :minutes =
-		        // (milliseconds / 1000) / 60;
-		        long minutes
-		            = TimeUnit.MILLISECONDS.toMinutes(milliseconds);
-		 
-		        // This method uses this formula seconds =
-		        // (milliseconds / 1000);
-		        long seconds
-		            = (TimeUnit.MILLISECONDS.toSeconds(milliseconds)
-		               % 60);
-		 
-		        // Print the answer
-		        System.out.format(" Exekuzio denbora = "+milliseconds+" ms = "
-		                          + minutes + " minutu eta "+seconds+  " segundu");
-		        
-		        return mp;
+			System.out.println("Klase minoritarioaren f-measure optimoa: "+fm+"\n");
+			System.out.println(m+"\n");
+			System.out.println();
+			long finalizacion = System.currentTimeMillis();
+			
+			long milliseconds = finalizacion - inicio;
+			
+			
+			 
+	        // This method uses this formula :minutes =
+	        // (milliseconds / 1000) / 60;
+	        long minutes
+	            = TimeUnit.MILLISECONDS.toMinutes(milliseconds);
+	 
+	        // This method uses this formula seconds =
+	        // (milliseconds / 1000);
+	        long seconds
+	            = (TimeUnit.MILLISECONDS.toSeconds(milliseconds)
+	               % 60);
+	 
+	        // Print the answer
+	        System.out.format(" Exekuzio denbora = "+milliseconds+" ms = "
+	                          + minutes + " minutu eta "+seconds+  " segundu");
+	        
+	        
+	        System.out.println("INSTANTZIA GEHIAGO IZATEAREN NAHI JARRAITUZ, TRAIN ETA DEV MERGEATZEKO PROZESUA\n");
+	        
+	        System.out.println("------- Merge-aren aurreko datuak -------"); 
+	        System.out.println("\tDataTrain: "); 
+	        System.out.println("\t\tAtributu kopurua: " + dataTrain.numAttributes()); 
+	        System.out.println("\t\tInstantzia kopurua: " + dataTrain.numInstances() + "\n"); 
+			
+	        System.out.println("\t\tDataDev: "); 
+	        System.out.println("\t\tAtributu kopurua: " + dataDev.numAttributes()); 
+	        System.out.println("\t\tInstantzia kopurua: " + dataDev.numInstances()+ "\n"); 
+	        
+	        Instances dataF = merge(dataTrain, dataDev);
+	        
+	        System.out.println("------- Merge-aren ondorengo datuak -------"); 
+	        System.out.println("\tDataDev: "); 
+	        System.out.println("\t\tAtributu kopurua: " + dataF.numAttributes()); 
+	        System.out.println("\t\tInstantzia kopurua: " + dataF.numInstances()); 
+	        
+	        LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.dataBuild.txt"), dataF);
+	        
+	        return mp;
 	}
-		
-		
-		
-		
-		
-		
-		
-		
 	
+	// Internetetik hartutako kodea: https://stackoverflow.com/questions/10771558/how-to-merge-two-sets-of-weka-instances-together
+	//Please note that the following conditions should hold (there are not checked in the function):
+		//Datasets must have the same attributes structure (number of attributes, type of attributes)
+		//Class index has to be the same
+		//Nominal values have to exactly correspond
+	public static Instances merge(Instances data1, Instances data2)
+		    throws Exception
+		{
+		    // Check where are the string attributes
+		    int asize = data1.numAttributes();
+		    boolean strings_pos[] = new boolean[asize];
+		    for(int i=0; i<asize; i++)
+		    {
+		        Attribute att = data1.attribute(i);
+		        strings_pos[i] = ((att.type() == Attribute.STRING) ||
+		                          (att.type() == Attribute.NOMINAL));
+		    }
 
+		    // Create a new dataset
+		    Instances dest = new Instances(data1);
+		    dest.setRelationName(data1.relationName() + "+" + data2.relationName());
+
+		    DataSource source = new DataSource(data2);
+		    Instances instances = source.getStructure();
+		    Instance instance = null;
+		    while (source.hasMoreElements(instances)) {
+		        instance = source.nextElement(instances);
+		        dest.add(instance);
+
+		        // Copy string attributes
+		        for(int i=0; i<asize; i++) {
+		            if(strings_pos[i]) {
+		                dest.instance(dest.numInstances()-1)
+		                    .setValue(i,instance.stringValue(i));
+		            }
+		        }
+		    }
+
+		    return dest;
+		}
+	
 	private static String layerTypeToExplanation(String layer, Instances data) {
-		// TODO Auto-generated method stub
 		String erantzuna = "None";
 		if (layer.equals("0")) {
 			erantzuna = "No hidden units. = 0";

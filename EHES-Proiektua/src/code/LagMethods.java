@@ -18,7 +18,7 @@ import weka.filters.unsupervised.instance.RemovePercentage;
 
 /**
  * Klase honetan proiektu osoan zehar klase batean baino gehiagotan erabiltzen diren metodoak daude, hauek kasu zehatz batzuentzat erabilgarri izango dira.
- * 
+ * <p>
  * Date: Mar 30-2022
  * 
  * @author Peio Llano

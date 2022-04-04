@@ -23,7 +23,7 @@ import weka.filters.unsupervised.attribute.StringToWordVector;
 
 /**
  * Klase honek train datu sortaren aurreprozesamendua aplikatuko dut, 'txt' motako fitxategia izatetik 'arff' motako fitxategi bat izatera.
- * 
+ * <p>
  * Date: Mar 30-2022
  * 
  * @author Peio Llano
