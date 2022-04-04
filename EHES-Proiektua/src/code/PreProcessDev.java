@@ -9,7 +9,7 @@ import weka.filters.unsupervised.attribute.Reorder;
 
 public class PreProcessDev {
 	/**
-	 * Klasea definituak ez duten SMS-ak dituen fitxategia jaso eta Intances motako datu sorta bueltatzen dut 'PreProcess'-aren metodo guztiak aplikatu ondoren.
+	 * Spam eta ham motako SMS-ak dituen fitxategia jaso eta izan behar dituen atributuen hiztegia izanik, Intances motako datu sorta bueltatzen du 'PreProcess'-aren metodo guztiak aplikatu ondoren.
 	 * @param dataPath dev datu sortaren fitxategia dagoen path-a.
 	 * @return PreProcess osoa aplikatu ondorengo Instances motako data sorta.
 	 */
