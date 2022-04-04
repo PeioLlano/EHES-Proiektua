@@ -20,8 +20,9 @@ public class ParametroEkorketa {
 			 dataTrain.setClassIndex(dataTrain.numAttributes()-1);
 		 }
 		 
-		 
-		long inicio = System.currentTimeMillis();
+		 if(dataDev.classIndex()==-1) {
+			 dataDev.setClassIndex(dataDev.numAttributes()-1);
+		 }
 				 
 			 //Azalpena:
 			//-------------
@@ -47,8 +48,6 @@ public class ParametroEkorketa {
 			//	'i' = number of attributes, 
 			//	'o' = number of classes, 
 			//	and 't' = number of attributes + number of classes.
-			
-			//konputazionalki oso kostu handi-handiak, errepasatu beharko dut!!!!
 			
 			
 			
@@ -78,31 +77,11 @@ public class ParametroEkorketa {
 					System.out.println("\nF-measure iterazio honetan: "+fm);
 					
 					
-					//hold-out %70
-					Randomize rd = new Randomize();
-					rd.setInputFormat(dataTrain);
-					rd.setRandomSeed(i);
-					Instances rdata = Filter.useFilter(dataTrain, rd);
+					mp.buildClassifier(dataTrain);
 					
-					RemovePercentage rptest = new RemovePercentage();
-					rptest.setInputFormat(rdata);
-					rptest.setPercentage(70);
-					Instances dataRandomTest = Filter.useFilter(rdata, rptest);
-					//Instances dataRandomTest = LagMethods.holdOut("test", dataTrain, 70.0, 1);
+					Evaluation eval = new Evaluation(dataTrain);
 					
-					RemovePercentage rptrain = new RemovePercentage();
-					rptrain.setInputFormat(rdata);
-					rptrain.setPercentage(70);
-					rptrain.setInvertSelection(true);
-					Instances dataRandomTrain = Filter.useFilter(rdata, rptrain);
-					
-					//Instances dataRandomTrain = LagMethods.holdOut("train", dataTrain, 70.0, 1);
-					
-					mp.buildClassifier(dataRandomTrain);
-					
-					Evaluation eval = new Evaluation(dataRandomTrain);
-					
-					eval.evaluateModel(mp, dataRandomTest);
+					eval.evaluateModel(mp, dataDev);
 					
 					if (eval.fMeasure(minoritarioa)>fm) {
 						fm = eval.fMeasure(minoritarioa);
@@ -128,26 +107,6 @@ public class ParametroEkorketa {
 			System.out.println("Klase minoritarioaren f-measure optimoa: "+fm+"\n");
 			System.out.println(m+"\n");
 			System.out.println();
-			long finalizacion = System.currentTimeMillis();
-			
-			long milliseconds = finalizacion - inicio;
-			
-			
-			 
-	        // This method uses this formula :minutes =
-	        // (milliseconds / 1000) / 60;
-	        long minutes
-	            = TimeUnit.MILLISECONDS.toMinutes(milliseconds);
-	 
-	        // This method uses this formula seconds =
-	        // (milliseconds / 1000);
-	        long seconds
-	            = (TimeUnit.MILLISECONDS.toSeconds(milliseconds)
-	               % 60);
-	 
-	        // Print the answer
-	        System.out.format(" Exekuzio denbora = "+milliseconds+" ms = "
-	                          + minutes + " minutu eta "+seconds+  " segundu");
 	        
 	        
 	        System.out.println("INSTANTZIA GEHIAGO IZATEAREN NAHI JARRAITUZ, TRAIN ETA DEV MERGEATZEKO PROZESUA\n");
