@@ -195,7 +195,7 @@ public class ParametroEkorketa {
 	 * @param data erabiltzen ari garen datu sorta.
 	 * @return Azalpena, String motatakoa.
 	 */
-	private static String layerTypeToExplanation(String layer, Instances data) {
+	public static String layerTypeToExplanation(String layer, Instances data) {
 		String erantzuna = "None";
 		if (layer.equals("0")) {
 			erantzuna = "No hidden units. = 0";
