@@ -22,15 +22,19 @@ import weka.filters.unsupervised.attribute.StringToWordVector;
 
 
 /**
+ * Klase honek train datu sortaren aurreprozesamendua aplikatuko dut, 'txt' motako fitxategia izatetik 'arff' motako fitxategi bat izatera.
+ * 
  * Date: Mar 30-2022
- * @author Peio Llano, Jon Blanco, Gorka del Rio
- * Klase honek train datu sortaren aurreprozesamendua aplikatuko dut, 'txt' motako fitxategia izatetik 'arff' motako fitxategi bat izateko.
- *
+ * 
+ * @author Peio Llano
+ * @author Jon Blanco
+ * @author Gorka del Rio
+
  */
 public class PreProcessTrain {
 
 	/**
-	 * Spam eta ham motako SMS-ak dituen fitzategia jaso eta Intances motako datu sorta bueltatzen dut 'PreProcess'-aren metodo guztiak aplikatu ondoren.
+	 * Spam eta ham motako SMS-ak dituen fitxategia jaso eta Intances motako datu sorta bueltatzen dut 'PreProcess'-aren metodo guztiak aplikatu ondoren.
 	 * @param dataPath Fitxategia dagoen path-a.
 	 * @return PreProcess osoa aplikatu ondorengo Instances motako data sorta.
 	 */
@@ -59,7 +63,7 @@ public class PreProcessTrain {
 				System.out.println("\n--------------" + i + ". ITERAZIOA --------------");
 				
 				// Textu gordina izanik DataTrain lortu
-				dataTrain = ppt.raw2arff(garbitutaPath);
+				dataTrain = ppt.text2raw(garbitutaPath);
 				// DataTrain izanik, StringToWordVector filtroa aplikatu
 				System.out.println("Num atributes: " + dataTrain.numAttributes());
 
@@ -71,7 +75,7 @@ public class PreProcessTrain {
 				// Aurreko filtroarekin lortutako atributu baliagarriak kentzeko nahirekin AttributeSelection aplikatuko dugu.
 				dataTrain = ppt.fss(dataTrain); //Hemendik klase atributuarekin amaieran atera
 				
-				ArrayList<Double> arrLag = BaselineModel.getBaselineFmeasure(dataTrain);
+				ArrayList<Double> arrLag = BaselineModel.getBaselineMeasures(dataTrain);
 				Double fMes = arrLag.get(0);
 				Double uncPct = arrLag.get(1);
 
@@ -159,7 +163,7 @@ public class PreProcessTrain {
 	 * @param dataPath Textu fitxategi garbia egongo den 'path'-a.
 	 * @return Textuan zegoen fitxategia Instances motako datu sorta moduan.
 	 */
-	public Instances raw2arff(String dataPath) throws Exception {
+	public Instances text2raw(String dataPath) throws Exception {
 		String output = LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.train_raw.arff");
 		Instances data = LagMethods.txt2Intances(dataPath,output);
 		data.setClassIndex(0);
@@ -253,7 +257,7 @@ public class PreProcessTrain {
 	
 	
 	/**
-	 * Lehenengo arff fitxategia eta filtroaren aukerak jasota datu sorta horri atibuetuekiko ez-gainbegiratutako 'String to Word Vector' textu mehatzaritza filtroa aplikatuko zaio eta moldatutako datu sorta bueltatuko da.
+	 * Lehenengo arff fitxategia eta filtroaren aukerak jasota datu sorta horri atibutuekiko ez-gainbegiratutako 'String to Word Vector' textu mehatzaritza filtroa aplikatuko zaio eta moldatutako datu sorta bueltatuko da.
 	 * @param Data 'raw'-tik 'arff'-ra pasatutako datu sorta, Intances motako objektua.
 	 * @param Options StringToWordVector filtroaren aukerak.
 	 * @return Filtroa aplikatu ondorengo datu sorta.

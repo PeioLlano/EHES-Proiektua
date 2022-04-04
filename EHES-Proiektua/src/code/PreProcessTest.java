@@ -13,10 +13,24 @@ import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.FixedDictionaryStringToWordVector;
 import weka.filters.unsupervised.attribute.Reorder;
 
-
+/**
+ * Klase honek test datu sortaren aurreprozesamendua aplikatuko dut, 'txt' motako fitxategia izatetik 'arff' motako fitxategi bat izatera.
+ * 
+ * Date: Mar 30-2022
+ * 
+ * @author Peio Llano
+ * @author Jon Blanco
+ * @author Gorka del Rio
+ *
+ */
 public class PreProcessTest {
 
-	public static Instances preProcess(Instances dataTrain, String dataTestPath) throws Exception {
+	/**
+	 * Klasea definituak ez duten SMS-ak dituen fitxategia jaso eta Intances motako datu sorta bueltatzen dut 'PreProcess'-aren metodo guztiak aplikatu ondoren.
+	 * @param dataPath Test datu sortaren fitxategia dagoen path-a.
+	 * @return PreProcess osoa aplikatu ondorengo Instances motako data sorta.
+	 */
+	public static Instances preProcess(String dataTestPath) throws Exception {
 		PreProcessTest ppt = new PreProcessTest();
 		
 		// Textu gordina izanik DataTest lortu
@@ -28,6 +42,12 @@ public class PreProcessTest {
 		return dataTest;
 	}
 	
+	
+	/**
+	 * Textu fitxategia jasota arff formatura pasatu gorde eta Java-ko Instances motako datu sorta moduan bueltatuko du. Honen kasuan, kontuan izango du klasea ezezaguna izango dela.
+	 * @param dataPath Textu fitxategi garbia egongo den 'path'-a.
+	 * @return Textuan zegoen fitxategia Instances motako datu sorta moduan.
+	 */
 	public Instances raw2arff(String dataPath) throws Exception {
 		String output = LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind_raw.arff");
 		
@@ -84,6 +104,11 @@ public class PreProcessTest {
 	    return  LagMethods.path2instances(output);
 	}
 	
+	/**
+	 * Lehenengo arff fitxategia jasota, datu sorta horri atibutuekiko ez-gainbegiratutako 'Fixed Dictionaty String to Word Vector' textu mehatzaritza filtroa aplikatuko zaio eta moldatutako datu sorta bueltatuko da.
+	 * @param Data 'raw'-tik 'arff'-ra pasatutako datu sorta, Intances motako objektua.
+	 * @return Filtroa aplikatu ondorengo datu sorta.
+	 */
 	public static Instances fixedDictionaryStringToWordVector(Instances dataTest) throws Exception {
 		        
 		//Converts String attributes into a set of attributes representing word occurrence (depending on the tokenizer) information from the text contained in the strings.
@@ -128,6 +153,12 @@ public class PreProcessTest {
 		return dataTestBoW;
 	}
 	
+	
+	/**
+	 * Klasea hasieran duen Instances motako datu sorta jaso eta klasea amaieran duen datu sorta bueltatuko du.
+	 * @param data Klasea hasieran duen Instances motako datu sorta.
+	 * @return Klasea amaieran duen Instances motako datu sorta.
+	 */
 	public static Instances reorderClass(Instances data) throws Exception {
 		//A filter that generates output with a new order of the attributes.
 		Reorder reorder = new Reorder();
