@@ -1,0 +1,2985 @@
+@relation 'SMS_SpamCollection-weka.filters.unsupervised.attribute.FixedDictionaryStringToWordVector-R2-dictionaryC:\\Users\\peiol\\git\\EHES-Proiektua\\EHES-Proiektua\\src\\outputFiles\\DictionaryFSS.txt-L-stemmerweka.core.stemmers.NullStemmer-stopwords-handlerweka.core.stopwords.Null-tokenizerweka.core.tokenizers.WordTokenizer -delimiters \" \\r\\n\\t.,;:\\\'\\\"()?!\"-weka.filters.unsupervised.attribute.Reorder-R2-last,1'
+
+@attribute call numeric
+@attribute txt numeric
+@attribute free numeric
+@attribute i numeric
+@attribute mobile numeric
+@attribute www numeric
+@attribute claim numeric
+@attribute to numeric
+@attribute prize numeric
+@attribute uk numeric
+@attribute 150p numeric
+@attribute reply numeric
+@attribute win numeric
+@attribute stop numeric
+@attribute text numeric
+@attribute your numeric
+@attribute or numeric
+@attribute won numeric
+@attribute guaranteed numeric
+@attribute £1 numeric
+@attribute urgent numeric
+@attribute cash numeric
+@attribute 50 numeric
+@attribute service numeric
+@attribute now numeric
+@attribute co numeric
+@attribute a numeric
+@attribute awarded numeric
+@attribute from numeric
+@attribute nokia numeric
+@attribute com numeric
+@attribute cs numeric
+@attribute tone numeric
+@attribute code numeric
+@attribute 150ppm numeric
+@attribute contact numeric
+@attribute new numeric
+@attribute £1000 numeric
+@attribute receive numeric
+@attribute customer numeric
+@attribute 16+ numeric
+@attribute 4 numeric
+@attribute 2 numeric
+@attribute draw numeric
+@attribute shows numeric
+@attribute ur numeric
+@attribute rate numeric
+@attribute for numeric
+@attribute our numeric
+@attribute per numeric
+@attribute ringtone numeric
+@attribute weekly numeric
+@attribute mob numeric
+@attribute 000 numeric
+@attribute po numeric
+@attribute £100 numeric
+@attribute entry numeric
+@attribute my numeric
+@attribute chat numeric
+@attribute video numeric
+@attribute box numeric
+@attribute £500 numeric
+@attribute national numeric
+@attribute valid numeric
+@attribute 500 numeric
+@attribute 1 numeric
+@attribute apply numeric
+@attribute camera numeric
+@attribute latest numeric
+@attribute 18 numeric
+@attribute expires numeric
+@attribute 10p numeric
+@attribute bonus numeric
+@attribute £2000 numeric
+@attribute msg numeric
+@attribute private numeric
+@attribute network numeric
+@attribute landline numeric
+@attribute statement numeric
+@attribute identifier numeric
+@attribute line numeric
+@attribute attempt numeric
+@attribute 86688 numeric
+@attribute 08000930705 numeric
+@attribute 12hrs numeric
+@attribute vouchers numeric
+@attribute week numeric
+@attribute cost numeric
+@attribute only numeric
+@attribute club numeric
+@attribute mins numeric
+@attribute collect numeric
+@attribute selected numeric
+@attribute me numeric
+@attribute ltd numeric
+@attribute land numeric
+@attribute 2003 numeric
+@attribute 18+ numeric
+@attribute collection numeric
+@attribute min numeric
+@attribute send numeric
+@attribute lt numeric
+@attribute word numeric
+@attribute award numeric
+@attribute music numeric
+@attribute gt numeric
+@attribute but numeric
+@attribute 87066 numeric
+@attribute redeemed numeric
+@attribute pobox numeric
+@attribute 16 numeric
+@attribute £3 numeric
+@attribute unsubscribe numeric
+@attribute 800 numeric
+@attribute un numeric
+@attribute 04 numeric
+@attribute 2lands numeric
+@attribute suite342 numeric
+@attribute camcorder numeric
+@attribute c numeric
+@attribute live numeric
+@attribute points numeric
+@attribute delivery numeric
+@attribute top numeric
+@attribute wk numeric
+@attribute account numeric
+@attribute colour numeric
+@attribute opt numeric
+@attribute quiz numeric
+@attribute services numeric
+@attribute operator numeric
+@attribute £5000 numeric
+@attribute wkly numeric
+@attribute 750 numeric
+@attribute sae numeric
+@attribute 8007 numeric
+@attribute £2 numeric
+@attribute 100 numeric
+@attribute holiday numeric
+@attribute it numeric
+@attribute congratulations numeric
+@attribute row numeric
+@attribute pounds numeric
+@attribute todays numeric
+@attribute please numeric
+@attribute every numeric
+@attribute with numeric
+@attribute await numeric
+@attribute ipod numeric
+@attribute http numeric
+@attribute 20p numeric
+@attribute ntt numeric
+@attribute mobiles numeric
+@attribute dogging numeric
+@attribute tones numeric
+@attribute winner numeric
+@attribute 03 numeric
+@attribute 08000839402 numeric
+@attribute 0800 numeric
+@attribute £250 numeric
+@attribute 1st numeric
+@attribute have numeric
+@attribute hot numeric
+@attribute offer numeric
+@attribute sms numeric
+@attribute content numeric
+@attribute ok numeric
+@attribute come numeric
+@attribute he numeric
+@attribute 2nd numeric
+@attribute gift numeric
+@attribute tried numeric
+@attribute mates numeric
+@attribute £200 numeric
+@attribute dating numeric
+@attribute poly numeric
+@attribute ldew numeric
+@attribute ac numeric
+@attribute 25p numeric
+@attribute £350 numeric
+@attribute hg numeric
+@attribute w1j6hl numeric
+@attribute mobileupd8 numeric
+@attribute caller numeric
+@attribute horny numeric
+@attribute ldn numeric
+@attribute orange numeric
+@attribute player numeric
+@attribute games numeric
+@attribute sex numeric
+@attribute txting numeric
+@attribute lor numeric
+@attribute how numeric
+@attribute 10 numeric
+@attribute chance numeric
+@attribute join numeric
+@attribute calls numeric
+@attribute digital numeric
+@attribute credits numeric
+@attribute freemsg numeric
+@attribute age16 numeric
+@attribute 02 numeric
+@attribute 5wb numeric
+@attribute 0870 numeric
+@attribute croydon numeric
+@attribute cr9 numeric
+@attribute getzed numeric
+@attribute 1327 numeric
+@attribute std numeric
+@attribute 3030 numeric
+@attribute 2004 numeric
+@attribute fantasies numeric
+@attribute charged numeric
+@attribute cd numeric
+@attribute this numeric
+@attribute real numeric
+@attribute xmas numeric
+@attribute that numeric
+@attribute later numeric
+@attribute valued numeric
+@attribute da numeric
+@attribute ll numeric
+@attribute final numeric
+@attribute voucher numeric
+@attribute enter numeric
+@attribute direct numeric
+@attribute order numeric
+@attribute + numeric
+@attribute message numeric
+@attribute yours numeric
+@attribute on numeric
+@attribute spree numeric
+@attribute call2optout numeric
+@attribute biz numeric
+@attribute tncs numeric
+@attribute vary numeric
+@attribute locations numeric
+@attribute maximize numeric
+@attribute 08707509020 numeric
+@attribute 36504 numeric
+@attribute 82277 numeric
+@attribute rates numeric
+@attribute £10 numeric
+@attribute user numeric
+@attribute ringtones numeric
+@attribute reward numeric
+@attribute reveal numeric
+@attribute admirer numeric
+@attribute rental numeric
+@attribute representative numeric
+@attribute no1 numeric
+@attribute £800 numeric
+@attribute england numeric
+@attribute ec2a numeric
+@attribute complimentary numeric
+@attribute ts numeric
+@attribute 06 numeric
+@attribute sp numeric
+@attribute 10am numeric
+@attribute phones numeric
+@attribute txts numeric
+@attribute net numeric
+@attribute get numeric
+@attribute price numeric
+@attribute auction numeric
+@attribute comp numeric
+@attribute anytime numeric
+@attribute credit numeric
+@attribute play numeric
+@attribute in numeric
+@attribute info numeric
+@attribute she numeric
+@attribute home numeric
+@attribute is numeric
+@attribute got numeric
+@attribute then numeric
+@attribute wat numeric
+@attribute was numeric
+@attribute just numeric
+@attribute been numeric
+@attribute unlimited numeric
+@attribute welcome numeric
+@attribute 11 numeric
+@attribute its numeric
+@attribute not numeric
+@attribute so numeric
+@attribute eg numeric
+@attribute w45wq numeric
+@attribute largest numeric
+@attribute specially numeric
+@attribute 08718720201 numeric
+@attribute o2 numeric
+@attribute cc numeric
+@attribute rcvd numeric
+@attribute £400 numeric
+@attribute 3mins numeric
+@attribute hl numeric
+@attribute sipix numeric
+@attribute announcement numeric
+@attribute 5we numeric
+@attribute tenerife numeric
+@attribute polys numeric
+@attribute 08712300220 numeric
+@attribute onto numeric
+@attribute logo numeric
+@attribute custcare numeric
+@attribute vodafone numeric
+@attribute 62468 numeric
+@attribute standard numeric
+@attribute 86021 numeric
+@attribute cds numeric
+@attribute inc numeric
+@attribute 7pm numeric
+@attribute pod numeric
+@attribute 150pm numeric
+@attribute bx420 numeric
+@attribute subscription numeric
+@attribute norm150p numeric
+@attribute handset numeric
+@attribute wc1n3xx numeric
+@attribute activate numeric
+@attribute fantasy numeric
+@attribute ip4 numeric
+@attribute wap numeric
+@attribute 08712460324 numeric
+@attribute inviting numeric
+@attribute love numeric
+@attribute currently numeric
+@attribute numbers numeric
+@attribute worth numeric
+@attribute say numeric
+@attribute either numeric
+@attribute texts numeric
+@attribute dvd numeric
+@attribute sunshine numeric
+@attribute f numeric
+@attribute ending numeric
+@attribute offers numeric
+@attribute pics numeric
+@attribute good numeric
+@attribute work numeric
+@attribute did numeric
+@attribute anything numeric
+@attribute morning numeric
+@attribute yeah numeric
+@attribute bt numeric
+@attribute store numeric
+@attribute fancy numeric
+@attribute amp numeric
+@attribute sorry numeric
+@attribute about numeric
+@attribute messages numeric
+@attribute oh numeric
+@attribute ask numeric
+@attribute more numeric
+@attribute cos numeric
+@attribute thinks numeric
+@attribute choose numeric
+@attribute sony numeric
+@attribute too numeric
+@attribute something numeric
+@attribute news numeric
+@attribute msgrcvdhg numeric
+@attribute skilgme numeric
+@attribute 80488 numeric
+@attribute 7250i numeric
+@attribute 50p numeric
+@attribute 60p numeric
+@attribute 786 numeric
+@attribute msg@150p numeric
+@attribute £150 numeric
+@attribute 80182 numeric
+@attribute singles numeric
+@attribute zed numeric
+@attribute del numeric
+@attribute deliveredtomorrow numeric
+@attribute ordered numeric
+@attribute gbp numeric
+@attribute csbcm4235wc1n3xx numeric
+@attribute com1win150ppmx3age16 numeric
+@attribute polyphonic numeric
+@attribute xchat numeric
+@attribute fromm numeric
+@attribute optout numeric
+@attribute 07xxxxxxxxx numeric
+@attribute ntwk numeric
+@attribute freefone numeric
+@attribute eerie numeric
+@attribute flag numeric
+@attribute freephone numeric
+@attribute euro2004 numeric
+@attribute 00 numeric
+@attribute entitled numeric
+@attribute postcode numeric
+@attribute netcollex numeric
+@attribute 83355 numeric
+@attribute access numeric
+@attribute hmv numeric
+@attribute ref numeric
+@attribute w1jhl numeric
+@attribute 87575 numeric
+@attribute 87239 numeric
+@attribute saucy numeric
+@attribute savamob numeric
+@attribute refused numeric
+@attribute ansr numeric
+@attribute box97n7qp numeric
+@attribute bluetooth numeric
+@attribute halloween numeric
+@attribute 08452810073 numeric
+@attribute purpose numeric
+@attribute q numeric
+@attribute billed numeric
+@attribute quoting numeric
+@attribute arrive numeric
+@attribute spook numeric
+@attribute 88039 numeric
+@attribute voda numeric
+@attribute £4 numeric
+@attribute uks numeric
+@attribute voicemail numeric
+@attribute 09061221066 numeric
+@attribute 28 numeric
+@attribute 18+only numeric
+@attribute k52 numeric
+@attribute jordan numeric
+@attribute 40gb numeric
+@attribute unsub numeric
+@attribute 26 numeric
+@attribute £7 numeric
+@attribute verify numeric
+@attribute 3lp numeric
+@attribute u4 numeric
+@attribute tenants numeric
+@attribute tyrone numeric
+@attribute 24 numeric
+@attribute unredeemed numeric
+@attribute txtauction numeric
+@attribute 3510i numeric
+@attribute 2stoptxt numeric
+@attribute 08718727870 numeric
+@attribute summer numeric
+@attribute 300 numeric
+@attribute supply numeric
+@attribute urawinner numeric
+@attribute tariffs numeric
+@attribute 08715705022 numeric
+@attribute loyalty numeric
+@attribute at numeric
+@attribute pic numeric
+@attribute special numeric
+@attribute doing numeric
+@attribute number numeric
+@attribute said numeric
+@attribute gay numeric
+@attribute laid numeric
+@attribute terms numeric
+@attribute fantastic numeric
+@attribute like numeric
+@attribute think numeric
+@attribute can numeric
+@attribute him numeric
+@attribute always numeric
+@attribute lol numeric
+@attribute part numeric
+@attribute still numeric
+@attribute feel numeric
+@attribute well numeric
+@attribute much numeric
+@attribute find numeric
+@attribute phone numeric
+@attribute double numeric
+@attribute secret numeric
+@attribute asap numeric
+@attribute balance numeric
+@attribute yr numeric
+@attribute gud numeric
+@attribute dun numeric
+@attribute sure numeric
+@attribute when numeric
+@attribute details numeric
+@attribute trying numeric
+@attribute what numeric
+@attribute nice numeric
+@attribute gonna numeric
+@attribute coming numeric
+@attribute going numeric
+@attribute do numeric
+@attribute already numeric
+@attribute visit numeric
+@attribute went numeric
+@attribute haha numeric
+@attribute who numeric
+@attribute area numeric
+@attribute update numeric
+@attribute following numeric
+@attribute 25 numeric
+@attribute tc numeric
+@attribute discount numeric
+@attribute 20 numeric
+@attribute plus numeric
+@attribute way numeric
+@attribute happy numeric
+@attribute where numeric
+@attribute thought numeric
+@attribute told numeric
+@attribute same numeric
+@attribute k numeric
+@attribute y numeric
+@attribute didn numeric
+@attribute hope numeric
+@attribute congrats numeric
+@attribute sexy numeric
+@attribute x numeric
+@attribute sleep numeric
+@attribute easy numeric
+@attribute has numeric
+@attribute 121 numeric
+@attribute bahamas numeric
+@attribute chart numeric
+@attribute 11mths numeric
+@attribute vip numeric
+@attribute 125gift numeric
+@attribute awaiting numeric
+@attribute charges numeric
+@attribute premier numeric
+@attribute careers numeric
+@attribute 08081560665 numeric
+@attribute 150 numeric
+@attribute 13 numeric
+@attribute ldnw15h numeric
+@attribute celeb numeric
+@attribute m6 numeric
+@attribute tkts numeric
+@attribute chances numeric
+@attribute c52 numeric
+@attribute 0871750 numeric
+@attribute box385 numeric
+@attribute box39822 numeric
+@attribute 1956669 numeric
+@attribute box95qu numeric
+@attribute bid numeric
+@attribute prompts numeric
+@attribute 08001950382 numeric
+@attribute provided numeric
+@attribute 1x150p numeric
+@attribute bloomberg numeric
+@attribute 1winaweek numeric
+@attribute 18yrs numeric
+@attribute britney numeric
+@attribute 150ppermesssubscription numeric
+@attribute £900 numeric
+@attribute callcost numeric
+@attribute randomly numeric
+@attribute callfreefone numeric
+@attribute previously numeric
+@attribute 16+only numeric
+@attribute networks numeric
+@attribute rally numeric
+@attribute bcm4284 numeric
+@attribute 2007 numeric
+@attribute £75 numeric
+@attribute porn numeric
+@attribute genuine numeric
+@attribute mk17 numeric
+@attribute 01223585334 numeric
+@attribute norm numeric
+@attribute g696ga numeric
+@attribute oranges numeric
+@attribute 08718738001 numeric
+@attribute local numeric
+@attribute txt> numeric
+@attribute txtin numeric
+@attribute dload numeric
+@attribute packs numeric
+@attribute chosen numeric
+@attribute pence numeric
+@attribute 02073162414 numeric
+@attribute 09066358152 numeric
+@attribute tscs numeric
+@attribute gamestar numeric
+@attribute liverpool numeric
+@attribute tscs087147403231winawk numeric
+@attribute noline numeric
+@attribute 09064012160 numeric
+@attribute 09064011000 numeric
+@attribute txttowin numeric
+@attribute flights numeric
+@attribute 09058091854 numeric
+@attribute eng numeric
+@attribute +447797706009 numeric
+@attribute 08719181513 numeric
+@attribute 09050003091 numeric
+@attribute usher numeric
+@attribute free>ringtone numeric
+@attribute fixedline numeric
+@attribute upd8 numeric
+@attribute loyal numeric
+@attribute 08719180248 numeric
+@attribute matches numeric
+@attribute euro numeric
+@attribute 0 numeric
+@attribute fancies numeric
+@attribute explicit numeric
+@attribute 09061209465 numeric
+@attribute 09066362231 numeric
+@attribute delivered numeric
+@attribute 09066364311 numeric
+@attribute pobox36504w45wq numeric
+@attribute 07786200117 numeric
+@attribute comuk numeric
+@attribute 07781482378 numeric
+@attribute 07742676969 numeric
+@attribute wrc numeric
+@attribute videophones numeric
+@attribute videochat numeric
+@attribute pobox84 numeric
+@attribute 087187262701 numeric
+@attribute pocketbabe numeric
+@attribute web numeric
+@attribute lucozade numeric
+@attribute 10k numeric
+@attribute mix numeric
+@attribute 1000 numeric
+@attribute 100percent numeric
+@attribute matrix3 numeric
+@attribute george numeric
+@attribute textoperator numeric
+@attribute personal numeric
+@attribute customers numeric
+@attribute 09066612661 numeric
+@attribute contacted numeric
+@attribute cw25wx numeric
+@attribute 09066382422 numeric
+@attribute 09066380611 numeric
+@attribute tsandcs numeric
+@attribute gaytextbuddy numeric
+@attribute cust numeric
+@attribute gender numeric
+@attribute csh11 numeric
+@attribute 0578 numeric
+@attribute linerental numeric
+@attribute gent numeric
+@attribute cr01327bt numeric
+@attribute 09071512433 numeric
+@attribute minmobsmorelkpobox177hp51fl numeric
+@attribute 050703 numeric
+@attribute helpline numeric
+@attribute valid12hrs numeric
+@attribute 300603 numeric
+@attribute 88066 numeric
+@attribute 88088 numeric
+@attribute housewives numeric
+@attribute 5k numeric
+@attribute suprman numeric
+@attribute sk38xh numeric
+@attribute java numeric
+@attribute 09 numeric
+@attribute 80086 numeric
+@attribute 0870241182716 numeric
+@attribute 08702840625 numeric
+@attribute subpoly numeric
+@attribute 87077 numeric
+@attribute 87121 numeric
+@attribute m26 numeric
+@attribute 89080 numeric
+@attribute 89545 numeric
+@attribute 87021 numeric
+@attribute 0871 numeric
+@attribute 92h numeric
+@attribute 434 numeric
+@attribute revealed numeric
+@attribute 9ae numeric
+@attribute holder numeric
+@attribute 08701417012150p numeric
+@attribute 81618 numeric
+@attribute 89555 numeric
+@attribute 5249 numeric
+@attribute 80082 numeric
+@attribute 89693 numeric
+@attribute £1250 numeric
+@attribute 542 numeric
+@attribute mobilesvary numeric
+@attribute 40533 numeric
+@attribute 61200 numeric
+@attribute 50perwksub numeric
+@attribute 31p numeric
+@attribute 83222 numeric
+@attribute smsco numeric
+@attribute mtmsgrcvd18+ numeric
+@attribute secs numeric
+@attribute august numeric
+@attribute 69696 numeric
+@attribute instructions numeric
+@attribute 08706091795 numeric
+@attribute 3qxj9 numeric
+@attribute 81303 numeric
+@attribute moby numeric
+@attribute 81151 numeric
+@attribute subscribed numeric
+@attribute improved numeric
+@attribute subscriber numeric
+@attribute 83383 numeric
+@attribute satisfy numeric
+@attribute 85023 numeric
+@attribute 31 numeric
+@attribute 08712405020 numeric
+@attribute 69888 numeric
+@attribute skillgame numeric
+@attribute 8552 numeric
+@attribute 85069 numeric
+@attribute subs16+1win150ppmx3 numeric
+@attribute scoring numeric
+@attribute 3650 numeric
+@attribute ibhltd numeric
+@attribute 84128 numeric
+@attribute 84199 numeric
+@attribute 80878 numeric
+@attribute 3uz numeric
+@attribute jamster numeric
+@attribute homeowners numeric
+@attribute 08708034412 numeric
+@attribute 2c numeric
+@attribute 450ppw numeric
+@attribute 45239 numeric
+@attribute w111wx numeric
+@attribute records numeric
+@attribute 3gbp numeric
+@attribute 6wu numeric
+@attribute mtmsg18 numeric
+@attribute tells numeric
+@attribute msgs@150p numeric
+@attribute 29 numeric
+@attribute advise numeric
+@attribute 77 numeric
+@attribute 6days numeric
+@attribute algarve numeric
+@attribute itcould numeric
+@attribute recent numeric
+@attribute £1500 numeric
+@attribute 4info numeric
+@attribute 0845 numeric
+@attribute landlines numeric
+@attribute textbuddy numeric
+@attribute starwars3 numeric
+@attribute arsenal numeric
+@attribute 4txt numeric
+@attribute w1 numeric
+@attribute yer numeric
+@attribute free2day numeric
+@attribute recd numeric
+@attribute 4t numeric
+@attribute active numeric
+@attribute inclusive numeric
+@attribute 50gbp numeric
+@attribute removal numeric
+@attribute rentl numeric
+@attribute 2optout numeric
+@attribute 3g numeric
+@attribute abta numeric
+@attribute reminder numeric
+@attribute shagged numeric
+@attribute £250k numeric
+@attribute 2end numeric
+@attribute up numeric
+@attribute the numeric
+@attribute meeting numeric
+@attribute having numeric
+@attribute thk numeric
+@attribute official numeric
+@attribute flirt numeric
+@attribute daily numeric
+@attribute pix numeric
+@attribute max numeric
+@attribute sport numeric
+@attribute goto numeric
+@attribute costs numeric
+@attribute brand numeric
+@attribute member numeric
+@attribute sam numeric
+@attribute sub numeric
+@attribute rude numeric
+@attribute etc numeric
+@attribute team numeric
+@attribute really numeric
+@attribute waiting numeric
+@attribute charge numeric
+@attribute yup numeric
+@attribute dinner numeric
+@attribute fine numeric
+@attribute don numeric
+@attribute information numeric
+@attribute cancel numeric
+@attribute frnd numeric
+@attribute 2day numeric
+@attribute questions numeric
+@attribute date numeric
+@attribute pick numeric
+@attribute very numeric
+@attribute few numeric
+@attribute liao numeric
+@attribute m numeric
+@attribute ill numeric
+@attribute car numeric
+@attribute lot numeric
+@attribute long numeric
+@attribute mind numeric
+@attribute eat numeric
+@attribute them numeric
+@attribute job numeric
+@attribute cool numeric
+@attribute things numeric
+@attribute help numeric
+@attribute sir numeric
+@attribute problem numeric
+@attribute sweet numeric
+@attribute wont numeric
+@attribute smile numeric
+@attribute princess numeric
+@attribute bit numeric
+@attribute shit numeric
+@attribute t numeric
+@attribute one numeric
+@attribute off numeric
+@attribute shall numeric
+@attribute probably numeric
+@attribute dat numeric
+@attribute big numeric
+@attribute better numeric
+@attribute thats numeric
+@attribute here numeric
+@attribute out numeric
+@attribute late numeric
+@attribute plan numeric
+@attribute yo numeric
+@attribute stuff numeric
+@attribute forgot numeric
+@attribute ah numeric
+@attribute watching numeric
+@attribute those numeric
+@attribute check numeric
+@attribute early numeric
+@attribute okay numeric
+@attribute abt numeric
+@attribute dunno numeric
+@attribute lunch numeric
+@attribute lar numeric
+@attribute would numeric
+@attribute life numeric
+@attribute anyway numeric
+@attribute remember numeric
+@attribute aight numeric
+@attribute jus numeric
+@attribute thanx numeric
+@attribute room numeric
+@attribute because numeric
+@attribute need numeric
+@attribute some numeric
+@attribute there numeric
+@attribute d numeric
+@attribute let numeric
+@attribute 9 numeric
+@attribute once numeric
+@attribute leh numeric
+@attribute den numeric
+@attribute finish numeric
+@attribute quite numeric
+@attribute down numeric
+@attribute soon numeric
+@attribute thing numeric
+@attribute times numeric
+@attribute kiss numeric
+@attribute pain numeric
+@attribute maybe numeric
+@attribute making numeric
+@attribute dad numeric
+@attribute hour numeric
+@attribute hey numeric
+@attribute yet numeric
+@attribute hav numeric
+@attribute afternoon numeric
+@attribute bus numeric
+@attribute wif numeric
+@attribute else numeric
+@attribute haven numeric
+@attribute everything numeric
+@attribute goes numeric
+@attribute wake numeric
+@attribute able numeric
+@attribute boy numeric
+@attribute might numeric
+@attribute thank numeric
+@attribute bed numeric
+@attribute goin numeric
+@attribute didnt numeric
+@attribute second numeric
+@attribute huh numeric
+@attribute havent numeric
+@attribute leaving numeric
+@attribute online numeric
+@attribute rite numeric
+@attribute name2 numeric
+@attribute mobcudb numeric
+@attribute names numeric
+@attribute nat27081980 numeric
+@attribute morefrmmob numeric
+@attribute matthew numeric
+@attribute members numeric
+@attribute natalie2k9 numeric
+@attribute mcfly numeric
+@attribute nasdaq numeric
+@attribute newest numeric
+@attribute maximum numeric
+@attribute mquiz numeric
+@attribute natalja numeric
+@attribute max6 numeric
+@attribute max10mins numeric
+@attribute newsletter numeric
+@attribute natalie numeric
+@attribute nasty numeric
+@attribute neo69 numeric
+@attribute nat numeric
+@attribute nookii numeric
+@attribute meet+greet numeric
+@attribute monoc numeric
+@attribute nokia6600 numeric
+@attribute minded numeric
+@attribute msgrcvd numeric
+@attribute minmobsmore numeric
+@attribute mtmsgrcvd18 numeric
+@attribute nokia6650 numeric
+@attribute mobypobox734ls27yf numeric
+@attribute msg150p numeric
+@attribute nokias numeric
+@attribute mono numeric
+@attribute mtalk numeric
+@attribute mths numeric
+@attribute minapn numeric
+@attribute mtmsg numeric
+@attribute minmoremobsemspobox45po139wa numeric
+@attribute monos numeric
+@attribute mat numeric
+@attribute meg numeric
+@attribute nikiyu4 numeric
+@attribute name1 numeric
+@attribute mgs numeric
+@attribute mf numeric
+@attribute mk45 numeric
+@attribute norcorp numeric
+@attribute mila numeric
+@attribute mobstorequiz10ppm numeric
+@attribute n9dx numeric
+@attribute monthlysubscription@50p numeric
+@attribute nok numeric
+@attribute mobno numeric
+@attribute no> numeric
+@attribute mymoby numeric
+@attribute meetins numeric
+@attribute replies numeric
+@attribute notifications numeric
+@attribute svc numeric
+@attribute suppliers numeric
+@attribute sw7 numeric
+@attribute tnc numeric
+@attribute sw73ss numeric
+@attribute sufficient numeric
+@attribute subscribe numeric
+@attribute strt numeric
+@attribute strokes numeric
+@attribute stream numeric
+@attribute strings numeric
+@attribute strip numeric
+@attribute swap numeric
+@attribute t91 numeric
+@attribute tcr numeric
+@attribute tgxxrz numeric
+@attribute theirs numeric
+@attribute themob numeric
+@attribute thnq numeric
+@attribute thedailydraw numeric
+@attribute textpod numeric
+@attribute tcs numeric
+@attribute textcomp numeric
+@attribute tddnewsletter@emc1 numeric
+@attribute teenager numeric
+@attribute text82228>> numeric
+@attribute stories numeric
+@attribute stoptxtstop numeric
+@attribute stopsms numeric
+@attribute smsrewards numeric
+@attribute snap numeric
+@attribute snappy numeric
+@attribute sol numeric
+@attribute smsservices numeric
+@attribute smith numeric
+@attribute sparkling numeric
+@attribute slower numeric
+@attribute sk3 numeric
+@attribute skills numeric
+@attribute slo numeric
+@attribute sonyericsson numeric
+@attribute speedchat numeric
+@attribute stopcost numeric
+@attribute stereophonics numeric
+@attribute stockport numeric
+@attribute stolen numeric
+@attribute stopbcm numeric
+@attribute sticky numeric
+@attribute stadium numeric
+@attribute sphosting numeric
+@attribute sptv numeric
+@attribute spider numeric
+@attribute spjanuary numeric
+@attribute sppok numeric
+@attribute tkls numeric
+@attribute toclaim numeric
+@attribute simonwatson5120 numeric
+@attribute vu numeric
+@attribute vouch4me numeric
+@attribute w14rg numeric
+@attribute toilet numeric
+@attribute w1a numeric
+@attribute visionsms numeric
+@attribute virgins numeric
+@attribute violet numeric
+@attribute videosounds+2 numeric
+@attribute vat numeric
+@attribute vatian numeric
+@attribute videosound numeric
+@attribute w1j numeric
+@attribute w4 numeric
+@attribute w8in numeric
+@attribute webeburnin numeric
+@attribute wildest numeric
+@attribute win150ppmx3age16 numeric
+@attribute wings numeric
+@attribute westlife numeric
+@attribute wc1n numeric
+@attribute wa14 numeric
+@attribute warranty numeric
+@attribute wallpaper numeric
+@attribute wamma numeric
+@attribute wan2 numeric
+@attribute uve numeric
+@attribute upgrade numeric
+@attribute update_now numeric
+@attribute toppoly numeric
+@attribute trav numeric
+@attribute trebles numeric
+@attribute trial numeric
+@attribute trackmarque numeric
+@attribute topped numeric
+@attribute trivia numeric
+@attribute tonights numeric
+@attribute tones2u numeric
+@attribute tones2you numeric
+@attribute tonexs numeric
+@attribute triple numeric
+@attribute tscs08714740323 numeric
+@attribute untamed numeric
+@attribute unbreakable numeric
+@attribute unicef numeric
+@attribute unkempt numeric
+@attribute unsecured numeric
+@attribute unclaimed numeric
+@attribute ultimate numeric
+@attribute tsunami numeric
+@attribute txtno numeric
+@attribute tulip numeric
+@attribute tune numeric
+@attribute txt82228 numeric
+@attribute simpsons numeric
+@attribute shracomorsglsuplt numeric
+@attribute notxt numeric
+@attribute premium numeric
+@attribute ppm150 numeric
+@attribute prepayment numeric
+@attribute pushbutton numeric
+@attribute presence numeric
+@attribute ppm numeric
+@attribute potter numeric
+@attribute posh numeric
+@attribute polyph numeric
+@attribute polo numeric
+@attribute polyc numeric
+@attribute polyh numeric
+@attribute president numeric
+@attribute presleys numeric
+@attribute privacy numeric
+@attribute promised numeric
+@attribute proze numeric
+@attribute psp numeric
+@attribute psychic numeric
+@attribute promo numeric
+@attribute prods numeric
+@attribute prizeawaiting numeric
+@attribute processed numeric
+@attribute prizes numeric
+@attribute prizeswith numeric
+@attribute pro numeric
+@attribute poboxox36504w45wq numeric
+@attribute pobox75ldns7 numeric
+@attribute pobox334 numeric
+@attribute orig numeric
+@attribute ou numeric
+@attribute outbid numeric
+@attribute outgoing numeric
+@attribute otbox numeric
+@attribute org numeric
+@attribute paris numeric
+@attribute oja numeric
+@attribute november numeric
+@attribute noworriesloans numeric
+@attribute offering numeric
+@attribute ow numeric
+@attribute parties numeric
+@attribute pobox114 numeric
+@attribute php numeric
+@attribute plyr numeric
+@attribute po19 numeric
+@attribute pobox1 numeric
+@attribute picsfree1 numeric
+@attribute phony numeric
+@attribute passes numeric
+@attribute phone750 numeric
+@attribute peak numeric
+@attribute phb1 numeric
+@attribute phoenix numeric
+@attribute pt2 numeric
+@attribute qlynnbv numeric
+@attribute shot numeric
+@attribute scammers numeric
+@attribute sara numeric
+@attribute scores numeric
+@attribute queries numeric
+@attribute scotsman numeric
+@attribute santacalling numeric
+@attribute santa numeric
+@attribute rwm numeric
+@attribute rtf numeric
+@attribute rpl numeric
+@attribute rstm numeric
+@attribute rt numeric
+@attribute secretly numeric
+@attribute secured numeric
+@attribute seeds numeric
+@attribute sf numeric
+@attribute shinco numeric
+@attribute shortbreaks numeric
+@attribute shortcode numeric
+@attribute shag numeric
+@attribute sexychat numeric
+@attribute selection numeric
+@attribute sexual numeric
+@attribute settings numeric
+@attribute sexiest numeric
+@attribute sextextuk numeric
+@attribute rp176781 numeric
+@attribute romcapspam numeric
+@attribute rodger numeric
+@attribute rcv numeric
+@attribute real1 numeric
+@attribute recd@thirtyeight numeric
+@attribute receivea numeric
+@attribute readers numeric
+@attribute rct numeric
+@attribute recpt numeric
+@attribute rcd numeric
+@attribute quizclub numeric
+@attribute racal numeric
+@attribute randy numeric
+@attribute recorder numeric
+@attribute redeemable numeric
+@attribute ringtoneking numeric
+@attribute repeat numeric
+@attribute responsible numeric
+@attribute rgds numeric
+@attribute rgent numeric
+@attribute resent numeric
+@attribute renewed numeric
+@attribute ree numeric
+@attribute renewal numeric
+@attribute refunded numeric
+@attribute regalportfolio numeric
+@attribute removed numeric
+@attribute marvel numeric
+@attribute $350 numeric
+@attribute marsms numeric
+@attribute 2stop numeric
+@attribute 2rcv numeric
+@attribute 24m numeric
+@attribute 2stoptx numeric
+@attribute 2wt numeric
+@attribute 2wu numeric
+@attribute 2yr numeric
+@attribute '300\%' numeric
+@attribute 2px numeric
+@attribute 2nights numeric
+@attribute 2ez numeric
+@attribute 2814032 numeric
+@attribute 2667 numeric
+@attribute 27 numeric
+@attribute 28days numeric
+@attribute 2channel numeric
+@attribute 28th numeric
+@attribute 28thfeb numeric
+@attribute 3000 numeric
+@attribute 300603t numeric
+@attribute 30apr numeric
+@attribute 3ss numeric
+@attribute 3lions numeric
+@attribute 3pound numeric
+@attribute 3x numeric
+@attribute 3750 numeric
+@attribute 3xx numeric
+@attribute 400 numeric
+@attribute 3aj numeric
+@attribute 373 numeric
+@attribute 30pp numeric
+@attribute 3100 numeric
+@attribute 30s numeric
+@attribute 30th numeric
+@attribute 310303 numeric
+@attribute 3680 numeric
+@attribute 32 numeric
+@attribute 326 numeric
+@attribute 250 numeric
+@attribute 24hrs numeric
+@attribute 09099726429 numeric
+@attribute 139 numeric
+@attribute 12mths numeric
+@attribute 23g numeric
+@attribute 14 numeric
+@attribute 140ppm numeric
+@attribute 145 numeric
+@attribute 146tf150p numeric
+@attribute 14tcr numeric
+@attribute 120p numeric
+@attribute 11pm numeric
+@attribute 11mths+ numeric
+@attribute 1013 numeric
+@attribute 09701213186 numeric
+@attribute 0a$networks numeric
+@attribute 10ppm numeric
+@attribute 118p numeric
+@attribute 114 numeric
+@attribute 1172 numeric
+@attribute 150p16+ numeric
+@attribute 165 numeric
+@attribute 169 numeric
+@attribute 220 numeric
+@attribute 20m12aq numeric
+@attribute 22 numeric
+@attribute 220cm2 numeric
+@attribute 2006 numeric
+@attribute 2309 numeric
+@attribute 23f numeric
+@attribute 2025050 numeric
+@attribute 2005 numeric
+@attribute 177 numeric
+@attribute 1er numeric
+@attribute 18+6 numeric
+@attribute 195 numeric
+@attribute 1st4terms numeric
+@attribute 200 numeric
+@attribute 1stchoice numeric
+@attribute 1winawk numeric
+@attribute 400mins numeric
+@attribute 4041 numeric
+@attribute 41685 numeric
+@attribute 7250 numeric
+@attribute 6zf numeric
+@attribute 41782 numeric
+@attribute 731 numeric
+@attribute 74355 numeric
+@attribute 7548 numeric
+@attribute 75max numeric
+@attribute 762 numeric
+@attribute 6hl numeric
+@attribute 69988 numeric
+@attribute 69911 numeric
+@attribute 69698 numeric
+@attribute 69101 numeric
+@attribute 69669 numeric
+@attribute 69855 numeric
+@attribute 69888nyt numeric
+@attribute 69866 numeric
+@attribute 69876 numeric
+@attribute 7634 numeric
+@attribute 7684 numeric
+@attribute 7732584351 numeric
+@attribute 82324 numeric
+@attribute 82050 numeric
+@attribute 82242 numeric
+@attribute 82468 numeric
+@attribute 8077 numeric
+@attribute 83021 numeric
+@attribute 83049 numeric
+@attribute 81010 numeric
+@attribute 8027 numeric
+@attribute 78 numeric
+@attribute 7mp numeric
+@attribute 7876150ppm numeric
+@attribute 7cfca1a numeric
+@attribute 7ws numeric
+@attribute 80155 numeric
+@attribute 80062 numeric
+@attribute 80122300p numeric
+@attribute 674 numeric
+@attribute 6669 numeric
+@attribute 6230 numeric
+@attribute 4882 numeric
+@attribute 4719 numeric
+@attribute 4742 numeric
+@attribute 48922 numeric
+@attribute 45 numeric
+@attribute 49 numeric
+@attribute 49557 numeric
+@attribute 47 numeric
+@attribute 447801259231 numeric
+@attribute 4goten numeric
+@attribute 42478 numeric
+@attribute 42049 numeric
+@attribute 4217 numeric
+@attribute 42810 numeric
+@attribute 4403ldnw1a7rw18 numeric
+@attribute 44 numeric
+@attribute 440 numeric
+@attribute 4fil numeric
+@attribute 4msgs numeric
+@attribute 61610 numeric
+@attribute 5wq numeric
+@attribute 5free numeric
+@attribute 5p numeric
+@attribute 600 numeric
+@attribute 50ppm numeric
+@attribute 6031 numeric
+@attribute 6089 numeric
+@attribute 523 numeric
+@attribute 50pmmorefrommobile2bremoved numeric
+@attribute 4utxt numeric
+@attribute 5000 numeric
+@attribute 4xx26 numeric
+@attribute '50\%' numeric
+@attribute 505060 numeric
+@attribute 50pm numeric
+@attribute 50ea numeric
+@attribute 50perweeksub numeric
+@attribute 09099726553 numeric
+@attribute 09099726395 numeric
+@attribute 83338 numeric
+@attribute 08707808226 numeric
+@attribute 0870753331018+ numeric
+@attribute 0844 numeric
+@attribute 08708800282 numeric
+@attribute 08709222922 numeric
+@attribute 08709501522 numeric
+@attribute 087104711148 numeric
+@attribute 08712101358 numeric
+@attribute 08707500020 numeric
+@attribute 08704439680 numeric
+@attribute 08704050406 numeric
+@attribute 08701237397 numeric
+@attribute 08700435505150p numeric
+@attribute 08700621170150p numeric
+@attribute 08701417012 numeric
+@attribute 08702490080 numeric
+@attribute 0870141701216+ numeric
+@attribute 087018728737 numeric
+@attribute 0871212025016 numeric
+@attribute 087123002209am numeric
+@attribute 08712317606 numeric
+@attribute 08715203652 numeric
+@attribute 08715203028 numeric
+@attribute 08715203649 numeric
+@attribute 08715203656 numeric
+@attribute 08714712394 numeric
+@attribute 08715203677 numeric
+@attribute 08715203685 numeric
+@attribute 08714712412 numeric
+@attribute 08714712379 numeric
+@attribute 08712400200 numeric
+@attribute 08712402050 numeric
+@attribute 08712400602450p numeric
+@attribute 08712400603 numeric
+@attribute 08712402902 numeric
+@attribute 0871277810910p numeric
+@attribute 08712402972 numeric
+@attribute 0871277810810 numeric
+@attribute 08452810075over18 numeric
+@attribute 083 numeric
+@attribute 09099725823 numeric
+@attribute 07 numeric
+@attribute 05 numeric
+@attribute 08081263000 numeric
+@attribute 07008009200 numeric
+@attribute 07090201529 numeric
+@attribute 07090298926 numeric
+@attribute 07099833605 numeric
+@attribute 07123456789 numeric
+@attribute 021 numeric
+@attribute 02085076972 numeric
+@attribute 0207 numeric
+@attribute +std numeric
+@attribute $5 numeric
+@attribute +449071512431 numeric
+@attribute 008704050406 numeric
+@attribute 01223585236 numeric
+@attribute 0089 numeric
+@attribute 0121 numeric
+@attribute 0721072 numeric
+@attribute 07732584351 numeric
+@attribute 07734396839 numeric
+@attribute 08002986030 numeric
+@attribute 08000776320 numeric
+@attribute 08002888812 numeric
+@attribute 08002986906 numeric
+@attribute 08 numeric
+@attribute 08006344447 numeric
+@attribute 0808 numeric
+@attribute 08000407165 numeric
+@attribute 07973788240 numeric
+@attribute 07753741225 numeric
+@attribute 078 numeric
+@attribute 0776xxxxxxx numeric
+@attribute 077xxx numeric
+@attribute 07808726822 numeric
+@attribute 0796xxxxxx numeric
+@attribute 07815296484 numeric
+@attribute 07821230901 numeric
+@attribute 08715203694 numeric
+@attribute 08715205273 numeric
+@attribute 08715500022 numeric
+@attribute 09063458130 numeric
+@attribute 09063442151 numeric
+@attribute 08717111821 numeric
+@attribute 0906346330 numeric
+@attribute 09064017295 numeric
+@attribute 09064017305 numeric
+@attribute 09064019014 numeric
+@attribute 09065069120 numeric
+@attribute 09063440451 numeric
+@attribute 09061790126 numeric
+@attribute 09061790125 numeric
+@attribute 09061743386 numeric
+@attribute 09061701444 numeric
+@attribute 09061701461 numeric
+@attribute 09061743806 numeric
+@attribute 09061790121 numeric
+@attribute 09061743811 numeric
+@attribute 09061744553 numeric
+@attribute 09065171142 numeric
+@attribute 09065174042 numeric
+@attribute 09065394514 numeric
+@attribute 09090900040 numeric
+@attribute 09077818151 numeric
+@attribute 09090204448 numeric
+@attribute 09094100151 numeric
+@attribute 09066660100 numeric
+@attribute 09094646631 numeric
+@attribute 09094646899 numeric
+@attribute 09071512432 numeric
+@attribute 09066368470 numeric
+@attribute 09065989182 numeric
+@attribute 09066361921 numeric
+@attribute 09066350750 numeric
+@attribute 09066358361 numeric
+@attribute 09066362206 numeric
+@attribute 09066368327 numeric
+@attribute 09066362220 numeric
+@attribute 09066364589 numeric
+@attribute 09061221061 numeric
+@attribute 09061213237 numeric
+@attribute 09061104283 numeric
+@attribute 08718730666 numeric
+@attribute 08718727870150ppm numeric
+@attribute 08718730555 numeric
+@attribute 08718738002 numeric
+@attribute 08718726971 numeric
+@attribute 08718738034 numeric
+@attribute 08719181259 numeric
+@attribute 08718726978 numeric
+@attribute 08718726270 numeric
+@attribute 08719839835 numeric
+@attribute 08717507382 numeric
+@attribute 08717168528 numeric
+@attribute 08717205546 numeric
+@attribute 08717895698 numeric
+@attribute 08718725756 numeric
+@attribute 08717898035 numeric
+@attribute 08718711108 numeric
+@attribute 08719181503 numeric
+@attribute 08719899230 numeric
+@attribute 09061104276 numeric
+@attribute 09058095201 numeric
+@attribute 09058094597 numeric
+@attribute 09058094599 numeric
+@attribute 09058097218 numeric
+@attribute 09058094507 numeric
+@attribute 09058098002 numeric
+@attribute 09058099801 numeric
+@attribute 09058094594 numeric
+@attribute 09058094455 numeric
+@attribute 09050000332 numeric
+@attribute 09050090044 numeric
+@attribute 09050000460 numeric
+@attribute 09050001808 numeric
+@attribute 09050280520 numeric
+@attribute 09058094454 numeric
+@attribute 09053750005 numeric
+@attribute 09057039994 numeric
+@attribute 83332 numeric
+@attribute 83370 numeric
+@attribute marley numeric
+@attribute fund numeric
+@attribute frog numeric
+@attribute filthy numeric
+@attribute funk numeric
+@attribute gage numeric
+@attribute garden numeric
+@attribute gbp1 numeric
+@attribute gbp5 numeric
+@attribute freemsg>fav numeric
+@attribute freeentry numeric
+@attribute fraction numeric
+@attribute floppy numeric
+@attribute fink numeric
+@attribute flight numeric
+@attribute flowers numeric
+@attribute footy numeric
+@attribute foley numeric
+@attribute followed numeric
+@attribute germany numeric
+@attribute getstop numeric
+@attribute global numeric
+@attribute guarantee numeric
+@attribute growing numeric
+@attribute gsex numeric
+@attribute hack numeric
+@attribute granite numeric
+@attribute harry numeric
+@attribute helen numeric
+@attribute gravel numeric
+@attribute gr8prizes numeric
+@attribute gnarls numeric
+@attribute golddigger numeric
+@attribute go2 numeric
+@attribute goals numeric
+@attribute goldviking numeric
+@attribute gprs numeric
+@attribute goodies numeric
+@attribute gotto numeric
+@attribute filthyguys numeric
+@attribute fifa numeric
+@attribute deepest numeric
+@attribute doit numeric
+@attribute dogs numeric
+@attribute fastest numeric
+@attribute donate numeric
+@attribute dontcha numeric
+@attribute dot numeric
+@attribute doubles numeric
+@attribute downloaded numeric
+@attribute doggin numeric
+@attribute dob numeric
+@attribute dizzee numeric
+@attribute devils numeric
+@attribute dept numeric
+@attribute detroit numeric
+@attribute digits numeric
+@attribute disaster numeric
+@attribute dining numeric
+@attribute dirtiest numeric
+@attribute downloads numeric
+@attribute dozens numeric
+@attribute dps numeric
+@attribute eye numeric
+@attribute explosive numeric
+@attribute extreme numeric
+@attribute f= numeric
+@attribute exp numeric
+@attribute fa numeric
+@attribute fans numeric
+@attribute wining numeric
+@attribute eurodisinc numeric
+@attribute duchess numeric
+@attribute echo numeric
+@attribute e= numeric
+@attribute eastenders numeric
+@attribute elvis numeric
+@attribute etlp numeric
+@attribute entry41 numeric
+@attribute error numeric
+@attribute help08700621170150p numeric
+@attribute help08718728876 numeric
+@attribute henry numeric
+@attribute loans numeric
+@attribute lkpobox177hp51fl numeric
+@attribute heroes numeric
+@attribute login= numeric
+@attribute logon numeric
+@attribute logos numeric
+@attribute logos+musicnews numeric
+@attribute ls1 numeric
+@attribute lions numeric
+@attribute lionp numeric
+@attribute lionm numeric
+@attribute leadership numeric
+@attribute lastest numeric
+@attribute lccltd numeric
+@attribute lf56 numeric
+@attribute lines numeric
+@attribute libertines numeric
+@attribute lily numeric
+@attribute ls15hb numeric
+@attribute ls278bb numeric
+@attribute ltdhelpdesk numeric
+@attribute mad2 numeric
+@attribute macedonia numeric
+@attribute mad1 numeric
+@attribute male numeric
+@attribute m8s numeric
+@attribute maniac numeric
+@attribute margin numeric
+@attribute m95 numeric
+@attribute m8 numeric
+@attribute lucy numeric
+@attribute m221bp numeric
+@attribute lux numeric
+@attribute luxury numeric
+@attribute m227xy numeric
+@attribute m60 numeric
+@attribute m263uz numeric
+@attribute m39m51 numeric
+@attribute large numeric
+@attribute la3 numeric
+@attribute la1 numeric
+@attribute idew numeric
+@attribute ibh numeric
+@attribute ibiza numeric
+@attribute ig11 numeric
+@attribute hottest numeric
+@attribute incorrect numeric
+@attribute increments numeric
+@attribute hvae numeric
+@attribute hotels numeric
+@attribute info@ringtoneking numeric
+@attribute highest numeric
+@attribute herself numeric
+@attribute hf8 numeric
+@attribute hlp numeric
+@attribute horniest numeric
+@attribute hmv1 numeric
+@attribute hockey numeric
+@attribute indicate numeric
+@attribute info@txt82228 numeric
+@attribute knock numeric
+@attribute kickoff numeric
+@attribute k718 numeric
+@attribute keyword numeric
+@attribute kit numeric
+@attribute jorge numeric
+@attribute kl341 numeric
+@attribute knickers numeric
+@attribute jsco numeric
+@attribute jersey numeric
+@attribute info@vipclub4u numeric
+@attribute interflora numeric
+@attribute install numeric
+@attribute instant numeric
+@attribute invaders numeric
+@attribute janinexx numeric
+@attribute j89 numeric
+@attribute jackpot numeric
+@attribute deltomorrow numeric
+@attribute deck numeric
+@attribute 83435 numeric
+@attribute alert numeric
+@attribute agent numeric
+@attribute abroad numeric
+@attribute alerts numeric
+@attribute alfie numeric
+@attribute among numeric
+@attribute aom numeric
+@attribute applausestore numeric
+@attribute age23 numeric
+@attribute age16+ numeric
+@attribute ag numeric
+@attribute aco numeric
+@attribute accommodation numeric
+@attribute acl03530150pm numeric
+@attribute action numeric
+@attribute ads numeric
+@attribute adam numeric
+@attribute adrian numeric
+@attribute arcade numeric
+@attribute areyouunique numeric
+@attribute arrow numeric
+@attribute bangbabes numeric
+@attribute band numeric
+@attribute bangb numeric
+@attribute banneduk numeric
+@attribute babygoodbye numeric
+@attribute barkleys numeric
+@attribute bcm numeric
+@attribute backdoor numeric
+@attribute b4utele numeric
+@attribute artists numeric
+@attribute asp numeric
+@attribute asian numeric
+@attribute asjesus numeric
+@attribute australia numeric
+@attribute b4u numeric
+@attribute avble numeric
+@attribute b4190604 numeric
+@attribute accessible numeric
+@attribute ab numeric
+@attribute december numeric
+@attribute 8800 numeric
+@attribute 872 numeric
+@attribute [sic] numeric
+@attribute 88222 numeric
+@attribute 88600 numeric
+@attribute 88800 numeric
+@attribute 8883 numeric
+@attribute 88888 numeric
+@attribute 87131 numeric
+@attribute 87070 numeric
+@attribute 864233 numeric
+@attribute 84025 numeric
+@attribute 83600 numeric
+@attribute 84 numeric
+@attribute 85 numeric
+@attribute 861 numeric
+@attribute 85222 numeric
+@attribute 85233 numeric
+@attribute 89034 numeric
+@attribute 89070 numeric
+@attribute 89105 numeric
+@attribute 9th numeric
+@attribute 9am numeric
+@attribute 9pm numeric
+@attribute <fone numeric
+@attribute 9758 numeric
+@attribute <ukp>2000 numeric
+@attribute [colour=red]text[ numeric
+@attribute 99 numeric
+@attribute 946 numeric
+@attribute 89123 numeric
+@attribute 8p numeric
+@attribute 89938 numeric
+@attribute 8ball numeric
+@attribute 8wp numeric
+@attribute 9307622 numeric
+@attribute 9061100010 numeric
+@attribute 9280114 numeric
+@attribute bcm1896wc1n3xx numeric
+@attribute becausethey numeric
+@attribute bergkamp numeric
+@attribute coincidence numeric
+@attribute coca numeric
+@attribute billing numeric
+@attribute cola numeric
+@attribute colour]txtstar numeric
+@attribute colours numeric
+@attribute companies numeric
+@attribute compare numeric
+@attribute cnupdates numeric
+@attribute cnl numeric
+@attribute cmon numeric
+@attribute club4 numeric
+@attribute claire numeric
+@attribute closingdate04 numeric
+@attribute club4mobiles numeric
+@attribute cm2 numeric
+@attribute club>> numeric
+@attribute clubzed numeric
+@attribute complementary numeric
+@attribute console numeric
+@attribute continued numeric
+@attribute datebox1282essexcm61xn numeric
+@attribute darkest numeric
+@attribute dartboard numeric
+@attribute daytime numeric
+@attribute customersqueries@netvision numeric
+@attribute dbuk numeric
+@attribute deals numeric
+@attribute d= numeric
+@attribute customercare numeric
+@attribute cops numeric
+@attribute costing numeric
+@attribute cornwall numeric
+@attribute costa numeric
+@attribute csc numeric
+@attribute cumin numeric
+@attribute cst numeric
+@attribute ctxt numeric
+@attribute claims numeric
+@attribute claimcode numeric
+@attribute chit numeric
+@attribute british numeric
+@attribute box61 numeric
+@attribute breaks numeric
+@attribute browse numeric
+@attribute box326 numeric
+@attribute bubbletext numeric
+@attribute buffy numeric
+@attribute box334 numeric
+@attribute box245c2150pm numeric
+@attribute bundle numeric
+@attribute bookmark numeric
+@attribute blonde numeric
+@attribute blu numeric
+@attribute bootydelious numeric
+@attribute box177 numeric
+@attribute borin numeric
+@attribute box1146 numeric
+@attribute bulbs numeric
+@attribute busty numeric
+@attribute chg numeric
+@attribute charity numeric
+@attribute champneys numeric
+@attribute chaps numeric
+@attribute chat80155 numeric
+@attribute cast numeric
+@attribute chatter numeric
+@attribute chatting numeric
+@attribute cdgt numeric
+@attribute cashto numeric
+@attribute bx526 numeric
+@attribute callcost150ppmmobilesvary numeric
+@attribute call09050000327 numeric
+@attribute call2optout=j5q numeric
+@attribute calls1 numeric
+@attribute carlie numeric
+@attribute canary numeric
+@attribute canname numeric
+@attribute experiencehttp numeric
+@attribute tips numeric
+@attribute winnersclub numeric
+@attribute “it numeric
+@attribute “harry numeric
+@attribute xxuk numeric
+@attribute €™ve numeric
+@attribute xxsp numeric
+@attribute £nd numeric
+@attribute xafter numeric
+@attribute xt numeric
+@attribute £150pw numeric
+@attribute y87 numeric
+@attribute £71 numeric
+@attribute wrote numeric
+@attribute £12 numeric
+@attribute £125 numeric
+@attribute £33 numeric
+@attribute £1000call numeric
+@attribute £5 numeric
+@attribute £54 numeric
+@attribute yards numeric
+@attribute £50 numeric
+@attribute yourinclusive numeric
+@attribute x49 numeric
+@attribute £1450 numeric
+@attribute wither numeric
+@attribute wire3 numeric
+@attribute wkent numeric
+@attribute dreams numeric
+@attribute awesome numeric
+@attribute actually numeric
+@attribute sch numeric
+@attribute sad numeric
+@attribute guy numeric
+@attribute neva numeric
+@attribute dude numeric
+@attribute gd numeric
+@attribute working numeric
+@attribute together numeric
+@attribute de numeric
+@attribute without numeric
+@attribute watch numeric
+@attribute klasea {spam,ham}
+
+@data
+{26 1,42 1,269 1,345 1,476 1,487 1,492 1,859 1,1880 ham}
+{789 1,1880 ham}
+{3 1,26 1,88 1,191 1,284 1,285 1,330 1,483 1,768 1,819 1,846 1,852 1,863 1,1880 ham}
+{1 1,7 1,12 1,26 1,27 1,45 1,124 1,145 1,200 1,231 1,346 1,363 1,416 1,441 1,452 1,582 1,685 1}
+{3 1,161 1,1880 ham}
+{1880 ham}
+{460 1,764 1,797 1,851 1,857 1,1880 ham}
+{7 1,26 1,45 1,74 1,93 1,100 1,126 1,275 1,283 1,506 1,765 1,784 1,859 1,1880 ham}
+{0 1,2 1,6 1,15 1,24 1,39 1,47 1,66 1,67 1,163 1,186 1,230 1,447 1,470 1,1044 1,1402 1}
+{3 1,74 1,341 1,461 1,790 1,821 1,1880 ham}
+{217 1,273 1,503 1,822 1,1880 ham}
+{276 1,451 1,1880 ham}
+{42 1,764 1,1880 ham}
+{0 1,7 1,11 1,13 1,22 1,26 1,49 1,65 1,74 1,127 1,161 1,246 1,247 1,285 1,356 1,450 1,472 1,492 1,637 1,750 1,831 1,1429 1,1452 1}
+{139 1,217 1,275 1,487 1,1880 ham}
+{3 1,7 1,14 1,47 1,93 1,221 1,262 1,448 1,479 1,765 1,851 1,856 1,1880 ham}
+{3 1,7 1,20 1,26 1,57 1,106 1,273 1,283 1,803 1,829 1,858 1,1880 ham}
+{3 1,220 1,230 1,272 1,486 1,801 1,881 1,1880 ham}
+{218 1,482 1,485 1,867 1,1880 ham}
+{26 1,45 1,47 1,57 1,273 1,458 1,464 1,817 1,819 1,848 1,1880 ham}
+{0 1,3 1,217 1,221 1,278 1,467 1,801 1,1880 ham}
+{352 1,454 1,494 1,812 1,829 1,1880 ham}
+{16 1,274 1,331 1,807 1,864 1,1880 ham}
+{3 1,24 1,42 1,284 1,285 1,488 1,801 1,838 1,1880 ham}
+{1 1,4 1,7 1,13 1,14 1,16 1,22 1,24 1,32 1,50 1,126 1,175 1,230 1,252 1,262 1,388 1,467 1,538 1,589 1,716 1,725 1,748 1,765 1,769 1}
+{7 1,11 1,15 1,17 1,24 1,28 1,88 1,106 1,139 1,217 1,260 1,806 1,811 1,821 1}
+{0 1,10 1,23 1,24 1,35 1,42 1,48 1,109 1,174 1,492 1,516 1,671 1,1614 1}
+{3 1,106 1,139 1,146 1,221 1,480 1,487 1,765 1,814 1,1181 1,1880 ham}
+{0 1,6 1,7 1,26 1,33 1,38 1,92 1,143 1,144 1,161 1,241 1,302 1,308 1,328 1,336 1,413 1,417 1,1219 1}
+{7 1,42 1,45 1,47 1,65 1,93 1,100 1,106 1,139 1,262 1,269 1,273 1,458 1,793 1,856 1,857 1,1880 ham}
+{1 1,2 1,6 1,7 1,11 1,13 1,41 1,42 1,47 1,48 1,74 1,142 1,146 1,214 1,269 1,392 1,726 1,765 1,873 1,1341 1,1654 1}
+{1 1,3 1,7 1,11 1,57 1,65 1,69 1,100 1,199 1,214 1,274 1,278 1,285 1,338 1,340 1,448 1,764 1,802 1,877 1}
+{3 1,57 1,74 1,166 1,1880 ham}
+{3 1,7 1,28 1,47 1,93 1,284 1,352 1,458 1,469 1,875 1,1880 ham}
+{3 1,41 1,93 1,269 1,865 1,1869 1,1880 ham}
+{3 1,24 1,448 1,765 1,801 1,854 1,1880 ham}
+{3 1,230 1,765 1,787 1,801 1,857 1,1880 ham}
+{285 1,484 1,788 1,821 1,825 1,830 1,878 1,884 1,1880 ham}
+{26 1,45 1,139 1,192 1,217 1,273 1,330 1,448 1,468 1,487 1,1880 ham}
+{0 1,15 1,16 1,20 1,24 1,98 1,134 1,138 1,147 1,374 1,497 1,655 1,916 1,992 1,1004 1,1015 1,1102 1,1504 1,1792 1}
+{3 1,45 1,74 1,221 1,768 1,864 1,895 1,1880 ham}
+{14 1,26 1,100 1,218 1,221 1,278 1,1880 ham}
+{0 1,26 1,41 1,42 1,220 1,230 1,279 1,448 1,513 1,810 1,861 1,877 1,1880 ham}
+{213 1,790 1,1880 ham}
+{0 1,2 1,24 1,93 1,460 1,877 1,1880 ham}
+{3 1,448 1,832 1,858 1,1880 ham}
+{166 1,1880 ham}
+{341 1,352 1,503 1,507 1,1880 ham}
+{15 1,93 1,100 1,1880 ham}
+{7 1,26 1,217 1,273 1,339 1,350 1,354 1,514 1,516 1,765 1,1880 ham}
+{0 1,6 1,7 1,8 1,17 1,18 1,20 1,26 1,33 1,35 1,43 1,44 1,63 1,88 1,161 1,217 1,481 1}
+{15 1,26 1,86 1,139 1,161 1,192 1,214 1,217 1,279 1,285 1,460 1,488 1,821 1,856 1,1880 ham}
+{0 1,3 1,7 1,26 1,57 1,93 1,106 1,196 1,269 1,284 1,326 1,765 1,804 1,808 1,848 1,855 1,1880 ham}
+{5 1,9 1,11 1,16 1,25 1,32 1,41 1,42 1,66 1,76 1,130 1,154 1,175 1,241 1,244 1,252 1,262 1,354 1,727 1,765 1,934 1,1604 1,1605 1,1606 1}
+{24 1,192 1,271 1,339 1,503 1,1875 1,1880 ham}
+{3 1,167 1,801 1,1880 ham}
+{0 1,16 1,26 1,88 1,93 1,106 1,460 1,894 1,1880 ham}
+{3 1,166 1,460 1,1880 ham}
+{3 1,26 1,146 1,448 1,1880 ham}
+{3 1,7 1,15 1,26 1,139 1,217 1,230 1,340 1,341 1,451 1,469 1,482 1,503 1,765 1,847 1,856 1,1875 1,1880 ham}
+{169 1,269 1,816 1,1880 ham}
+{3 1,217 1,350 1,480 1,809 1,856 1,899 1,1880 ham}
+{7 1,220 1,230 1,501 1,765 1,1880 ham}
+{1 1,4 1,7 1,24 1,28 1,36 1,39 1,88 1,102 1,163 1,229 1,262 1,437 1,447 1,448 1,497 1,698 1,765 1,930 1}
+{0 1,3 1,93 1,167 1,275 1,479 1,797 1,865 1,1880 ham}
+{15 1,507 1,845 1,1880 ham}
+{7 1,15 1,16 1,20 1,21 1,24 1,28 1,41 1,53 1,77 1,98 1,138 1,254 1,284 1,831 1,1639 1}
+{47 1,263 1,269 1,448 1,506 1,765 1,856 1,1629 1,1880 ham}
+{0 1,14 1,57 1,93 1,259 1,262 1,479 1,767 1,790 1,821 1,823 1,1880 ham}
+{1 1,7 1,24 1,42 1,45 1,269 1,273 1,339 1,474 1,492 1,765 1,1730 1}
+{15 1,217 1,273 1,463 1,845 1,1880 ham}
+{7 1,90 1,139 1,221 1,269 1,458 1,1880 ham}
+{26 1,42 1,65 1,278 1,357 1,1880 ham}
+{0 1,7 1,15 1,28 1,41 1,144 1,161 1,164 1,214 1,230 1,273 1,351 1,599 1,1677 1}
+{3 1,47 1,57 1,106 1,217 1,230 1,269 1,273 1,285 1,459 1,765 1,799 1,829 1,854 1,867 1,894 1,1880 ham}
+{26 1,45 1,146 1,168 1,192 1,271 1,273 1,789 1,848 1,889 1,1867 1,1880 ham}
+{7 1,16 1,30 1,161 1,224 1,269 1,284 1,448 1,487 1,1880 ham}
+{7 1,47 1,360 1,487 1,1880 ham}
+{26 1,277 1,799 1,1880 ham}
+{464 1,809 1,1880 ham}
+{508 1,1880 ham}
+{0 1,3 1,7 1,93 1,801 1,1880 ham}
+{3 1,4 1,36 1,765 1,1880 ham}
+{7 1,26 1,284 1,448 1,824 1,881 1,1880 ham}
+{3 1,285 1,460 1,482 1,487 1,790 1,821 1,890 1,1880 ham}
+{41 1,1880 ham}
+{26 1,57 1,192 1,273 1,451 1,479 1,487 1,858 1,1880 ham}
+{15 1,57 1,93 1,144 1,269 1,284 1,803 1,1880 ham}
+{3 1,24 1,36 1,274 1,809 1,838 1,1880 ham}
+{284 1,787 1,1880 ham}
+{3 1,7 1,93 1,167 1,221 1,262 1,448 1,857 1,858 1,1880 ham}
+{842 1,1880 ham}
+{1 1,4 1,7 1,13 1,14 1,16 1,22 1,32 1,47 1,50 1,126 1,175 1,230 1,252 1,262 1,383 1,388 1,538 1,589 1,716 1,725 1,748 1,765 1,769 1,1053 1}
+{3 1,139 1,166 1,275 1,330 1,1880 ham}
+{831 1,1873 1,1880 ham}
+{3 1,13 1,26 1,139 1,217 1,273 1,458 1,460 1,804 1,805 1,821 1,1880 ham}
+{0 1,24 1,28 1,41 1,42 1,66 1,587 1,1109 1}
+{3 1,191 1,275 1,458 1,483 1,822 1,838 1,1880 ham}
+{3 1,26 1,272 1,278 1,279 1,285 1,352 1,448 1,765 1,1880 ham}
+{26 1,166 1,217 1,804 1,853 1,1880 ham}
+{1 1,2 1,7 1,24 1,26 1,29 1,36 1,41 1,42 1,164 1,195 1,264 1,273 1,309 1,464 1,764 1,777 1,1270 1}
+{16 1,278 1,284 1,465 1,1880 ham}
+{3 1,57 1,139 1,262 1,460 1,461 1,464 1,1880 ham}
+{139 1,273 1,352 1,777 1,1880 ham}
+{3 1,274 1,278 1,340 1,360 1,1880 ham}
+{3 1,88 1,326 1,765 1,838 1,1880 ham}
+{458 1,460 1,524 1,858 1,1880 ham}
+{15 1,24 1,88 1,228 1,1880 ham}
+{3 1,16 1,24 1,26 1,100 1,144 1,146 1,360 1,449 1,463 1,487 1,1868 1,1880 ham}
+{26 1,139 1,146 1,229 1,277 1,452 1,458 1,492 1,1880 ham}
+{0 1,7 1,13 1,24 1,28 1,46 1,58 1,62 1,65 1,162 1,324 1,332 1,454 1,1125 1,1355 1,1620 1}
+{168 1,330 1,844 1,1872 1,1880 ham}
+{0 1,3 1,218 1,221 1,269 1,349 1,766 1,1880 ham}
+{2 1,3 1,7 1,11 1,93 1,106 1,144 1,262 1,278 1,349 1,359 1,460 1,469 1,482 1,501 1,801 1,857 1,888 1,1880 ham}
+{0 1,2 1,3 1,4 1,57 1,161 1,221 1,262 1,285 1,814 1,821 1,1880 ham}
+{7 1,106 1,284 1,514 1,888 1,1880 ham}
+{4 1,6 1,7 1,14 1,24 1,31 1,45 1,85 1,110 1,194 1,222 1,329 1,337 1,391 1,403 1,498 1,616 1,704 1,778 1,821 1,1632 1}
+{3 1,326 1,502 1,836 1,877 1,1880 ham}
+{283 1,284 1,1880 ham}
+{3 1,274 1,355 1,1880 ham}
+{11 1,26 1,139 1,217 1,273 1,339 1,479 1,482 1,859 1,1880 ham}
+{3 1,57 1,480 1,507 1,1880 ham}
+{106 1,187 1,460 1,765 1,1880 ham}
+{7 1,217 1,284 1,458 1,487 1,1880 ham}
+{26 1,146 1,217 1,262 1,269 1,273 1,285 1,340 1,352 1,354 1,468 1,876 1,1880 ham}
+{0 1,4 1,5 1,15 1,28 1,30 1,47 1,88 1,165 1,262 1,823 1,1573 1}
+{1880 ham}
+{3 1,57 1,168 1,217 1,273 1,284 1,285 1,332 1,342 1,453 1,457 1,765 1,801 1,821 1,884 1,1880 ham}
+{269 1,765 1,1880 ham}
+{228 1,482 1,1880 ham}
+{41 1,486 1,766 1,1880 ham}
+{274 1,877 1,1880 ham}
+{3 1,16 1,26 1,139 1,166 1,191 1,275 1,284 1,353 1,460 1,801 1,808 1,1880 ham}
+{1 1,2 1,5 1,6 1,7 1,8 1,17 1,20 1,26 1,48 1,53 1,65 1,86 1,102 1,109 1,161 1,261 1,269 1,765 1,1298 1,1325 1,1609 1,1673 1,1785 1}
+{0 1,3 1,218 1,221 1,269 1,349 1,766 1,1880 ham}
+{3 1,11 1,214 1,453 1,500 1,894 1,1880 ham}
+{228 1,273 1,278 1,283 1,284 1,350 1,476 1,765 1,1880 ham}
+{0 1,28 1,57 1,93 1,144 1,220 1,349 1,775 1,1880 ham}
+{7 1,88 1,460 1,765 1,804 1,848 1,1880 ham}
+{57 1,1880 ham}
+{3 1,7 1,15 1,228 1,352 1,502 1,1880 ham}
+{3 1,7 1,58 1,146 1,230 1,458 1,462 1,801 1,847 1,899 1,1880 ham}
+{3 1,166 1,168 1,220 1,453 1,471 1,483 1,488 1,840 1,846 1,882 1,1880 ham}
+{7 1,42 1,47 1,57 1,65 1,349 1,460 1,827 1,853 1,875 1,1880 ham}
+{16 1,276 1,1880 ham}
+{3 1,15 1,271 1,284 1,351 1,1880 ham}
+{827 1,1880 ham}
+{45 1,139 1,161 1,220 1,273 1,483 1,501 1,859 1,1880 ham}
+{196 1,351 1,1880 ham}
+{2 1,3 1,7 1,45 1,57 1,167 1,272 1,461 1,507 1,828 1,879 1,1880 ham}
+{45 1,217 1,459 1,487 1,820 1,1880 ham}
+{1880 ham}
+{7 1,93 1,139 1,220 1,273 1,285 1,846 1,882 1,1880 ham}
+{3 1,11 1,26 1,41 1,42 1,65 1,139 1,146 1,230 1,268 1,277 1,479 1,490 1,492 1,765 1,813 1,859 1,880 1,1880 ham}
+{3 1,26 1,47 1,146 1,217 1,262 1,269 1,349 1,459 1,460 1,790 1,805 1,821 1,1880 ham}
+{11 1,93 1,146 1,877 1,1880 ham}
+{3 1,15 1,139 1,230 1,273 1,341 1,466 1,470 1,487 1,503 1,765 1,1880 ham}
+{57 1,488 1,788 1,852 1,865 1,1880 ham}
+{36 1,273 1,488 1,501 1,765 1,1880 ham}
+{1880 ham}
+{3 1,7 1,45 1,230 1,272 1,501 1,765 1,1880 ham}
+{3 1,192 1,1880 ham}
+{26 1,139 1,221 1,340 1,448 1,765 1,766 1,1880 ham}
+{93 1,789 1,1880 ham}
+{57 1,273 1,502 1,503 1,1880 ham}
+{26 1,192 1,1880 ham}
+{7 1,15 1,93 1,139 1,167 1,451 1,486 1,874 1,1880 ham}
+{3 1,100 1,220 1,765 1,1880 ham}
+{3 1,7 1,13 1,47 1,139 1,145 1,146 1,217 1,230 1,271 1,888 1,1880 ham}
+{3 1,26 1,146 1,810 1,829 1,1880 ham}
+{7 1,26 1,36 1,68 1,448 1,460 1,465 1,764 1,765 1,857 1,858 1,1880 ham}
+{274 1,425 1,831 1,1880 ham}
+{24 1,93 1,276 1,451 1,458 1,465 1,477 1,488 1,506 1,508 1,837 1,1880 ham}
+{3 1,7 1,36 1,106 1,139 1,146 1,271 1,274 1,355 1,453 1,479 1,765 1,894 1,1880 ham}
+{3 1,339 1,451 1,482 1,765 1,801 1,842 1,1880 ham}
+{3 1,57 1,106 1,1880 ham}
+{3 1,7 1,26 1,168 1,214 1,273 1,278 1,284 1,463 1,479 1,784 1,801 1,807 1,867 1,1880 ham}
+{3 1,26 1,339 1,801 1,1880 ham}
+{42 1,166 1,359 1,853 1,1874 1,1880 ham}
+{0 1,4 1,7 1,8 1,15 1,20 1,26 1,27 1,35 1,48 1,53 1,72 1,81 1,169 1,183 1,214 1,230 1,273 1,277 1,540 1}
+{7 1,26 1,106 1,139 1,339 1,476 1,1880 ham}
+{192 1,765 1,1880 ham}
+{3 1,7 1,45 1,106 1,275 1,284 1,344 1,467 1,478 1,825 1,860 1,893 1,1880 ham}
+{0 1,26 1,86 1,93 1,106 1,168 1,217 1,221 1,274 1,479 1,765 1,1880 ham}
+{3 1,26 1,42 1,106 1,139 1,218 1,273 1,284 1,285 1,342 1,461 1,465 1,510 1,819 1,821 1,858 1,884 1,1880 ham}
+{3 1,23 1,93 1,106 1,196 1,218 1,262 1,269 1,460 1,814 1,821 1,880 1,1880 ham}
+{3 1,7 1,41 1,57 1,93 1,271 1,450 1,453 1,490 1,502 1,845 1,858 1,1880 ham}
+{192 1,818 1,1880 ham}
+{2 1,11 1,28 1,41 1,45 1,47 1,160 1,188 1,262 1,275 1,291 1,601 1,765 1,1154 1,1695 1}
+{3 1,47 1,139 1,161 1,284 1,478 1,765 1,1880 ham}
+{9 1,11 1,13 1,26 1,42 1,89 1,146 1,195 1,339 1,765 1,1188 1,1536 1,1557 1,1620 1}
+{3 1,7 1,26 1,36 1,67 1,138 1,161 1,193 1,269 1,339 1,502 1,510 1,866 1,879 1,1880 ham}
+{3 1,16 1,217 1,230 1,360 1,458 1,808 1,858 1,1880 ham}
+{3 1,7 1,15 1,57 1,326 1,448 1,466 1,856 1,877 1,1880 ham}
+{0 1,3 1,166 1,218 1,221 1,275 1,353 1,461 1,860 1,1880 ham}
+{0 1,15 1,16 1,20 1,21 1,28 1,77 1,98 1,134 1,138 1,144 1,147 1,254 1,374 1,422 1,528 1,630 1,992 1,1079 1,1628 1,1792 1}
+{344 1,479 1,487 1,1880 ham}
+{0 1,3 1,7 1,15 1,41 1,44 1,93 1,161 1,269 1,285 1,452 1,460 1,493 1,831 1,1880 ham}
+{3 1,139 1,166 1,191 1,272 1,284 1,801 1,878 1,1880 ham}
+{26 1,41 1,218 1,274 1,285 1,491 1,503 1,768 1,864 1,1880 ham}
+{15 1,192 1,277 1,810 1,829 1,1880 ham}
+{57 1,144 1,167 1,830 1,1880 ham}
+{3 1,7 1,57 1,93 1,106 1,462 1,479 1,502 1,628 1,765 1,1880 ham}
+{503 1,766 1,1880 ham}
+{507 1,511 1,765 1,1880 ham}
+{7 1,14 1,16 1,24 1,26 1,45 1,119 1,273 1,339 1,474 1,765 1,827 1}
+{513 1,1880 ham}
+{7 1,217 1,221 1,262 1,350 1,448 1,764 1,797 1,802 1,858 1,1880 ham}
+{3 1,15 1,139 1,479 1,503 1,856 1,1880 ham}
+{3 1,16 1,24 1,42 1,93 1,139 1,166 1,167 1,274 1,275 1,276 1,768 1,1880 ham}
+{5 1,7 1,9 1,11 1,14 1,25 1,26 1,32 1,36 1,42 1,45 1,51 1,66 1,76 1,130 1,146 1,154 1,214 1,241 1,244 1,727 1,764 1,765 1,1054 1,1517 1}
+{7 1,279 1,354 1,828 1,891 1,1880 ham}
+{3 1,7 1,47 1,269 1,330 1,479 1,492 1,502 1,789 1,830 1,836 1,891 1,1880 ham}
+{26 1,45 1,124 1,192 1,870 1,1880 ham}
+{7 1,13 1,68 1,69 1,100 1,112 1,262 1,361 1,390 1,600 1,687 1,765 1,771 1,1657 1}
+{214 1,273 1,352 1,765 1,1880 ham}
+{3 1,57 1,119 1,167 1,192 1,787 1,1880 ham}
+{230 1,1880 ham}
+{283 1,466 1,501 1,765 1,789 1,1880 ham}
+{3 1,24 1,139 1,161 1,216 1,262 1,274 1,284 1,870 1,1880 ham}
+{3 1,7 1,93 1,230 1,269 1,448 1,849 1,855 1,856 1,1880 ham}
+{3 1,217 1,277 1,344 1,482 1,1880 ham}
+{3 1,7 1,106 1,218 1,272 1,284 1,355 1,448 1,801 1,802 1,835 1,870 1,1880 ham}
+{162 1,283 1,338 1,359 1,808 1,1880 ham}
+{3 1,230 1,326 1,470 1,765 1,831 1,1880 ham}
+{0 1,6 1,7 1,8 1,16 1,18 1,24 1,26 1,35 1,48 1,81 1,155 1,183 1,214 1,222 1,273 1}
+{3 1,93 1,106 1,146 1,192 1,262 1,342 1,360 1,504 1,516 1,765 1,858 1,1880 ham}
+{7 1,167 1,343 1,353 1,482 1,877 1,1880 ham}
+{42 1,192 1,326 1,513 1,764 1,858 1,877 1,1880 ham}
+{3 1,26 1,88 1,146 1,274 1,344 1,784 1,801 1,1880 ham}
+{26 1,65 1,93 1,269 1,344 1,352 1,765 1,879 1,1880 ham}
+{167 1,1880 ham}
+{0 1,2 1,4 1,7 1,15 1,25 1,47 1,67 1,68 1,88 1,126 1,230 1,392 1,494 1,765 1,1239 1,1416 1,1717 1}
+{3 1,7 1,26 1,42 1,167 1,191 1,274 1,284 1,487 1,835 1,846 1,1874 1,1879 1,1880 ham}
+{275 1,450 1,858 1,1880 ham}
+{3 1,41 1,74 1,93 1,106 1,126 1,139 1,166 1,271 1,276 1,285 1,357 1,359 1,784 1,801 1,822 1,844 1,1880 ham}
+{838 1,852 1,865 1,1880 ham}
+{7 1,161 1,217 1,465 1,885 1,1880 ham}
+{0 1,6 1,8 1,17 1,24 1,35 1,42 1,49 1,71 1,88 1,99 1,133 1,161 1,169 1,171 1,214 1,273 1,515 1,765 1,1358 1}
+{7 1,16 1,26 1,161 1,349 1,350 1,463 1,487 1,831 1,848 1,861 1,1868 1,1880 ham}
+{7 1,16 1,57 1,100 1,125 1,453 1,458 1,477 1,826 1,1880 ham}
+{2 1,28 1,30 1,47 1,100 1,214 1,228 1,351 1,487 1,765 1,858 1}
+{0 1,4 1,6 1,8 1,15 1,18 1,20 1,26 1,27 1,28 1,34 1,63 1,80 1,84 1,88 1,95 1,146 1,209 1,279 1,452 1,516 1,1448 1}
+{7 1,36 1,47 1,144 1,241 1,269 1,271 1,273 1,283 1,353 1,460 1,468 1,482 1,489 1,506 1,765 1,840 1,858 1,869 1,1880 ham}
+{3 1,14 1,26 1,93 1,230 1,269 1,285 1,479 1,501 1,765 1,801 1,851 1,854 1,1880 ham}
+{57 1,93 1,168 1,217 1,278 1,285 1,765 1,1880 ham}
+{24 1,26 1,217 1,269 1,271 1,274 1,789 1,830 1,1880 ham}
+{1 1,10 1,11 1,13 1,16 1,41 1,42 1,47 1,65 1,93 1,146 1,154 1,167 1,286 1,344 1,354 1}
+{93 1,343 1,448 1,764 1,887 1,1880 ham}
+{3 1,7 1,22 1,24 1,47 1,86 1,100 1,102 1,139 1,166 1,199 1,208 1,279 1,458 1,465 1,764 1,857 1,858 1,859 1,877 1,1160 1}
+{3 1,262 1,285 1,827 1,1880 ham}
+{7 1,28 1,47 1,262 1,465 1,764 1,1880 ham}
+{26 1,139 1,214 1,463 1,466 1,486 1,510 1,515 1,804 1,828 1,868 1,869 1,1880 ham}
+{7 1,168 1,273 1,460 1,469 1,481 1,784 1,1880 ham}
+{106 1,274 1,330 1,857 1,1592 1,1880 ham}
+{269 1,273 1,285 1,326 1,339 1,806 1,815 1,848 1,1866 1,1878 1,1880 ham}
+{26 1,214 1,448 1,764 1,821 1,903 1,1880 ham}
+{273 1,809 1,858 1,1880 ham}
+{166 1,1880 ham}
+{41 1,65 1,227 1,1880 ham}
+{3 1,7 1,15 1,16 1,26 1,36 1,47 1,86 1,93 1,161 1,486 1,765 1,898 1,1880 ham}
+{57 1,88 1,845 1,852 1,863 1,882 1,1880 ham}
+{7 1,269 1,273 1,278 1,283 1,326 1,469 1,829 1,858 1,860 1,1880 ham}
+{3 1,214 1,352 1,1880 ham}
+{1880 ham}
+{4 1,47 1,88 1,339 1,1880 ham}
+{3 1,7 1,17 1,26 1,463 1,466 1,479 1,788 1,821 1,831 1,1880 ham}
+{3 1,26 1,28 1,57 1,100 1,192 1,217 1,230 1,274 1,326 1,339 1,459 1,510 1,765 1,809 1,857 1,871 1,873 1,880 1,886 1,1880 ham}
+{192 1,451 1,482 1,1880 ham}
+{166 1,191 1,276 1,865 1,1880 ham}
+{3 1,7 1,192 1,350 1,765 1,818 1,1880 ham}
+{0 1,2 1,3 1,24 1,460 1,1880 ham}
+{1875 1,1880 ham}
+{0 1,16 1,20 1,21 1,26 1,28 1,34 1,40 1,54 1,60 1,77 1,98 1,134 1,138 1,144 1,147 1,1259 1,1472 1,1629 1,1630 1,1835 1}
+{3 1,26 1,106 1,139 1,168 1,269 1,458 1,459 1,492 1,764 1,790 1,821 1,867 1,1871 1,1880 ham}
+{93 1,487 1,789 1,850 1,1880 ham}
+{0 1,2 1,7 1,15 1,24 1,41 1,67 1,68 1,80 1,186 1,230 1,248 1,259 1,263 1,470 1,494 1,520 1}
+{3 1,28 1,42 1,45 1,57 1,784 1,856 1,871 1,1880 ham}
+{2 1,3 1,42 1,57 1,284 1,764 1,797 1,1880 ham}
+{7 1,161 1,218 1,269 1,274 1,349 1,487 1,799 1,811 1,1880 ham}
+{7 1,168 1,195 1,217 1,269 1,273 1,486 1,505 1,1880 ham}
+{0 1,3 1,218 1,221 1,269 1,349 1,766 1,1880 ham}
+{1 1,7 1,10 1,26 1,41 1,42 1,45 1,100 1,286 1,304 1,326 1,608 1,662 1,901 1,903 1,944 1,954 1,1067 1,1399 1,1692 1,1693 1}
+{93 1,167 1,218 1,272 1,349 1,486 1,1880 ham}
+{161 1,269 1,1880 ham}
+{230 1,486 1,497 1,1880 ham}
+{0 1,3 1,7 1,16 1,24 1,139 1,166 1,192 1,230 1,262 1,273 1,340 1,344 1,352 1,484 1,485 1,487 1,765 1,801 1,885 1,1880 ham}
+{3 1,24 1,42 1,220 1,269 1,801 1,845 1,1880 ham}
+{891 1,1880 ham}
+{2 1,7 1,11 1,16 1,146 1,278 1,458 1,765 1,859 1,1880 ham}
+{146 1,161 1,217 1,221 1,269 1,350 1,487 1}
+{3 1,146 1,271 1,284 1,801 1,1880 ham}
+{1 1,2 1,5 1,7 1,16 1,18 1,27 1,42 1,43 1,45 1,56 1,64 1,85 1,104 1,107 1,132 1,137 1,140 1,176 1,213 1,234 1,379 1,522 1}
+{277 1,1880 ham}
+{7 1,262 1,341 1,479 1,765 1,1880 ham}
+{47 1,214 1,1880 ham}
+{166 1,1880 ham}
+{166 1,341 1,448 1,488 1,846 1,1880 ham}
+{24 1,93 1,220 1,285 1,835 1,1880 ham}
+{3 1,7 1,14 1,24 1,26 1,57 1,93 1,97 1,120 1,189 1,326 1,340 1,499 1,627 1,676 1,801 1}
+{26 1,161 1,339 1,510 1,828 1,1880 ham}
+{3 1,7 1,11 1,36 1,42 1,45 1,47 1,57 1,93 1,221 1,269 1,339 1,343 1,785 1,1880 ham}
+{7 1,26 1,57 1,93 1,344 1,478 1,867 1,1880 ham}
+{269 1,463 1,1880 ham}
+{7 1,88 1,139 1,451 1,1880 ham}
+{15 1,166 1,463 1,1880 ham}
+{3 1,7 1,26 1,35 1,47 1,57 1,87 1,93 1,230 1,273 1,459 1,487 1,765 1,799 1,822 1,1133 1,1880 ham}
+{146 1,465 1,1880 ham}
+{269 1,1880 ham}
+{3 1,7 1,11 1,33 1,57 1,214 1,273 1,460 1,765 1,1880 ham}
+{7 1,48 1,482 1,796 1,834 1,1880 ham}
+{7 1,16 1,26 1,47 1,57 1,93 1,146 1,283 1,285 1,360 1,460 1,470 1,486 1,764 1,765 1,822 1,1880 ham}
+{45 1,93 1,269 1,326 1,355 1,448 1,1880 ham}
+{106 1,465 1,1880 ham}
+{7 1,26 1,168 1,272 1,274 1,285 1,473 1,504 1,516 1,830 1,1880 ham}
+{192 1,214 1,273 1,339 1,1880 ham}
+{7 1,161 1,218 1,269 1,274 1,487 1,799 1,811 1,1880 ham}
+{831 1,1880 ham}
+{269 1,502 1,1880 ham}
+{26 1,217 1,221 1,278 1,339 1,478 1,1880 ham}
+{3 1,65 1,191 1,355 1,844 1,1869 1,1880 ham}
+{490 1,1880 ham}
+{3 1,7 1,88 1,189 1,354 1,765 1,1880 ham}
+{90 1,100 1,507 1,1880 ham}
+{166 1,1880 ham}
+{16 1,217 1,278 1,487 1,1880 ham}
+{191 1,352 1,507 1,864 1,1880 ham}
+{1 1,5 1,7 1,28 1,29 1,36 1,88 1,91 1,152 1,210 1,229 1,233 1,437 1,617 1,666 1,757 1}
+{827 1,1880 ham}
+{3 1,7 1,167 1,262 1,824 1,1880 ham}
+{7 1,11 1,12 1,13 1,24 1,41 1,42 1,194 1,260 1,269 1,310 1,346 1,765 1}
+{285 1,826 1,896 1,897 1,1880 ham}
+{1880 ham}
+{47 1,765 1,856 1,1880 ham}
+{139 1,146 1,166 1,168 1,284 1,1880 ham}
+{38 1,57 1,74 1,341 1,1880 ham}
+{3 1,45 1,269 1,272 1,1880 ham}
+{0 1,6 1,7 1,8 1,17 1,18 1,20 1,26 1,28 1,35 1,43 1,44 1,63 1,80 1,84 1,88 1,95 1,143 1,161 1,217 1,481 1}
+{42 1,45 1,230 1,277 1,350 1,808 1,1880 ham}
+{3 1,161 1,217 1,285 1,468 1,1880 ham}
+{74 1,275 1,1880 ham}
+{3 1,7 1,279 1,461 1,481 1,1878 1,1880 ham}
+{3 1,93 1,100 1,220 1,274 1,276 1,340 1,508 1,822 1,826 1,1880 ham}
+{28 1,139 1,269 1,458 1,764 1,797 1,810 1,857 1,876 1,1880 ham}
+{7 1,39 1,100 1,214 1,264 1,273 1,541 1,765 1,831 1,1482 1}
+{3 1,167 1,482 1,861 1,1880 ham}
+{464 1,809 1,1880 ham}
+{3 1,221 1,269 1,448 1,458 1,1880 ham}
+{146 1,283 1,830 1,1880 ham}
+{0 1,24 1,26 1,57 1,168 1,273 1,461 1,1880 ham}
+{3 1,220 1,221 1,274 1,451 1,465 1,768 1,1880 ham}
+{3 1,7 1,24 1,486 1,892 1,1880 ham}
+{3 1,24 1,57 1,106 1,139 1,146 1,217 1,269 1,271 1,278 1,350 1,453 1,764 1,765 1,798 1,847 1,899 1,1880 ham}
+{161 1,339 1,1880 ham}
+{3 1,57 1,93 1,146 1,269 1,278 1,326 1,488 1,764 1,830 1,892 1,1880 ham}
+{41 1,42 1,93 1,269 1,284 1,466 1,488 1,802 1,893 1,1880 ham}
+{7 1,100 1,139 1,813 1,840 1,1880 ham}
+{7 1,161 1,1880 ham}
+{3 1,7 1,144 1,810 1,829 1,1880 ham}
+{3 1,167 1,275 1,284 1,467 1,890 1,1880 ham}
+{26 1,139 1,277 1,284 1,339 1,468 1,1880 ham}
+{0 1,15 1,16 1,20 1,21 1,28 1,60 1,77 1,98 1,134 1,138 1,144 1,147 1,254 1,300 1,528 1,632 1,759 1,1079 1,1225 1}
+{138 1,230 1,273 1,277 1,765 1,1880 ham}
+{7 1,26 1,35 1,47 1,48 1,144 1,170 1,217 1,230 1,269 1,273 1,281 1,354 1,458 1,480 1,492 1,765 1,783 1,839 1,1880 ham}
+{161 1,168 1,339 1,806 1,1880 ham}
+{3 1,119 1,269 1,355 1,460 1,465 1,787 1,801 1,821 1,1880 ham}
+{1 1,7 1,26 1,41 1,43 1,170 1,223 1,230 1,475 1,479 1,701 1,765 1,1306 1}
+{269 1,507 1,589 1,1880 ham}
+{470 1,1880 ham}
+{6 1,9 1,15 1,42 1,66 1,273 1,452 1,456 1}
+{1 1,2 1,7 1,29 1,32 1,40 1,41 1,45 1,47 1,52 1,86 1,109 1,145 1,160 1,172 1,190 1,239 1,250 1,262 1,278 1,287 1,373 1,662 1}
+{342 1,846 1,1880 ham}
+{3 1,7 1,26 1,100 1,161 1,192 1,217 1,221 1,228 1,272 1,350 1,765 1,811 1,813 1,1880 ham}
+{506 1,830 1,1880 ham}
+{7 1,106 1,221 1,487 1,1880 ham}
+{6 1,7 1,9 1,13 1,26 1,45 1,54 1,60 1,100 1,128 1,138 1,230 1,334 1,427 1}
+{273 1,858 1,1880 ham}
+{192 1,275 1,285 1,1880 ham}
+{782 1,1880 ham}
+{269 1,460 1,821 1,1880 ham}
+{47 1,57 1,273 1,765 1,1880 ham}
+{0 1,6 1,7 1,8 1,26 1,33 1,39 1,63 1,76 1,88 1,92 1,155 1,161 1,219 1,245 1,279 1,1163 1,1446 1,1662 1}
+{275 1,284 1,451 1,767 1,788 1,1880 ham}
+{6 1,7 1,15 1,25 1,66 1,144 1,149 1,163 1,214 1,223 1,448 1,673 1}
+{16 1,26 1,48 1,86 1,161 1,217 1,221 1,230 1,262 1,269 1,339 1,448 1,765 1,847 1,1527 1,1880 ham}
+{5 1,7 1,17 1,24 1,30 1,41 1,64 1,72 1,82 1,85 1,100 1,142 1,268 1,270 1,278 1,354 1,397 1,450 1,515 1,563 1,795 1}
+{3 1,26 1,57 1,139 1,146 1,214 1,277 1,350 1,359 1,451 1,764 1,831 1,1880 ham}
+{0 1,2 1,15 1,16 1,90 1,146 1,157 1,182 1,186 1,230 1,260 1,263 1,471 1,641 1,1000 1}
+{217 1,350 1,452 1,1880 ham}
+{0 1,15 1,16 1,20 1,21 1,28 1,34 1,53 1,60 1,77 1,97 1,98 1,134 1,138 1,147 1,254 1,300 1}
+{3 1,26 1,28 1,93 1,102 1,168 1,275 1,461 1,509 1,821 1,831 1,832 1,847 1,1880 ham}
+{16 1,1880 ham}
+{3 1,26 1,47 1,227 1,274 1,765 1,877 1,1880 ham}
+{3 1,45 1,145 1,269 1,273 1,476 1,765 1,848 1,895 1,1880 ham}
+{3 1,30 1,88 1,139 1,1880 ham}
+{41 1,42 1,88 1,139 1,263 1,273 1,448 1,1880 ham}
+{3 1,26 1,141 1,166 1,168 1,765 1,831 1,1880 ham}
+{167 1,765 1,790 1,821 1,823 1,850 1,1880 ham}
+{3 1,42 1,57 1,93 1,217 1,284 1,353 1,359 1,453 1,768 1,787 1,1880 ham}
+{7 1,139 1,161 1,167 1,221 1,275 1,282 1,340 1,448 1,467 1,490 1,886 1,1771 1,1880 ham}
+{3 1,7 1,16 1,28 1,106 1,273 1,340 1,465 1,490 1,801 1,847 1,885 1,1880 ham}
+{3 1,284 1,452 1,767 1,813 1,1880 ham}
+{3 1,41 1,47 1,460 1,491 1,768 1,822 1,1880 ham}
+{339 1,1880 ham}
+{88 1,339 1,1877 1,1880 ham}
+{99 1,193 1,218 1,507 1,1880 ham}
+{16 1,26 1,269 1,273 1,502 1,765 1,1880 ham}
+{3 1,7 1,26 1,47 1,167 1,269 1,278 1,460 1,830 1,858 1,1880 ham}
+{3 1,119 1,768 1,1880 ham}
+{192 1,285 1,764 1,1880 ham}
+{3 1,7 1,26 1,47 1,106 1,161 1,277 1,285 1,330 1,465 1,468 1,487 1,764 1,784 1,885 1,1880 ham}
+{93 1,214 1,340 1,812 1,831 1,847 1,1880 ham}
+{6 1,7 1,13 1,16 1,24 1,30 1,42 1,45 1,47 1,65 1,110 1,164 1,166 1,172 1,195 1,199 1,782 1,1226 1,1729 1}
+{0 1,47 1,88 1,160 1,274 1,330 1,765 1,822 1,837 1,1252 1,1880 ham}
+{24 1,28 1,36 1,47 1,146 1,262 1,269 1,278 1,765 1}
+{7 1,13 1,14 1,26 1,41 1,43 1,48 1,112 1,137 1,146 1,170 1,223 1,224 1,460 1,765 1,822 1}
+{26 1,35 1,42 1,45 1,146 1,161 1,230 1,247 1,273 1,285 1,356 1,472 1,492 1,831 1,1319 1,1495 1}
+{3 1,26 1,57 1,221 1,353 1,799 1,851 1,1880 ham}
+{2 1,11 1,41 1,63 1,65 1,119 1,214 1,262 1,269 1,278 1,337 1,358 1}
+{146 1,486 1,765 1,881 1,1880 ham}
+{7 1,48 1,273 1,501 1,793 1,822 1,1880 ham}
+{7 1,278 1,1880 ham}
+{3 1,284 1,463 1,801 1,1880 ham}
+{3 1,7 1,26 1,45 1,93 1,102 1,166 1,192 1,285 1,460 1,468 1,505 1,509 1,811 1,821 1,839 1,843 1,1880 ham}
+{448 1,877 1,1880 ham}
+{26 1,41 1,45 1,166 1,269 1,326 1,510 1,819 1,877 1,1880 ham}
+{3 1,26 1,91 1,269 1,801 1,803 1,1880 ham}
+{1 1,7 1,35 1,48 1,58 1,81 1,82 1,185 1,214 1,222 1,273 1,279 1,381 1,548 1,1424 1}
+{3 1,7 1,220 1,349 1,448 1,486 1,794 1,1880 ham}
+{15 1,26 1,47 1,167 1,269 1,343 1,448 1,450 1,458 1,476 1,501 1,516 1,765 1,817 1,1880 ham}
+{3 1,41 1,74 1,119 1,124 1,192 1,214 1,269 1,273 1,277 1,285 1,339 1,492 1,503 1,765 1,802 1,1880 ham}
+{119 1,275 1,285 1,330 1,477 1,488 1,841 1,1880 ham}
+{3 1,7 1,26 1,47 1,57 1,93 1,161 1,326 1,467 1,483 1,510 1,514 1,1880 ham}
+{3 1,106 1,139 1,216 1,221 1,269 1,349 1,448 1,451 1,479 1,482 1,487 1,802 1,825 1,892 1,1741 1,1880 ham}
+{3 1,161 1,193 1,1880 ham}
+{26 1,271 1,274 1,463 1,830 1,1880 ham}
+{3 1,7 1,349 1,508 1,829 1,1880 ham}
+{3 1,7 1,15 1,26 1,106 1,139 1,217 1,221 1,230 1,273 1,275 1,278 1,453 1,478 1,479 1,501 1,764 1,765 1,801 1,821 1,858 1,866 1,1880 ham}
+{0 1,3 1,218 1,221 1,349 1,1880 ham}
+{3 1,57 1,106 1,120 1,146 1,262 1,284 1,354 1,460 1,462 1,476 1,1880 ham}
+{220 1,790 1,833 1,1880 ham}
+{3 1,217 1,221 1,269 1,448 1,1880 ham}
+{26 1,57 1,161 1,339 1,343 1,1880 ham}
+{3 1,26 1,217 1,269 1,277 1,284 1,448 1,458 1,479 1,765 1,801 1,835 1,877 1,1880 ham}
+{217 1,1880 ham}
+{57 1,93 1,164 1,269 1,272 1,478 1,507 1,1877 1,1880 ham}
+{467 1,858 1,890 1,1880 ham}
+{48 1,106 1,139 1,269 1,273 1,339 1,479 1,798 1,1880 ham}
+{216 1,460 1,494 1,830 1,1880 ham}
+{15 1,168 1,273 1,285 1,340 1,448 1,460 1,831 1,1880 ham}
+{0 1,7 1,15 1,16 1,21 1,28 1,34 1,77 1,91 1,103 1,134 1,138 1,214 1,222 1,273 1,300 1,632 1,981 1,1447 1,1804 1}
+{0 1,6 1,7 1,8 1,16 1,17 1,18 1,21 1,23 1,26 1,39 1,48 1,161 1,230 1,249 1,475 1}
+{271 1,856 1,1880 ham}
+{277 1,349 1,448 1,765 1,1880 ham}
+{26 1,47 1,214 1,339 1,510 1,1880 ham}
+{7 1,26 1,100 1,161 1,277 1,350 1,760 1,1868 1,1880 ham}
+{3 1,7 1,17 1,93 1,161 1,221 1,342 1,350 1,453 1,458 1,487 1,506 1,765 1,821 1,1880 ham}
+{191 1,275 1,1880 ham}
+{3 1,42 1,106 1,359 1,822 1,846 1,1880 ham}
+{3 1,7 1,214 1,272 1,350 1,484 1,507 1,790 1,801 1,821 1,835 1,868 1,1880 ham}
+{3 1,139 1,161 1,220 1,284 1,465 1,1880 ham}
+{93 1,1880 ham}
+{214 1,468 1,1880 ham}
+{3 1,28 1,45 1,93 1,106 1,230 1,339 1,487 1,502 1,506 1,817 1,859 1,1880 ham}
+{3 1,24 1,192 1,230 1,1880 ham}
+{7 1,139 1,167 1,220 1,312 1,448 1,1880 ham}
+{0 1,6 1,7 1,16 1,21 1,26 1,38 1,71 1,87 1,92 1,103 1,120 1,130 1,155 1,161 1,279 1,289 1}
+{3 1,42 1,273 1,355 1,768 1,787 1,828 1,856 1,867 1,1880 ham}
+{2 1,7 1,14 1,15 1,24 1,32 1,50 1,86 1,110 1,175 1,262 1,316 1,380 1,765 1,1726 1}
+{26 1,42 1,45 1,57 1,146 1,167 1,269 1,458 1,468 1,501 1,510 1,821 1,1880 ham}
+{3 1,7 1,13 1,14 1,15 1,30 1,93 1,139 1,192 1,230 1,257 1,277 1,279 1,283 1,1022 1}
+{7 1,24 1,93 1,192 1,262 1,269 1,482 1,1880 ham}
+{1 1,4 1,7 1,24 1,28 1,36 1,39 1,88 1,102 1,163 1,229 1,262 1,437 1,447 1,448 1,698 1,765 1,925 1,1412 1,1638 1}
+{5 1,7 1,9 1,10 1,25 1,29 1,32 1,135 1,154 1,206 1,286 1,387 1,608 1}
+{26 1,41 1,45 1,47 1,80 1,106 1,146 1,342 1,476 1,790 1,821 1,827 1,848 1,1880 ham}
+{3 1,26 1,161 1,285 1,326 1,483 1,487 1,1880 ham}
+{7 1,26 1,93 1,100 1,230 1,342 1,350 1,460 1,485 1,776 1,830 1,883 1,1880 ham}
+{3 1,453 1,479 1,503 1,830 1,847 1,1880 ham}
+{3 1,57 1,93 1,487 1,790 1,821 1,1880 ham}
+{15 1,192 1,273 1,507 1,1880 ham}
+{2 1,3 1,106 1,230 1,448 1,865 1,1880 ham}
+{0 1,1 1,2 1,16 1,29 1,68 1,90 1,157 1,163 1,182 1,186 1,216 1,230 1,333 1,407 1,471 1,623 1,1000 1}
+{3 1,7 1,41 1,57 1,93 1,269 1,353 1,355 1,849 1,865 1,876 1,1880 ham}
+{273 1,858 1,1880 ham}
+{3 1,220 1,784 1,1880 ham}
+{0 1,5 1,7 1,8 1,15 1,39 1,94 1,97 1,144 1,233 1,448 1,790 1,821 1,1029 1,1083 1,1217 1,1278 1}
+{352 1,482 1,835 1,1880 ham}
+{3 1,15 1,458 1,467 1,510 1,1880 ham}
+{57 1,123 1,146 1,459 1,823 1,854 1,1880 ham}
+{139 1,278 1,816 1,829 1,1877 1,1880 ham}
+{9 1,47 1,217 1,278 1,283 1,353 1,459 1,487 1,516 1,856 1,1880 ham}
+{3 1,93 1,106 1,168 1,279 1,458 1,460 1,764 1,765 1,821 1,822 1,832 1,858 1,1871 1,1878 1,1880 ham}
+{138 1,230 1,273 1,277 1,765 1,1880 ham}
+{7 1,15 1,106 1,139 1,463 1,857 1,1880 ham}
+{217 1,277 1,285 1,1880 ham}
+{7 1,350 1,353 1,850 1,1880 ham}
+{482 1,487 1,835 1,1880 ham}
+{139 1,273 1,284 1,505 1,808 1,857 1,1880 ham}
+{3 1,7 1,26 1,86 1,87 1,93 1,161 1,217 1,269 1,279 1,349 1,448 1,487 1,628 1,765 1,801 1,870 1,1880 ham}
+{3 1,7 1,93 1,167 1,269 1,278 1,344 1,349 1,428 1,448 1,460 1,858 1,1880 ham}
+{3 1,106 1,221 1,344 1,1880 ham}
+{0 1,7 1,166 1,353 1,764 1,808 1,809 1,870 1,1880 ham}
+{106 1,168 1,191 1,262 1,461 1,477 1,866 1,1880 ham}
+{1880 ham}
+{3 1,7 1,26 1,93 1,139 1,217 1,262 1,263 1,269 1,285 1,453 1,486 1,506 1,765 1,806 1,839 1,850 1,856 1,1880 ham}
+{2 1,4 1,7 1,14 1,15 1,28 1,29 1,47 1,68 1,90 1,186 1,230 1,282 1,445 1,471 1,726 1,782 1}
+{0 1,3 1,144 1,340 1,448 1,801 1,1880 ham}
+{24 1,278 1,490 1,831 1,1880 ham}
+{217 1,273 1,877 1,900 1,1880 ham}
+{339 1,1880 ham}
+{42 1,57 1,146 1,273 1,458 1,463 1,1880 ham}
+{448 1,1880 ham}
+{26 1,273 1,467 1,869 1,1880 ham}
+{3 1,7 1,47 1,262 1,269 1,285 1,460 1,463 1,488 1,765 1,821 1,1880 ham}
+{0 1,3 1,505 1,847 1,1114 1,1880 ham}
+{3 1,15 1,93 1,452 1,801 1,877 1,1880 ham}
+{7 1,65 1,88 1,106 1,161 1,329 1,458 1,840 1,858 1,1880 ham}
+{7 1,28 1,139 1,217 1,230 1,765 1,790 1,821 1,835 1,858 1,1880 ham}
+{274 1,1880 ham}
+{3 1,15 1,26 1,93 1,217 1,283 1,484 1,765 1,801 1,1880 ham}
+{3 1,24 1,272 1,284 1,448 1,1880 ham}
+{7 1,26 1,192 1,274 1,330 1,804 1,1880 ham}
+{24 1,26 1,353 1,354 1,453 1,460 1,516 1,795 1,1880 ham}
+{166 1,191 1,269 1,853 1,1880 ham}
+{787 1,1880 ham}
+{16 1,114 1,217 1,360 1,458 1,1880 ham}
+{86 1,106 1,273 1,340 1,344 1,506 1,515 1,765 1,789 1,835 1,1880 ham}
+{7 1,339 1,849 1,1880 ham}
+{0 1,3 1,218 1,221 1,349 1,1880 ham}
+{7 1,168 1,230 1,284 1,502 1,858 1,1880 ham}
+{26 1,230 1,262 1,269 1,802 1,851 1,1880 ham}
+{26 1,161 1,217 1,278 1,1880 ham}
+{7 1,15 1,47 1,217 1,273 1,1096 1,1880 ham}
+{339 1,343 1,1880 ham}
+{3 1,24 1,26 1,57 1,161 1,339 1,467 1,484 1,789 1,801 1,865 1,1880 ham}
+{3 1,45 1,166 1,1880 ham}
+{0 1,3 1,7 1,24 1,26 1,161 1,339 1,352 1,467 1,486 1,514 1,829 1,832 1,1880 ham}
+{4 1,5 1,9 1,12 1,16 1,17 1,25 1,26 1,45 1,148 1,155 1,161 1,230 1,285 1,354 1,489 1,821 1,868 1,1097 1,1530 1,1576 1}
+{0 1,8 1,16 1,17 1,18 1,21 1,23 1,26 1,39 1,48 1,144 1,161 1,230 1,249 1,389 1,1234 1,1313 1,1419 1}
+{0 1,93 1,275 1,1880 ham}
+{0 1,11 1,16 1,26 1,36 1,47 1,59 1,76 1,80 1,83 1,90 1,118 1,122 1,133 1,248 1,263 1,266 1,318 1,487 1}
+{3 1,11 1,24 1,26 1,106 1,123 1,272 1,275 1,276 1,277 1,285 1,448 1,458 1,503 1,801 1,826 1,832 1,1880 ham}
+{167 1,192 1,279 1,285 1,810 1,897 1,1880 ham}
+{2 1,3 1,460 1,801 1,1880 ham}
+{3 1,139 1,171 1,214 1,217 1,273 1,277 1,284 1,465 1,765 1,1875 1,1880 ham}
+{45 1,192 1,275 1,1880 ham}
+{7 1,12 1,14 1,16 1,26 1,41 1,42 1,65 1,87 1,146 1,230 1,327 1,366 1,482 1,923 1,1036 1,1042 1,1059 1,1060 1,1062 1,1297 1,1403 1,1625 1}
+{7 1,514 1,858 1,1880 ham}
+{36 1,139 1,146 1,341 1,350 1,765 1,835 1}
+{41 1,42 1,65 1,861 1,1880 ham}
+{167 1,858 1,877 1,899 1,1880 ham}
+{0 1,218 1,269 1,802 1,1880 ham}
+{7 1,26 1,161 1,483 1,785 1,810 1,1880 ham}
+{15 1,16 1,269 1,277 1,360 1,854 1,1880 ham}
+{7 1,26 1,139 1,192 1,262 1,765 1,1880 ham}
+{161 1,168 1,262 1,269 1,799 1,809 1,1880 ham}
+{26 1,93 1,161 1,359 1,1880 ham}
+{3 1,7 1,486 1,765 1,868 1,877 1,1875 1,1880 ham}
+{15 1,1880 ham}
+{0 1,11 1,14 1,16 1,24 1,26 1,36 1,47 1,49 1,59 1,76 1,86 1,88 1,90 1,122 1,133 1,142 1,266 1,470 1,487 1,528 1,1414 1}
+{3 1,26 1,221 1,262 1,344 1,479 1,764 1,819 1,858 1,866 1,1880 ham}
+{0 1,26 1,28 1,69 1,77 1,139 1,230 1,273 1,469 1,482 1,492 1,602 1,831 1,1143 1,1780 1}
+{217 1,262 1,765 1,1880 ham}
+{3 1,7 1,273 1,278 1,280 1,460 1,858 1,862 1,1879 1,1880 ham}
+{0 1,6 1,7 1,15 1,33 1,44 1,47 1,70 1,72 1,75 1,78 1,79 1,121 1,125 1,210 1,256 1,368 1,436 1,724 1,1393 1}
+{0 1,15 1,16 1,20 1,21 1,28 1,53 1,54 1,60 1,77 1,97 1,98 1,134 1,138 1,147 1,193 1,254 1,528 1,670 1,997 1,1079 1,1465 1,1639 1,1752 1}
+{341 1,1880 ham}
+{3 1,93 1,339 1,458 1,765 1,824 1,856 1,860 1,1880 ham}
+{7 1,262 1,269 1,284 1,458 1,460 1,516 1,805 1,830 1,861 1,876 1,1880 ham}
+{217 1,1879 1,1880 ham}
+{3 1,448 1,832 1,837 1,877 1,1880 ham}
+{3 1,7 1,24 1,139 1,166 1,230 1,269 1,284 1,460 1,801 1,1880 ham}
+{87 1,139 1,192 1,468 1,507 1,1880 ham}
+{93 1,492 1,1880 ham}
+{3 1,119 1,218 1,276 1,451 1,458 1,460 1,488 1,764 1,801 1,826 1,840 1,868 1,887 1,900 1,1880 ham}
+{284 1,482 1,1880 ham}
+{88 1,139 1,273 1,1880 ham}
+{3 1,57 1,139 1,214 1,448 1,460 1,801 1,807 1,821 1,830 1,848 1,884 1,1880 ham}
+{47 1,487 1,831 1,851 1,1880 ham}
+{16 1,47 1,93 1,452 1,765 1,822 1,1880 ham}
+{15 1,93 1,139 1,284 1,339 1,448 1,487 1,765 1,860 1,1880 ham}
+{2 1,28 1,42 1,146 1,270 1,1109 1}
+{1 1,2 1,7 1,16 1,29 1,40 1,42 1,47 1,124 1,135 1,154 1,160 1,230 1,301 1}
+{2 1,3 1,106 1,221 1,1880 ham}
+{3 1,15 1,856 1,1880 ham}
+{3 1,24 1,41 1,106 1,139 1,355 1,458 1,505 1,784 1,801 1,826 1,853 1,885 1,1879 1,1880 ham}
+{88 1,106 1,476 1,765 1,1880 ham}
+{0 1,23 1,24 1,39 1,158 1,161 1,298 1,389 1,681 1}
+{269 1,448 1,822 1,1880 ham}
+{1 1,7 1,35 1,48 1,58 1,81 1,82 1,214 1,222 1,273 1,279 1,381 1}
+{3 1,15 1,192 1,285 1,875 1,1880 ham}
+{3 1,262 1,269 1,273 1,458 1,503 1,831 1,1880 ham}
+{7 1,275 1,1880 ham}
+{47 1,1880 ham}
+{3 1,269 1,479 1,1880 ham}
+{3 1,14 1,221 1,230 1,479 1,501 1,765 1,801 1,810 1,1880 ham}
+{24 1,42 1,48 1,119 1,161 1,167 1,764 1,847 1,858 1,1880 ham}
+{3 1,100 1,139 1,146 1,161 1,271 1,460 1,470 1,789 1,1880 ham}
+{3 1,7 1,57 1,268 1,275 1,277 1,284 1,458 1,462 1,765 1,822 1,828 1,1880 ham}
+{7 1,93 1,167 1,339 1,479 1,487 1,851 1,867 1,1880 ham}
+{3 1,352 1,507 1,801 1,830 1,838 1,1880 ham}
+{3 1,192 1,341 1,482 1,1880 ham}
+{7 1,269 1,458 1,465 1,479 1,817 1,872 1,1880 ham}
+{47 1,139 1,273 1,503 1,858 1,1880 ham}
+{0 1,15 1,16 1,20 1,24 1,98 1,134 1,138 1,147 1,374 1,497 1,655 1,916 1,992 1,1004 1,1015 1,1102 1,1504 1,1792 1}
+{478 1,1880 ham}
+{3 1,88 1,106 1,217 1,273 1,460 1,858 1,1562 1,1880 ham}
+{3 1,93 1,191 1,272 1,285 1,465 1,491 1,800 1,801 1,841 1,864 1,1880 ham}
+{15 1,230 1,458 1,487 1,765 1,1880 ham}
+{3 1,42 1,93 1,192 1,450 1,468 1,1880 ham}
+{99 1,1880 ham}
+{0 1,3 1,15 1,33 1,44 1,47 1,70 1,75 1,78 1,79 1,96 1,113 1,121 1,125 1,801 1,1269 1}
+{0 1,3 1,26 1,93 1,218 1,269 1,448 1,766 1,801 1,1880 ham}
+{214 1,273 1,1880 ham}
+{16 1,45 1,269 1,273 1,1880 ham}
+{828 1,1880 ham}
+{789 1,1880 ham}
+{192 1,1880 ham}
+{3 1,139 1,274 1,339 1,462 1,891 1,1880 ham}
+{3 1,7 1,41 1,45 1,195 1,284 1,359 1,469 1,768 1,788 1,844 1,857 1,864 1,878 1,888 1,890 1,893 1,1880 ham}
+{7 1,139 1,278 1,764 1,886 1,1880 ham}
+{106 1,273 1,276 1,463 1,1880 ham}
+{139 1,273 1,851 1,1880 ham}
+{3 1,15 1,24 1,26 1,28 1,47 1,57 1,106 1,161 1,225 1,228 1,230 1,269 1,284 1,469 1,478 1,487 1,501 1,765 1,784 1,801 1,831 1,1880 ham}
+{172 1,278 1,279 1,339 1,341 1,1880 ham}
+{93 1,166 1,849 1,1880 ham}
+{3 1,1880 ham}
+{3 1,7 1,16 1,26 1,161 1,168 1,214 1,269 1,279 1,284 1,453 1,488 1,1880 ham}
+{16 1,26 1,42 1,168 1,192 1,269 1,458 1,459 1,468 1,764 1,820 1,847 1,857 1,1880 ham}
+{3 1,24 1,26 1,106 1,221 1,344 1,479 1,801 1,1880 ham}
+{57 1,220 1,230 1,273 1,1880 ham}
+{3 1,507 1,801 1,1880 ham}
+{0 1,9 1,15 1,23 1,24 1,58 1,120 1,278 1,357 1,517 1,1017 1,1460 1,1756 1}
+{1 1,6 1,7 1,13 1,25 1,66 1,144 1,149 1,163 1,214 1,223 1,332 1,448 1,673 1,1306 1}
+{14 1,16 1,359 1,460 1,1880 ham}
+{7 1,214 1,278 1,330 1,350 1,820 1,821 1,1880 ham}
+{3 1,47 1,57 1,214 1,215 1,273 1,460 1,801 1,821 1,831 1,1880 ham}
+{7 1,167 1,479 1,507 1,1880 ham}
+{191 1,460 1,487 1,1880 ham}
+{144 1,339 1,1880 ham}
+{7 1,106 1,271 1,272 1,341 1,465 1,490 1,821 1,1880 ham}
+{478 1,764 1,765 1,1880 ham}
+{139 1,277 1,360 1,1880 ham}
+{230 1,483 1,798 1,1880 ham}
+{3 1,192 1,193 1,274 1,787 1,1880 ham}
+{0 1,2 1,93 1,813 1,862 1,1880 ham}
+{0 1,3 1,144 1,272 1,448 1,801 1,1880 ham}
+{26 1,217 1,269 1,343 1,764 1,765 1,822 1,1880 ham}
+{1880 ham}
+{2 1,7 1,30 1,139 1,283 1,354 1,856 1,858 1,1880 ham}
+{7 1,16 1,26 1,93 1,139 1,167 1,262 1,469 1,789 1,1880 ham}
+{7 1,26 1,106 1,139 1,273 1,359 1,492 1,1871 1,1880 ham}
+{3 1,26 1,221 1,804 1,825 1,1880 ham}
+{5 1,7 1,9 1,10 1,25 1,29 1,32 1,135 1,154 1,206 1,286 1,387 1,608 1}
+{3 1,24 1,88 1,167 1,272 1,798 1,1880 ham}
+{3 1,7 1,24 1,42 1,47 1,93 1,106 1,161 1,765 1,797 1,801 1,881 1,1880 ham}
+{3 1,220 1,459 1,1880 ham}
+{3 1,269 1,876 1,1880 ham}
+{146 1,214 1,284 1,809 1,830 1,1880 ham}
+{217 1,1880 ham}
+{15 1,230 1,1880 ham}
+{7 1,11 1,12 1,13 1,23 1,51 1,100 1,268 1,401 1,482 1,774 1}
+{26 1,57 1,93 1,217 1,269 1,283 1,350 1,764 1,790 1,811 1,821 1,1880 ham}
+{3 1,16 1,42 1,57 1,119 1,191 1,269 1,273 1,284 1,285 1,801 1,838 1,880 1,1879 1,1880 ham}
+{7 1,11 1,15 1,17 1,24 1,28 1,88 1,106 1,139 1,217 1,260 1,806 1,811 1,821 1}
+{0 1,2 1,24 1,93 1,1880 ham}
+{3 1,139 1,790 1,840 1,1880 ham}
+{0 1,7 1,26 1,38 1,40 1,66 1,87 1,92 1,103 1,161 1,279 1,289 1,765 1,1093 1,1243 1,1382 1,1611 1,1687 1}
+{47 1,857 1,1880 ham}
+{3 1,7 1,15 1,57 1,139 1,146 1,326 1,486 1,1880 ham}
+{0 1,3 1,7 1,8 1,15 1,26 1,27 1,39 1,52 1,72 1,146 1,217 1,219 1,495 1,733 1,738 1,1470 1}
+{3 1,7 1,15 1,47 1,57 1,214 1,326 1,343 1,359 1,467 1,502 1,510 1,886 1,1876 1,1880 ham}
+{0 1,16 1,21 1,34 1,47 1,54 1,60 1,77 1,87 1,92 1,97 1,151 1,152 1,223 1,235 1,345 1,516 1,621 1,765 1,827 1,1677 1}
+{47 1,48 1,1880 ham}
+{3 1,21 1,221 1,262 1,479 1,764 1,851 1,857 1,1880 ham}
+{47 1,57 1,93 1,790 1,821 1,877 1,1880 ham}
+{42 1,273 1,285 1,339 1,343 1,502 1,817 1,821 1,859 1,879 1,1880 ham}
+{7 1,26 1,106 1,269 1,273 1,339 1,478 1,487 1,503 1,765 1,819 1,829 1,1880 ham}
+{3 1,4 1,7 1,11 1,24 1,93 1,100 1,106 1,139 1,161 1,221 1,228 1,230 1,262 1,269 1,278 1,462 1,765 1,801 1,1880 ham}
+{15 1,285 1,487 1,840 1,1880 ham}
+{15 1,59 1,69 1,146 1,165 1}
+{3 1,7 1,139 1,801 1,1880 ham}
+{3 1,139 1,161 1,221 1,271 1,453 1,500 1,862 1,1880 ham}
+{106 1,273 1,276 1,278 1,284 1,466 1,479 1,808 1,826 1,857 1,872 1,1877 1,1880 ham}
+{3 1,26 1,47 1,57 1,166 1,269 1,271 1,453 1,487 1,512 1,765 1,806 1,831 1,1880 ham}
+{45 1,57 1,160 1,164 1,169 1,269 1,339 1,343 1,817 1,1880 ham}
+{3 1,24 1,57 1,801 1,898 1,1880 ham}
+{146 1,167 1,1880 ham}
+{278 1,491 1,1880 ham}
+{3 1,42 1,48 1,106 1,124 1,129 1,161 1,274 1,279 1,448 1,513 1,765 1,810 1,1880 ham}
+{0 1,3 1,16 1,26 1,47 1,93 1,166 1,816 1,822 1,1880 ham}
+{16 1,228 1,341 1,808 1,1880 ham}
+{3 1,220 1,353 1,766 1,1880 ham}
+{16 1,26 1,86 1,218 1,339 1,347 1,360 1,1880 ham}
+{3 1,7 1,26 1,58 1,93 1,161 1,192 1,269 1,326 1,458 1,482 1,512 1,847 1}
+{0 1,7 1,15 1,26 1,38 1,92 1,103 1,143 1,146 1,306 1,328 1,336 1,452 1,599 1,1311 1,1439 1}
+{3 1,7 1,13 1,16 1,26 1,47 1,57 1,269 1,285 1,458 1,459 1,764 1,876 1,1880 ham}
+{16 1,41 1,93 1,166 1,191 1,1880 ham}
+{0 1,2 1,4 1,7 1,15 1,23 1,24 1,28 1,48 1,146 1,281 1,289 1,291 1,460 1}
+{26 1,161 1,230 1,269 1,278 1,487 1,784 1,1880 ham}
+{3 1,7 1,14 1,26 1,93 1,221 1,269 1,503 1,799 1,831 1,1880 ham}
+{1 1,7 1,8 1,16 1,18 1,26 1,29 1,68 1,91 1,102 1,148 1,187 1,395 1,426 1,470 1,530 1,714 1,765 1}
+{3 1,57 1,230 1,784 1,831 1,1880 ham}
+{0 1,8 1,16 1,17 1,18 1,21 1,23 1,26 1,39 1,48 1,144 1,161 1,230 1,249 1,389 1,1234 1,1313 1,1419 1}
+{3 1,88 1,1880 ham}
+{3 1,7 1,41 1,106 1,274 1,277 1,448 1,486 1,896 1,1869 1,1880 ham}
+{1870 1,1880 ham}
+{285 1,894 1,1880 ham}
+{26 1,41 1,42 1,65 1,355 1,465 1,513 1,819 1,879 1,1880 ham}
+{5 1,7 1,11 1,13 1,16 1,100 1,164 1,273 1,307 1,325 1,793 1}
+{0 1,6 1,7 1,47 1,65 1,92 1,123 1,138 1,161 1,269 1,279 1,329 1,964 1,1226 1,1645 1,1800 1}
+{0 1,2 1,7 1,11 1,15 1,16 1,24 1,26 1,35 1,36 1,47 1,48 1,59 1,90 1,122 1,133 1,163 1,171 1,470 1,528 1}
+{0 1,3 1,7 1,26 1,47 1,57 1,161 1,221 1,230 1,262 1,272 1,274 1,284 1,340 1,354 1,460 1,487 1,509 1,764 1,765 1,801 1,808 1,821 1,828 1,856 1,885 1,1868 1,1880 ham}
+{3 1,15 1,162 1,269 1,810 1,818 1,829 1,1007 1,1880 ham}
+{3 1,15 1,24 1,26 1,47 1,57 1,88 1,106 1,167 1,349 1,460 1,503 1,801 1,1880 ham}
+{57 1,1880 ham}
+{7 1,139 1,192 1,273 1,503 1,1880 ham}
+{262 1,467 1,868 1,1880 ham}
+{57 1,1880 ham}
+{262 1,448 1,459 1,460 1,857 1,1867 1,1880 ham}
+{0 1,3 1,218 1,221 1,349 1,1880 ham}
+{41 1,57 1,93 1,166 1,352 1,858 1,865 1,897 1,1880 ham}
+{0 1,5 1,9 1,25 1,26 1,28 1,47 1,49 1,65 1,80 1,88 1,225 1,396 1,452 1,576 1,1076 1,1353 1,1532 1,1732 1,1733 1}
+{3 1,7 1,24 1,26 1,139 1,273 1,339 1,765 1,801 1,869 1,1880 ham}
+{93 1,167 1,192 1,269 1,274 1,451 1,835 1,857 1,1869 1,1880 ham}
+{276 1,843 1,1880 ham}
+{5 1,7 1,9 1,21 1,25 1,48 1,161 1,214 1,262 1,274 1,281 1,765 1}
+{26 1,30 1,47 1,48 1,49 1,217 1,273 1,391 1,797 1,907 1,910 1,1195 1,1404 1,1539 1,1577 1,1827 1}
+{837 1,842 1,1880 ham}
+{0 1,7 1,8 1,17 1,18 1,26 1,28 1,35 1,43 1,44 1,63 1,80 1,84 1,88 1,95 1,143 1,161 1,216 1,217 1,481 1}
+{13 1,41 1,42 1,48 1,139 1,195 1,269 1,271 1,273 1,277 1,326 1,492 1,510 1,859 1,872 1,1876 1,1880 ham}
+{3 1,24 1,41 1,486 1,1880 ham}
+{139 1,217 1,220 1,320 1,765 1,1880 ham}
+{7 1,15 1,28 1,57 1,146 1,192 1,326 1,330 1,461 1,765 1,877 1,1880 ham}
+{3 1,7 1,57 1,93 1,146 1,192 1,217 1,269 1,277 1,468 1,848 1,856 1,874 1,1880 ham}
+{0 1,4 1,7 1,8 1,15 1,17 1,20 1,26 1,34 1,60 1,72 1,81 1,169 1,183 1,214 1,230 1,273 1,452 1,473 1,765 1}
+{3 1,285 1,466 1,830 1,1880 ham}
+{16 1,49 1,139 1,285 1,1880 ham}
+{2 1,7 1,9 1,13 1,14 1,15 1,25 1,36 1,112 1,154 1,165 1,510 1,544 1,812 1,1055 1,1330 1,1383 1}
+{7 1,12 1,45 1,47 1,88 1,161 1,269 1,765 1,1880 ham}
+{15 1,32 1,47 1,133 1,144 1,456 1,765 1,1227 1}
+{3 1,74 1,191 1,192 1,273 1,461 1,486 1,843 1,844 1,1880 ham}
+{106 1,269 1,339 1,870 1,1880 ham}
+{15 1,146 1,837 1,1880 ham}
+{57 1,146 1,344 1,460 1,764 1,825 1,862 1,1880 ham}
+{7 1,283 1,284 1,461 1,765 1,1880 ham}
+{0 1,7 1,11 1,16 1,35 1,36 1,47 1,48 1,59 1,76 1,83 1,90 1,118 1,122 1,133 1,163 1,171 1,248 1,263 1,266 1,470 1}
+{1880 ham}
+{283 1,1880 ham}
+{2 1,4 1,7 1,9 1,14 1,25 1,26 1,41 1,45 1,110 1,124 1,145 1,146 1,189 1,262 1,275 1,278 1,338 1,354 1,425 1,449 1,512 1,531 1,618 1,764 1,1722 1}
+{36 1,57 1,214 1,273 1,452 1,1880 ham}
+{24 1,340 1,448 1,1880 ham}
+{7 1,110 1,877 1,1740 1,1880 ham}
+{3 1,24 1,852 1,1880 ham}
+{26 1,139 1,161 1,217 1,273 1,485 1,486 1,510 1,765 1,789 1,811 1,830 1,1880 ham}
+{192 1,341 1,503 1,507 1,1880 ham}
+{228 1,273 1,278 1,283 1,284 1,350 1,476 1,765 1,1880 ham}
+{26 1,510 1,767 1,1880 ham}
+{3 1,767 1,821 1,1880 ham}
+{16 1,195 1,460 1,1880 ham}
+{36 1,502 1,1880 ham}
+{7 1,11 1,12 1,194 1,226 1,765 1,795 1,911 1,1080 1,1127 1,1164 1,1540 1,1682 1}
+{26 1,36 1,339 1,502 1,510 1,767 1,1880 ham}
+{191 1,451 1,1880 ham}
+{3 1,15 1,57 1,192 1,326 1,339 1,462 1,502 1,504 1,512 1,765 1,789 1,809 1,880 1,886 1,887 1,1880 ham}
+{15 1,88 1,466 1,476 1,479 1,765 1,828 1,1880 ham}
+{1880 ham}
+{7 1,93 1,106 1,214 1,283 1,330 1,342 1,458 1,459 1,460 1,811 1,1880 ham}
+{146 1,272 1,448 1,765 1,875 1,1880 ham}
+{15 1,161 1,192 1,501 1,765 1,823 1,1880 ham}
+{7 1,218 1,814 1,1880 ham}
+{42 1,139 1,166 1,217 1,273 1,481 1,816 1,831 1,1880 ham}
+{3 1,57 1,222 1,230 1,285 1,1880 ham}
+{7 1,93 1,275 1,822 1,1880 ham}
+{221 1,283 1,284 1,285 1,359 1,458 1,1880 ham}
+{41 1,65 1,120 1,139 1,145 1,269 1,273 1,469 1,501 1,765 1,848 1,859 1,1880 ham}
+{3 1,7 1,166 1,214 1,217 1,269 1,271 1,279 1,353 1,360 1,453 1,859 1,1880 ham}
+{285 1,351 1,1880 ham}
+{3 1,352 1,459 1,507 1,1880 ham}
+{3 1,15 1,26 1,57 1,161 1,167 1,217 1,277 1,326 1,479 1,510 1,765 1,785 1,809 1,819 1,830 1,890 1,1880 ham}
+{57 1,339 1,1880 ham}
+{3 1,7 1,24 1,26 1,106 1,139 1,214 1,273 1,277 1,460 1,465 1,486 1,487 1,765 1,784 1,801 1,821 1,856 1,873 1,1880 ham}
+{1880 ham}
+{1880 ham}
+{464 1,809 1,1880 ham}
+{2 1,7 1,15 1,22 1,24 1,26 1,49 1,58 1,74 1,100 1,215 1,269 1,469 1,493 1,785 1}
+{7 1,42 1,45 1,47 1,65 1,93 1,100 1,106 1,139 1,262 1,269 1,273 1,458 1,793 1,856 1,857 1,1880 ham}
+{3 1,36 1,45 1,106 1,146 1,278 1,285 1,330 1,462 1,765 1,801 1,808 1,859 1,1880 ham}
+{1173 1}
+{3 1,448 1,465 1,510 1,801 1,1880 ham}
+{2 1,7 1,11 1,16 1,146 1,278 1,458 1,765 1,859 1,1880 ham}
+{834 1,1880 ham}
+{0 1,15 1,16 1,24 1,98 1,134 1,138 1,147 1,374 1,467 1,655 1,916 1,981 1,992 1,1004 1,1015 1,1102 1,1504 1,1792 1}
+{26 1,41 1,42 1,45 1,58 1,161 1,166 1,278 1,326 1,339 1,448 1,513 1,805 1,1880 ham}
+{3 1,26 1,146 1,273 1,486 1,506 1,764 1,765 1,798 1,885 1,1880 ham}
+{26 1,344 1,1880 ham}
+{3 1,88 1,93 1,164 1,217 1,285 1,350 1,458 1,505 1,813 1,1880 ham}
+{3 1,170 1,214 1,262 1,285 1,341 1,342 1,894 1,1880 ham}
+{3 1,7 1,269 1,284 1,486 1,801 1,854 1,878 1,881 1,1880 ham}
+{3 1,486 1,501 1,801 1,858 1,1880 ham}
+{3 1,7 1,57 1,100 1,139 1,275 1,451 1,482 1,507 1,802 1,856 1,1880 ham}
+{3 1,139 1,221 1,507 1,1880 ham}
+{218 1,890 1,1880 ham}
+{14 1,15 1,26 1,28 1,93 1,214 1,771 1,1880 ham}
+{3 1,7 1,26 1,28 1,139 1,217 1,262 1,478 1,1880 ham}
+{274 1,1880 ham}
+{3 1,42 1,191 1,269 1,273 1,355 1,477 1,486 1,488 1,505 1,768 1,1880 ham}
+{3 1,42 1,106 1,191 1,275 1,353 1,797 1,1880 ham}
+{214 1,269 1,1880 ham}
+{7 1,106 1,124 1,161 1,166 1,284 1,339 1,487 1,1880 ham}
+{1880 ham}
+{3 1,7 1,26 1,28 1,57 1,161 1,217 1,221 1,285 1,790 1,821 1,858 1,867 1,1880 ham}
+{3 1,26 1,217 1,269 1,283 1,458 1,459 1,493 1,869 1,1880 ham}
+{0 1,4 1,7 1,15 1,16 1,23 1,28 1,35 1,48 1,77 1,139 1,174 1,273 1,469 1,481 1,492 1,831 1}
+{0 1,1 1,6 1,7 1,13 1,15 1,24 1,28 1,110 1,199 1,245 1,311 1,470 1}
+{3 1,26 1,139 1,344 1,353 1,460 1,487 1,819 1,821 1,873 1,1880 ham}
+{3 1,7 1,24 1,26 1,269 1,486 1,799 1,1879 1,1880 ham}
+{23 1,26 1,28 1,51 1,124 1,146 1,154 1,161 1,214 1,267 1,273 1,357 1,822 1,1790 1}
+{7 1,28 1,57 1,273 1,1880 ham}
+{41 1,274 1,340 1,349 1,448 1,490 1,764 1,1880 ham}
+{3 1,7 1,15 1,215 1,831 1,1880 ham}
+{3 1,7 1,26 1,139 1,277 1,350 1,479 1,487 1,805 1,1880 ham}
+{192 1,465 1,1880 ham}
+{0 1,7 1,15 1,23 1,28 1,48 1,77 1,139 1,174 1,273 1,347 1,469 1,470 1,492 1,516 1,831 1,855 1}
+{0 1,3 1,7 1,16 1,26 1,100 1,217 1,283 1,765 1,790 1,808 1,835 1,887 1,1880 ham}
+{1 1,4 1,7 1,26 1,146 1,195 1,278 1,339 1,350 1,504 1,765 1,848 1}
+{448 1,503 1,764 1,1880 ham}
+{192 1,285 1,448 1,482 1,491 1,765 1,1880 ham}
+{47 1,262 1,1880 ham}
+{47 1,1880 ham}
+{3 1,45 1,119 1,139 1,146 1,192 1,269 1,459 1,487 1,847 1,859 1,889 1,1880 ham}
+{0 1,7 1,15 1,28 1,144 1,161 1,164 1,214 1,230 1,273 1,351 1,599 1,1677 1}
+{285 1,451 1,482 1,1880 ham}
+{7 1,57 1,461 1,1880 ham}
+{88 1,1880 ham}
+{1 1,5 1,7 1,12 1,21 1,26 1,45 1,47 1,124 1,145 1,194 1,305 1,821 1,1691 1}
+{7 1,15 1,25 1,26 1,149 1,279 1,460 1,516 1,1708 1}
+{12 1,16 1,214 1,273 1,1880 ham}
+{3 1,7 1,168 1,459 1,790 1,821 1,830 1,886 1,1880 ham}
+{808 1,822 1,1880 ham}
+{3 1,42 1,88 1,283 1,1880 ham}
+{26 1,269 1,819 1,851 1,1880 ham}
+{1 1,7 1,16 1,32 1,41 1,42 1,45 1,47 1,52 1,135 1,175 1,178 1,230 1,269 1,301 1,373 1,856 1,933 1,1365 1,1621 1,1681 1,1820 1}
+{3 1,24 1,41 1,465 1,486 1,801 1,845 1,1880 ham}
+{3 1,16 1,26 1,28 1,42 1,120 1,168 1,192 1,194 1,330 1,341 1,342 1,411 1,457 1,459 1,487 1,765 1,847 1,848 1,856 1,1880 ham}
+{3 1,7 1,57 1,269 1,285 1,487 1,507 1,765 1,801 1,856 1,883 1,890 1,1880 ham}
+{15 1,192 1,220 1,350 1,482 1,877 1,1880 ham}
+{0 1,6 1,7 1,8 1,17 1,18 1,20 1,26 1,28 1,35 1,43 1,44 1,80 1,88 1,95 1,143 1,161 1,217 1,481 1,648 1,1506 1,1624 1}
+{166 1,1880 ham}
+{6 1,7 1,9 1,13 1,26 1,45 1,54 1,60 1,100 1,128 1,138 1,230 1,334 1,427 1}
+{4 1,6 1,7 1,14 1,24 1,31 1,45 1,85 1,110 1,194 1,329 1,337 1,391 1,403 1,498 1,616 1,704 1,780 1,821 1,1632 1}
+{41 1,146 1,269 1,273 1,274 1,339 1,465 1,513 1,819 1,853 1,869 1,1880 ham}
+{88 1,1880 ham}
+{24 1,42 1,74 1,106 1,349 1,481 1,487 1,787 1,857 1,1880 ham}
+{7 1,12 1,15 1,24 1,26 1,48 1,100 1,128 1,230 1,269 1,290 1,293 1,305 1,450 1,765 1,1730 1}
+{57 1,168 1,273 1,284 1,453 1,482 1,765 1,806 1,857 1,858 1,1880 ham}
+{93 1,269 1,350 1,482 1,1880 ham}
+{14 1,26 1,161 1,214 1,467 1,510 1,767 1,848 1,1880 ham}
+{0 1,3 1,7 1,57 1,93 1,167 1,168 1,192 1,214 1,262 1,269 1,284 1,285 1,343 1,452 1,459 1,461 1,462 1,468 1,490 1,503 1,505 1,765 1,782 1,803 1,847 1,1868 1,1880 ham}
+{3 1,26 1,285 1,451 1,801 1,1880 ham}
+{93 1,273 1,1880 ham}
+{3 1,221 1,285 1,344 1,873 1,1880 ham}
+{3 1,24 1,26 1,100 1,228 1,470 1,765 1,797 1,1880 ham}
+{3 1,7 1,139 1,221 1,262 1,284 1,478 1,801 1,1880 ham}
+{15 1,146 1,269 1,1880 ham}
+{3 1,139 1,167 1,453 1,487 1,867 1,872 1,1880 ham}
+{0 1,4 1,24 1,42 1,45 1,104 1,172 1,188 1,229 1,268 1,299 1,314 1,315 1,322 1,511 1,573 1,583 1,614 1,615 1,656 1,756 1,758 1,1085 1,1450 1}
+{3 1,7 1,14 1,26 1,47 1,161 1,217 1,230 1,269 1,278 1,283 1,284 1,285 1,342 1,765 1,821 1,878 1,1880 ham}
+{7 1,93 1,1880 ham}
+{7 1,26 1,41 1,42 1,144 1,217 1,349 1,516 1,570 1,765 1,1868 1,1880 ham}
+{42 1,262 1,468 1,857 1,890 1,1880 ham}
+{28 1,47 1,48 1,1880 ham}
+{279 1,503 1,1880 ham}
+{1 1,7 1,11 1,13 1,16 1,26 1,42 1,57 1,93 1,119 1,199 1,274 1,449 1,458 1,510 1,697 1,796 1,932 1,1189 1,1293 1,1371 1,1650 1}
+{2 1,3 1,7 1,42 1,59 1,93 1,191 1,228 1,269 1,274 1,285 1,353 1,355 1,812 1,1879 1,1880 ham}
+{0 1,7 1,11 1,15 1,16 1,26 1,35 1,48 1,59 1,76 1,80 1,83 1,90 1,118 1,133 1,163 1,171 1,248 1,263 1,266 1,470 1}
+{0 1,3 1,93 1,106 1,272 1,283 1,340 1,448 1,460 1,479 1,1880 ham}
+{144 1,274 1,1880 ham}
+{3 1,139 1,349 1,1880 ham}
+{3 1,26 1,344 1,460 1,465 1,1880 ham}
+{1 1,7 1,8 1,12 1,13 1,22 1,26 1,36 1,128 1,240 1,257 1,427 1,492 1,697 1,765 1,1406 1,1585 1,1791 1}
+{217 1,269 1,765 1,1880 ham}
+{7 1,9 1,25 1,41 1,135 1,146 1,154 1,175 1,206 1,225 1,286 1}
+{891 1,1880 ham}
+{339 1,487 1,835 1,1880 ham}
+{7 1,214 1,359 1,486 1,833 1,1880 ham}
+{3 1,7 1,26 1,106 1,119 1,269 1,274 1,284 1,458 1,483 1,836 1,1880 ham}
+{42 1,764 1,1880 ham}
+{3 1,7 1,161 1,262 1,270 1,345 1,482 1,487 1,1880 ham}
+{139 1,214 1,273 1,448 1,1880 ham}
+{3 1,448 1,765 1,801 1,857 1,858 1,1880 ham}
+{1880 ham}
+{7 1,482 1,1880 ham}
+{15 1,26 1,30 1,41 1,149 1,186 1,243 1,273 1,303 1,444 1,457 1,523 1,791 1,831 1,858 1}
+{0 1,2 1,4 1,7 1,15 1,47 1,67 1,68 1,88 1,126 1,230 1,392 1,494 1,765 1,1239 1,1416 1,1717 1}
+{3 1,88 1,284 1,350 1,478 1,1880 ham}
+{26 1,42 1,273 1,344 1,491 1,1880 ham}
+{3 1,272 1,276 1,801 1,1880 ham}
+{482 1,892 1,1880 ham}
+{825 1,1880 ham}
+{90 1,218 1,275 1,1880 ham}
+{3 1,7 1,13 1,93 1,139 1,217 1,790 1,821 1,1880 ham}
+{3 1,146 1,353 1,765 1,803 1,831 1,1880 ham}
+{0 1,11 1,14 1,16 1,26 1,36 1,47 1,49 1,59 1,76 1,86 1,88 1,90 1,122 1,133 1,142 1,266 1,470 1,487 1,528 1,1415 1}
+{3 1,86 1,106 1,139 1,230 1,269 1,277 1,278 1,354 1,463 1,484 1,765 1,857 1,1880 ham}
+{3 1,7 1,214 1,273 1,330 1,482 1,1880 ham}
+{479 1,484 1,1880 ham}
+{57 1,139 1,230 1,1880 ham}
+{7 1,26 1,47 1,269 1,441 1,479 1,765 1,858 1,860 1,1880 ham}
+{3 1,7 1,24 1,26 1,47 1,106 1,161 1,339 1,359 1,467 1,486 1,510 1,849 1,868 1,1791 1,1880 ham}
+{139 1,344 1,852 1,900 1,1880 ham}
+{47 1,218 1,344 1,349 1,359 1,513 1,516 1,765 1,854 1,858 1,1880 ham}
+{26 1,93 1,166 1,271 1,284 1,353 1,812 1,1875 1,1880 ham}
+{3 1,801 1,1880 ham}
+{7 1,14 1,26 1,161 1,214 1,275 1,284 1,510 1,817 1,860 1,1880 ham}
+{7 1,106 1,139 1,269 1,271 1,277 1,465 1,821 1,1880 ham}
+{45 1,814 1,1880 ham}
+{3 1,7 1,161 1,840 1,1880 ham}
+{93 1,124 1,161 1,192 1,513 1,764 1,765 1,1625 1,1880 ham}
+{3 1,15 1,106 1,139 1,217 1,230 1,268 1,273 1,278 1,506 1,790 1,820 1,821 1,830 1,855 1,1880 ham}
+{0 1,7 1,13 1,14 1,15 1,28 1,30 1,47 1,49 1,80 1,99 1,119 1,127 1,270 1,278 1,345 1,821 1,831 1,840 1,1532 1}
+{15 1,93 1,100 1,813 1,1880 ham}
+{0 1,1 1,2 1,7 1,13 1,196 1,199 1,280 1,320 1,812 1}
+{3 1,93 1,192 1,349 1,510 1,836 1,1873 1,1880 ham}
+{0 1,3 1,24 1,42 1,58 1,93 1,230 1,262 1,460 1,470 1,764 1,830 1}
+{3 1,220 1,352 1,850 1,1880 ham}
+{3 1,41 1,45 1,139 1,269 1,274 1,459 1,1880 ham}
+{3 1,15 1,350 1,459 1,460 1,479 1,488 1,821 1,1876 1,1880 ham}
+{24 1,26 1,1873 1,1880 ham}
+{218 1,230 1,1880 ham}
+{5 1,7 1,11 1,15 1,24 1,36 1,69 1,88 1,161 1,269 1,493 1,570 1,796 1}
+{3 1,42 1,93 1,106 1,168 1,191 1,215 1,221 1,274 1,275 1,285 1,353 1,460 1,465 1,488 1,503 1,831 1,832 1,1880 ham}
+{119 1,276 1,355 1,1880 ham}
+{0 1,3 1,39 1,1880 ham}
+{7 1,26 1,465 1,467 1,819 1,858 1,1880 ham}
+{6 1,7 1,8 1,14 1,15 1,26 1,42 1,46 1,155 1,1722 1}
+{192 1,1880 ham}
+{1880 ham}
+{15 1,36 1,269 1,502 1,513 1,1880 ham}
+{269 1,341 1,482 1,1880 ham}
+{7 1,13 1,14 1,15 1,217 1,230 1,340 1,501 1,881 1,1880 ham}
+{3 1,57 1,269 1,349 1,801 1,838 1,1880 ham}
+{7 1,16 1,93 1,120 1,146 1,217 1,284 1,350 1,465 1,478 1,513 1,821 1,1880 ham}
+{17 1,42 1,106 1,168 1,217 1,269 1,271 1,274 1,277 1,284 1,344 1,359 1,448 1,451 1,458 1,764 1,821 1,831 1,858 1,1880 ham}
+{3 1,1880 ham}
+{3 1,276 1,285 1,451 1,801 1,877 1,1880 ham}
+{0 1,15 1,16 1,17 1,24 1,98 1,134 1,138 1,147 1,374 1,497 1,655 1,916 1,992 1,1004 1,1015 1,1102 1,1504 1,1792 1}
+{3 1,26 1,47 1,88 1,146 1,217 1,461 1,758 1,765 1,799 1,1871 1,1880 ham}
+{168 1,262 1,509 1,821 1,841 1,1880 ham}
+{3 1,47 1,764 1,765 1,1880 ham}
+{3 1,7 1,26 1,161 1,279 1,339 1,341 1,479 1,764 1,869 1,1880 ham}
+{93 1,217 1,273 1,513 1,730 1,764 1,765 1,1880 ham}
+{3 1,7 1,15 1,26 1,47 1,146 1,192 1,269 1,277 1,284 1,341 1,359 1,448 1,490 1,764 1,765 1,805 1,892 1,1868 1,1880 ham}
+{3 1,7 1,16 1,269 1,459 1,479 1,487 1,886 1,1880 ham}
+{3 1,7 1,15 1,217 1,274 1,278 1,351 1,487 1,765 1,808 1,830 1,1868 1,1880 ham}
+{2 1,7 1,17 1,47 1,57 1,217 1,285 1,329 1,466 1,765 1,821 1,831 1,1880 ham}
+{26 1,194 1,821 1,1880 ham}
+{3 1,7 1,106 1,146 1,451 1,460 1,482 1,790 1,801 1,821 1,1880 ham}
+{24 1,93 1,106 1,166 1,191 1,284 1,359 1,465 1,766 1,767 1,841 1,1880 ham}
+{4 1,6 1,7 1,14 1,24 1,31 1,45 1,85 1,110 1,194 1,329 1,337 1,391 1,403 1,498 1,616 1,704 1,780 1,821 1,1632 1}
+{3 1,7 1,26 1,47 1,262 1,269 1,273 1,284 1,285 1,341 1,352 1,465 1,691 1,765 1,822 1,1880 ham}
+{0 1,6 1,8 1,17 1,24 1,35 1,42 1,49 1,71 1,88 1,99 1,133 1,161 1,169 1,171 1,214 1,273 1,515 1,765 1}
+{3 1,269 1,271 1,487 1,1880 ham}
+{3 1,192 1,1880 ham}
+{93 1,192 1,273 1,872 1,1877 1,1880 ham}
+{262 1,269 1,452 1,487 1,765 1,858 1,1880 ham}
+{3 1,269 1,801 1,1880 ham}
+{139 1,1880 ham}
+{220 1,227 1,459 1,487 1,1880 ham}
+{47 1,57 1,1880 ham}
+{7 1,93 1,100 1,139 1,192 1,486 1,1880 ham}
+{3 1,7 1,36 1,88 1,269 1,273 1,460 1,483 1,765 1,808 1,869 1,1880 ham}
+{47 1,1880 ham}
+{3 1,7 1,26 1,106 1,269 1,272 1,273 1,283 1,464 1,467 1,765 1,803 1,856 1,1870 1,1880 ham}
+{12 1,47 1,65 1,283 1,784 1,805 1,1880 ham}
+{285 1,512 1,818 1,891 1,1880 ham}
+{3 1,7 1,220 1,285 1,349 1,482 1,487 1,1880 ham}
+{3 1,453 1,807 1,820 1,1880 ham}
+{3 1,7 1,36 1,93 1,106 1,192 1,214 1,273 1,460 1,468 1,502 1,860 1,1880 ham}
+{161 1,1880 ham}
+{3 1,24 1,88 1,167 1,217 1,460 1,1880 ham}
+{3 1,7 1,88 1,93 1,139 1,217 1,273 1,460 1,479 1,730 1,764 1,765 1,801 1,855 1,1880 ham}
+{3 1,26 1,57 1,93 1,106 1,161 1,230 1,269 1,330 1,479 1,483 1,765 1,822 1,848 1,1880 ham}
+{2 1,3 1,14 1,26 1,58 1,93 1,106 1,166 1,221 1,273 1,285 1,467 1,479 1,510 1,782 1,811 1,836 1,1875 1,1880 ham}
+{3 1,47 1,460 1,1880 ham}
+{0 1,4 1,6 1,8 1,12 1,15 1,18 1,20 1,26 1,27 1,28 1,34 1,63 1,80 1,84 1,88 1,95 1,146 1,209 1,279 1,452 1,516 1,1448 1}
+{4 1,6 1,7 1,11 1,14 1,24 1,31 1,45 1,85 1,110 1,163 1,329 1,337 1,391 1,403 1,427 1,498 1,513 1,704 1,778 1,780 1,821 1,1489 1}
+{138 1,273 1,285 1,340 1,482 1,1880 ham}
+{2 1,4 1,7 1,14 1,15 1,28 1,29 1,47 1,68 1,90 1,186 1,230 1,282 1,445 1,471 1,726 1,782 1}
+{23 1,137 1,174 1}
+{166 1,1880 ham}
+{3 1,7 1,106 1,220 1,262 1,285 1,508 1,832 1,856 1,1880 ham}
+{278 1,1880 ham}
+{3 1,4 1,57 1,106 1,161 1,196 1,218 1,285 1,460 1,814 1,821 1,1880 ham}
+{3 1,57 1,273 1,472 1,765 1,801 1,1880 ham}
+{0 1,7 1,8 1,12 1,17 1,26 1,39 1,48 1,91 1,161 1,219 1,273 1,278 1,306 1,515 1,516 1,1444 1}
+{3 1,16 1,42 1,106 1,269 1,274 1,451 1,460 1,488 1,503 1,506 1,768 1,806 1,869 1,1879 1,1880 ham}
+{26 1,47 1,217 1,799 1,873 1,1880 ham}
+{0 1,2 1,6 1,15 1,24 1,39 1,47 1,66 1,67 1,163 1,186 1,230 1,447 1,470 1,1044 1,1402 1}
+{0 1,4 1,15 1,22 1,32 1,39 1,41 1,47 1,50 1,129 1,144 1,212 1,226 1,284 1,414 1,452 1,1463 1,1861 1}
+{3 1,26 1,146 1,810 1,829 1,1880 ham}
+{0 1,10 1,23 1,24 1,35 1,42 1,48 1,109 1,174 1,492 1,516 1,671 1}
+{16 1,26 1,458 1,482 1,628 1,1880 ham}
+{3 1,7 1,16 1,24 1,58 1,69 1,82 1,88 1,93 1,100 1,185 1,293 1,469 1,790 1,821 1,860 1}
+{3 1,221 1,340 1,360 1,507 1,831 1,1880 ham}
+{36 1,57 1,217 1,273 1,830 1,1880 ham}
+{273 1,448 1,821 1,1880 ham}
+{359 1,1880 ham}
+{3 1,16 1,57 1,230 1,274 1,284 1,360 1,448 1,451 1,478 1,479 1,765 1,809 1,822 1,1880 ham}
+{458 1,466 1,481 1,1880 ham}
+{3 1,7 1,20 1,26 1,42 1,47 1,57 1,167 1,285 1,460 1,489 1,833 1,856 1,862 1,865 1,890 1,1880 ham}
+{0 1,8 1,16 1,17 1,18 1,21 1,23 1,26 1,39 1,48 1,144 1,161 1,230 1,249 1,389 1,1234 1,1313 1,1419 1}
+{0 1,7 1,15 1,26 1,91 1,98 1,161 1,228 1,278 1,327 1,523 1}
+{7 1,93 1,166 1,214 1,330 1,458 1,482 1,856 1,1880 ham}
+{16 1,42 1,279 1,283 1,448 1,468 1,764 1,789 1,866 1,880 1,1880 ham}
+{139 1,272 1,765 1,1568 1,1880 ham}
+{47 1,486 1,1880 ham}
+{26 1,57 1,168 1,226 1,262 1,274 1,278 1,460 1,479 1,799 1,830 1,1880 ham}
+{45 1,1880 ham}
+{339 1,784 1,862 1,1880 ham}
+{3 1,7 1,146 1,167 1,269 1,462 1,836 1,1880 ham}
+{26 1,269 1,484 1,819 1,825 1,1880 ham}
+{1 1,2 1,7 1,12 1,14 1,26 1,38 1,42 1,46 1,56 1,66 1,132 1,208 1,222 1,265 1,269 1,533 1,663 1,1258 1,1389 1,1581 1}
+{7 1,26 1,57 1,93 1,139 1,273 1,487 1,1880 ham}
+{3 1,60 1,139 1,269 1,487 1,504 1,765 1,1880 ham}
+{15 1,26 1,30 1,41 1,149 1,186 1,243 1,273 1,303 1,444 1,457 1,523 1,791 1,831 1,858 1}
+{3 1,16 1,1880 ham}
+{7 1,167 1,191 1,269 1,275 1,458 1,477 1,826 1,831 1,1880 ham}
+{3 1,7 1,9 1,14 1,22 1,36 1,69 1,93 1,146 1,160 1,189 1,269 1,458 1,935 1,949 1,1286 1,1332 1,1594 1,1643 1,1685 1,1811 1}
+{26 1,41 1,215 1,230 1,1880 ham}
+{3 1,14 1,214 1,221 1,262 1,1880 ham}
+{4 1,7 1,14 1,15 1,48 1,154 1,165 1,188 1,323 1,774 1,831 1,840 1,911 1,1152 1,1294 1}
+{0 1,65 1,93 1,766 1,865 1,1880 ham}
+{3 1,47 1,106 1,214 1,217 1,230 1,284 1,350 1,464 1,480 1,765 1,801 1,1880 ham}
+{0 1,1 1,42 1,93 1,484 1,507 1,764 1,1880 ham}
+{13 1,47 1,54 1,60 1,87 1,89 1,154 1,456 1,460 1,622 1,947 1,1192 1}
+{26 1,279 1,1873 1,1880 ham}
+{41 1,57 1,448 1,514 1,821 1,1880 ham}
+{3 1,7 1,15 1,24 1,93 1,167 1,230 1,503 1,765 1,790 1,821 1,1880 ham}
+{3 1,273 1,274 1,1880 ham}
+{161 1,1880 ham}
+{3 1,26 1,102 1,146 1,283 1,284 1,793 1,1880 ham}
+{3 1,28 1,272 1,326 1,1875 1,1880 ham}
+{3 1,7 1,15 1,26 1,47 1,57 1,100 1,139 1,192 1,273 1,326 1,459 1,460 1,490 1,765 1,815 1,1880 ham}
+{3 1,24 1,57 1,230 1,284 1,355 1,477 1,486 1,800 1,801 1,849 1,878 1,1880 ham}
+{3 1,41 1,191 1,230 1,274 1,491 1,492 1,788 1,801 1,893 1,1880 ham}
+{7 1,15 1,262 1,1880 ham}
+{3 1,106 1,278 1,283 1,509 1,764 1,821 1,832 1,1880 ham}
+{45 1,269 1,1880 ham}
+{3 1,15 1,269 1,277 1,349 1,359 1,510 1,764 1,832 1,1880 ham}
+{7 1,139 1,262 1,487 1,503 1,856 1,1880 ham}
+{5 1,7 1,24 1,28 1,30 1,48 1,51 1,56 1,69 1,100 1,102 1,224 1,265 1,278 1,765 1,982 1}
+{106 1,168 1,191 1,330 1,453 1,863 1,1880 ham}
+{195 1,221 1,765 1,881 1,1880 ham}
+{0 1,7 1,13 1,46 1,48 1,100 1,278 1,324 1,332 1,921 1}
+{3 1,26 1,42 1,93 1,106 1,146 1,277 1,853 1,877 1,1815 1,1878 1,1880 ham}
+{26 1,214 1,273 1,460 1,487 1,790 1,816 1,821 1,869 1,1880 ham}
+{3 1,16 1,41 1,57 1,93 1,191 1,272 1,835 1,846 1,867 1,1880 ham}
+{1 1,2 1,4 1,7 1,13 1,15 1,42 1,47 1,49 1,74 1,214 1,225 1,262 1,273 1,275 1,280 1,396 1,435 1,562 1}
+{3 1,26 1,192 1,272 1,448 1,488 1,801 1,811 1,1880 ham}
+{1880 ham}
+{3 1,45 1,160 1,166 1,283 1,849 1,1880 ham}
+{285 1,330 1,341 1,350 1,482 1,765 1,1880 ham}
+{3 1,7 1,57 1,74 1,100 1,106 1,167 1,460 1,476 1,1880 ham}
+{3 1,7 1,88 1,93 1,167 1,214 1,285 1,353 1,458 1,482 1,487 1,795 1,831 1,1880 ham}
+{3 1,7 1,36 1,284 1,508 1,801 1,1880 ham}
+{3 1,16 1,161 1,166 1,269 1,285 1,360 1,831 1,857 1,1880 ham}
+{139 1,252 1,273 1,352 1,458 1,838 1,1880 ham}
+{41 1,42 1,167 1,191 1,276 1,1880 ham}
+{220 1,1873 1,1880 ham}
+{192 1,468 1,1880 ham}
+{15 1,86 1,214 1,349 1,465 1,830 1,836 1,1880 ham}
+{7 1,41 1,262 1,276 1,460 1,844 1,1880 ham}
+{3 1,276 1,285 1,765 1,816 1,1880 ham}
+{24 1,93 1,217 1,349 1,466 1,764 1,784 1,869 1,1880 ham}
+{1 1,2 1,7 1,11 1,24 1,29 1,32 1,41 1,45 1,52 1,65 1,86 1,110 1,145 1,160 1,262 1,278 1,285 1,296 1,572 1,667 1,740 1,953 1}
+{7 1,26 1,41 1,43 1,45 1,170 1,223 1,230 1,250 1,269 1,701 1,765 1,1306 1}
+{166 1,191 1,1880 ham}
+{467 1,505 1,808 1,859 1,1880 ham}
+{3 1,285 1,448 1,463 1,467 1,1880 ham}
+{139 1,354 1,1880 ham}
+{0 1,8 1,16 1,17 1,18 1,21 1,23 1,26 1,39 1,48 1,144 1,158 1,161 1,230 1,249 1,1249 1,1336 1}
+{3 1,277 1,278 1,284 1,478 1,482 1,493 1,765 1,801 1,831 1,1880 ham}
+{0 1,2 1,16 1,29 1,157 1,182 1,186 1,230 1,757 1}
+{352 1,476 1,1880 ham}
+{12 1,25 1,26 1,41 1,42 1,47 1,188 1,194 1,208 1,227 1,291 1,323 1,456 1,601 1,786 1,1103 1,1154 1,1670 1,1695 1,1778 1}
+{3 1,26 1,273 1,801 1,1871 1,1880 ham}
+{138 1,139 1,269 1,271 1,273 1,274 1,283 1,285 1,765 1,1880 ham}
+{4 1,26 1,57 1,161 1,273 1,339 1,340 1,452 1,822 1,877 1,1880 ham}
+{7 1,93 1,764 1,887 1,1880 ham}
+{166 1,274 1,276 1,460 1,488 1,805 1,1880 ham}
+{3 1,24 1,479 1,1880 ham}
+{7 1,167 1,192 1,482 1,1880 ham}
+{26 1,214 1,274 1,278 1,284 1,1880 ham}
+{3 1,26 1,161 1,789 1,829 1,890 1,1880 ham}
+{16 1,144 1,765 1,1880 ham}
+{139 1,269 1,831 1,1880 ham}
+{93 1,100 1,452 1,1880 ham}
+{0 1,3 1,7 1,24 1,166 1,461 1,1880 ham}
+{45 1,273 1,1880 ham}

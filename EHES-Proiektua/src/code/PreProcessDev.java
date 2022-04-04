@@ -22,6 +22,9 @@ public class PreProcessDev {
 		dataDev = ppd.fixedDictionaryStringToWordVector(dataDev);
 		// Aurreko filtroak klase atributua hasieran jartzen du, hurrengo honekin amaieran jarriko dugu.
 		dataDev = ppd.reorderClass(dataDev);
+		
+		LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.dev.arff"), dataDev);
+		
 		return dataDev;
 	}
 	
@@ -71,7 +74,7 @@ public class PreProcessDev {
         //Pasatutako aukera zerrenda, filtroaren aukera bezala esleitu.
         fixedDictionary.setOptions(devOptions);
         //Set the dictionary file to read from
-        fixedDictionary.setDictionaryFile(new File(LagMethods.relative2absolute("src/files/DictionaryFSS.txt")));
+        fixedDictionary.setDictionaryFile(new File(LagMethods.relative2absolute("src/outputFiles/DictionaryFSS.txt")));
 		//Sets the format of the input instances.
         fixedDictionary.setInputFormat(dataDev);
 		//Erabili filtroa.

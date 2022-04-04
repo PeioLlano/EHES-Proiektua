@@ -39,6 +39,9 @@ public class PreProcessTest {
 		dataTest = ppt.fixedDictionaryStringToWordVector(dataTest);
 		// Aurreko filtroak klase atributua hasieran jartzen du, hurrengo honekin amaieran jarriko dugu.
 		dataTest = ppt.reorderClass(dataTest);
+		
+		LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.test.arff"), dataTest);
+
 		return dataTest;
 	}
 	
@@ -49,7 +52,7 @@ public class PreProcessTest {
 	 * @return Textuan zegoen fitxategia Instances motako datu sorta moduan.
 	 */
 	public Instances text2raw(String dataPath) throws Exception {
-		String output = LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind_raw.arff");
+		String output = LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.test_blind_raw.arff");
 		
     	//StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters.
 		StringBuilder report = new StringBuilder();
@@ -137,7 +140,7 @@ public class PreProcessTest {
         //Pasatutako aukera zerrenda, filtroaren aukera bezala esleitu.
         fixedDictionary.setOptions(testOptions);
         //Set the dictionary file to read from
-        fixedDictionary.setDictionaryFile(new File(LagMethods.relative2absolute("src/files/DictionaryFSS.txt")));
+        fixedDictionary.setDictionaryFile(new File(LagMethods.relative2absolute("src/outputFiles/DictionaryFSS.txt")));
 		//Sets the format of the input instances.
         fixedDictionary.setInputFormat(dataTest);
 		//Erabili filtroa.
@@ -148,7 +151,7 @@ public class PreProcessTest {
 
 		//Gorde jarritako fitxategian.
 
-        //LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind.arff"), dataTestBoW);
+        //LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.test_blind.arff"), dataTestBoW);
 				
 		return dataTestBoW;
 	}
@@ -169,7 +172,7 @@ public class PreProcessTest {
 		//Erabili filtroa.
 		data = Filter.useFilter(data,reorder);
 		//Gorde jarritako fitxategian.
-		//LagMethods.saver(LagMethods.relative2absolute("src/files/SMS_SpamCollection.test_blind_shorted.arff"), data);
+		//LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.test_blind_shorted.arff"), data);
 		return data;
 	}
 }

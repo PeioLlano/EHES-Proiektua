@@ -7,7 +7,10 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -69,8 +72,6 @@ public class PreProcessTrain {
 
 				dataTrain = ppt.stringToVector(dataTrain, string2vectorOptions[j]);
 				System.out.println("Num atributes: " + dataTrain.numAttributes());
-
-				LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/"+i+".arff"), dataTrain);
 
 				// Aurreko filtroarekin lortutako atributu baliagarriak kentzeko nahirekin AttributeSelection aplikatuko dugu.
 				dataTrain = ppt.fss(dataTrain); //Hemendik klase atributuarekin amaieran atera

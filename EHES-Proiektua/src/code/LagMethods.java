@@ -2,11 +2,15 @@ package code;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 
 import weka.classifiers.Evaluation;
@@ -60,9 +64,9 @@ public class LagMethods {
      * @return Java Instances motako datu sorta.
      */
     public static Instances path2instances(String path) throws Exception {
-        DataSource ds = new DataSource(path);
+    	DataSource ds = new DataSource(path);
         Instances data = ds.getDataSet();
-        return data;
+		return data;
     }
     
     /**
@@ -178,12 +182,28 @@ public class LagMethods {
 	    }
 	    
 	    //Gorde sortutakoa fitzategi batean.
-	    BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(pathOutput)));
-		writer.write(report.toString());
-		writer.close();
+		LagMethods.saver(pathOutput, report.toString());
 	    br.close();
 	    
 	    return path2instances(pathOutput);
 	}
+    
+    
+    public static void deleteFiles(File[] files, ArrayList<String> ezEzab) throws IOException {
+        for (File file : files) {
+            if (file.isFile() & !ezEzab.contains(file.getName())) {
+                if (file.delete()) { 
+                  System.out.println("Deleted the file: " + file.getName());
+                } else {
+                	try {
+                        Files.delete(Paths.get(file.getAbsolutePath()));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                        System.out.println("Failed to delete the file.");
+                    }        
+                } 
+            }
+        }
+    }
     
 }
