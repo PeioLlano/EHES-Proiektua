@@ -7,10 +7,24 @@ import weka.core.Instance;
 import weka.core.Instances;
 import weka.core.Utils;
 import weka.core.converters.ConverterUtils.DataSource;
-
+/**
+ * Parametro ekorketa egiten duen eta baita ekorketa horretarako behar diren metodo lagungarriak dituen klasea.
+ * <p>
+ * Date: Apr 04-2022
+ * 
+ * @author Peio Llano
+ * @author Jon Blanco
+ * @author Gorka del Rio
+ *
+ */
 
 public class ParametroEkorketa {
-
+	/**
+	 * Train eta dev datu sortak hartuta, geruza kopuruaren eta geruza bakoitzeko neurona kopuruaren ekorketa egingo du.
+	 * @param dataTrain entrenatzeko eta ekorketa egiteko erabiliko den datu sorta.
+	 * @param dataDev ebaluazioa egiteko erabiliko den datu sorta.
+	 * @return MultilayerPerceptron motako sailkatzailea, parametro optimoak kalkulatuta dituena.
+	 */
 	public static MultilayerPerceptron parametroakEkortu(Instances dataTrain, Instances dataDev) throws Exception {
 		 if(dataTrain.classIndex()==-1) {
 			 dataTrain.setClassIndex(dataTrain.numAttributes()-1);
@@ -133,6 +147,12 @@ public class ParametroEkorketa {
 		//Datasets must have the same attributes structure (number of attributes, type of attributes)
 		//Class index has to be the same
 		//Nominal values have to exactly correspond
+	/**
+	 * Bi datu sorta emanda, hauek fusionatuko ditu.
+	 * @param data1 batu nahi den lehen datu sorta.
+	 * @param data2 batu nahi den bigarren datu sorta.
+	 * @return Instances motako datu sorta, sartutako datu sortak fusionatuta dituena.
+	 */
 	public static Instances merge(Instances data1, Instances data2)
 		    throws Exception
 		{
@@ -169,6 +189,12 @@ public class ParametroEkorketa {
 		    return dest;
 		}
 	
+	/**
+	 * Letra bat sartuta, letra horri dagokion azalpena bueltatuko du.
+	 * @param layer azaldu nahi den letra.
+	 * @param data erabiltzen ari garen datu sorta.
+	 * @return Azalpena, String motatakoa.
+	 */
 	private static String layerTypeToExplanation(String layer, Instances data) {
 		String erantzuna = "None";
 		if (layer.equals("0")) {
