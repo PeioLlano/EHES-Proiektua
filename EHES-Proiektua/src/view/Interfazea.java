@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import java.awt.Font;
@@ -18,10 +19,11 @@ import weka.classifiers.Classifier;
 import weka.core.SerializationHelper;
 
 import java.awt.TextArea;
+import java.awt.Toolkit;
 
 import javax.swing.JScrollPane;
 import javax.swing.ImageIcon;
-import javax.swing.UIManager;
+import javax.swing.ScrollPaneConstants;
 
 public class Interfazea extends JFrame {
 
@@ -34,8 +36,8 @@ public class Interfazea extends JFrame {
 	 */
 	public static void main(String[] args) throws Exception {
 		//MultilayerPerceptron mp = (MultilayerPerceptron) SerializationHelper.read(args[0]);
-		Classifier cl = (Classifier) SerializationHelper.read("src/files/nb.model");
-		
+		Classifier cl = (Classifier) SerializationHelper.read("src/models/sailkatzaile.model");
+
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -54,6 +56,7 @@ public class Interfazea extends JFrame {
 	public Interfazea(Classifier cl) {
 		setTitle("SPAM sailkatzailea");
 		setForeground(Color.WHITE);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Interfazea.class.getResource("/view/email.png")));
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -73,7 +76,7 @@ public class Interfazea extends JFrame {
 		JLabel lblSpamEdoHam = new JLabel("SPAM edo HAM?");
 		lblSpamEdoHam.setForeground(new Color(255, 153, 0));
 		lblSpamEdoHam.setFont(new Font("Source Serif Pro", Font.BOLD | Font.ITALIC, 40));
-		lblSpamEdoHam.setBounds(60, -15, 311, 75);
+		lblSpamEdoHam.setBounds(48, -15, 334, 75);
 		contentPane.add(lblSpamEdoHam);
 		
 		
@@ -86,13 +89,15 @@ public class Interfazea extends JFrame {
 		setLocationRelativeTo(null);
 		
 		TextArea email_sms = new TextArea();
-		email_sms.setFont(UIManager.getFont("ToolBar.font"));
+		email_sms.setFont(new Font("Monospaced", Font.PLAIN, 14));
 		email_sms.setForeground(Color.BLACK);
 		email_sms.setBackground(Color.WHITE);
 		email_sms.setBounds(23, 77, 380, 102);
 		contentPane.add(email_sms);
 		
 		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPane.setBounds(0, 195, 403, -110);
 		contentPane.add(scrollPane);
 		

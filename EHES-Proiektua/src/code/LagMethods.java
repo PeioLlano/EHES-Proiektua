@@ -79,6 +79,7 @@ public class LagMethods {
 		PrintStream ps = new PrintStream(os);
 		ps.print(gordetzeke);
 		ps.close();
+		os.close();
     }
     
     /**
@@ -184,8 +185,10 @@ public class LagMethods {
 	    //Gorde sortutakoa fitzategi batean.
 		LagMethods.saver(pathOutput, report.toString());
 	    br.close();
-	    
-	    return path2instances(pathOutput);
+
+	    Instances emaitza = path2instances(pathOutput);
+	    	    
+	    return emaitza;
 	}
     
     
@@ -204,6 +207,20 @@ public class LagMethods {
                 } 
             }
         }
+    }
+    
+    public static String bilatuTFIDF() throws Exception {
+    	//Java BufferedReader is a public Java class that reads text, using buffering to enable large reads 
+    	//at a time for efficiency, storing what is not needed immediately in memory for later use.
+	    BufferedReader br = new BufferedReader(new FileReader("src/outputFiles/SMS_SpamCollection.train.arff"));
+	    //Uneko ilara
+	    String firstLine = br.readLine();
+	    br.close();
+	    if(firstLine.indexOf("-T-I")==-1) {
+	    	return "BoW";
+	    }else {
+	    	return "TF-IDF";
+	    }  
     }
     
 }

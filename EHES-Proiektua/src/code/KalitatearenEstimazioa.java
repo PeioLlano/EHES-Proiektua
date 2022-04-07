@@ -8,8 +8,25 @@ import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
 import weka.core.Instances;
 
+/**
+ * Klase honetan lortutako sailkatzailearekin eta data finalaren kalitatearen estimazioa egingo da.
+ * <p>
+ * Date: Apr 06-2022
+ * 
+ * @author Peio Llano
+ * @author Jon Blanco
+ * @author Gorka del Rio
+ *
+ */
 public class KalitatearenEstimazioa {
 
+	/**
+	 * Metodo honen bidez jasotako sailkatzailearekin eta datu-sortarekin kalitatearen estimazioa egingo da eta hirugarren atributuaren path-ean gordeko dira..
+	 * 
+	 * @param Data Kalitatea estimatzeko erabiliko den datu-sorta.
+	 * @param cls Kalitatea estimatzeko bezala erabiliko den sailkatzailea.
+	 * @param path2Save Emaitzak gordetzeko helbidea.
+	 */
 	public static void kalitateaEstimatu(Instances data, Classifier cls, String path2Save) throws Exception {
 		
 		//ECLIPSE-tik FILE-era pasatzeaz arduratuko den 'stremer'-a.
@@ -63,7 +80,7 @@ public class KalitatearenEstimazioa {
 				LagMethods.printResults(ps, evHO, "HOLD-OUT (70%)");
 			
 			//k-CROSS VALIDATION
-				LagMethods.printResults(ps, evCV, "10-CROSS VALIDATION");
+				LagMethods.printResults(ps, evCV, "10-FOLD CROSS VALIDATION");
 	
 		ps.close();
 	}

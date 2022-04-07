@@ -3,8 +3,10 @@ package code;
 import java.io.File;
 import java.util.ArrayList;
 
+import weka.classifiers.Classifier;
 import weka.classifiers.functions.MultilayerPerceptron;
 import weka.core.Instances;
+import weka.core.SerializationHelper;
 
 /**
  * Proiektu osoaren fluxua gidatuko duen klasea.
@@ -27,7 +29,7 @@ public class Main {
 		
 		LagMethods.printHeader(System.out);
 		ArrayList<String> finalOutputs = new ArrayList<>();
-		finalOutputs.add("SMS_SpamCollection.train.arff");finalOutputs.add("SMS_SpamCollection.test.arff");finalOutputs.add("SMS_SpamCollection.dev.arff");finalOutputs.add("SMS_SpamCollection.dataBuild.arff");
+		finalOutputs.add("SMS_SpamCollection.train.arff");finalOutputs.add("SMS_SpamCollection.test.arff");finalOutputs.add("SMS_SpamCollection.dev.arff");finalOutputs.add("SMS_SpamCollection.dataBuild.arff");finalOutputs.add("DictionaryFSS.txt");
 		File outputDir = new File("src/outputFiles");
 		
 		//1. Pausua --> Lortu: train.arff
@@ -54,16 +56,24 @@ public class Main {
 			//Non gordetzen da classifier.model? filesOutput/classifier.model
 			//Non gordetzen da dataTrain+dataDev? filesOutput/dataBuild.arff
 			System.out.println("\n--------------------------------------------------------- PARAMETRO EKORKETA ---------------------------------------------------------\n");
-			MultilayerPerceptron model = ParametroEkorketa.parametroakEkortu(dataTrain, dataDev);
-		
-			System.out.println("\n--------------------------------------------------------- GEHIGARRIAK ---------------------------------------------------------\n");
-			LagMethods.deleteFiles(outputDir.listFiles(), finalOutputs);
+			Classifier model = ParametroEkorketa.parametroakEkortu(dataTrain, dataDev);
 			
-			System.exit(0);
-		//5. Pausua --> Iragarpenak egitea
-			//Non gordetzen dira iragarpenak? filesOutput/iragarpenak.txt
-			IragarpenSortzailea.eginIragarpenak(dataTest, model, "Path");	
+		//5. Pausua --> Kalitatearen estimazioa
+			System.out.println("\n--------------------------------------------------------- KALITATEAREN ESTIMAZIOA ---------------------------------------------------------\n");
+			model = (Classifier) SerializationHelper.read("src/models/sailkatzaile.model");
+			Classifier baselineModel = (Classifier) SerializationHelper.read("src/models/baseline.model");
+			//Non gordetzen da kalitatearen estimazioa? bezeroEntrega/KalitatearenEstimazioa.txt
+			KalitatearenEstimazioa.kalitateaEstimatu(dataTrain, model, "src/bezeroEntrega/KalitatearenEstimazioa.txt");
+			//Non gordetzen da baselineren kalitatearen estimazioa? bezeroEntrega/KalitatearenEstimazioa.txt
+			KalitatearenEstimazioa.kalitateaEstimatu(dataTrain, baselineModel, "src/bezeroEntrega/KalitatearenEstimazioaBaseline.txt");
 			
+		//6. Pausua --> Iragarpenak egitea
+			System.out.println("\n--------------------------------------------------------- IRAGARPENAK SORTZEN ---------------------------------------------------------\n");
+			//Non gordetzen dira iragarpenak? bezeroEntrega/iragarpenak.txt
+			IragarpenSortzailea.eginIragarpenak(dataTest, model, "src/bezeroEntrega/Iragarpenak.txt");	
+			
+		System.out.println("\n--------------------------------------------------------- GEHIGARRIAK ---------------------------------------------------------\n");
+		LagMethods.deleteFiles(outputDir.listFiles(), finalOutputs);
 	}
 
 }

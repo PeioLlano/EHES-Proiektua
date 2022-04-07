@@ -87,7 +87,7 @@ public class PreProcessTrain {
 				System.out.println("Unclassified percentage: " + uncPct);
 				System.out.println("Garbitu-path: " + garbitutaPath);
 
-				if(fMesOptimoa < fMes && uncPct < 50.0) {
+				if(fMesOptimoa <= fMes && uncPct < 50.0) {
 					fMesOptimoa = fMes;
 					dataSortaOpt = dataTrain;
 					hiztOpt = new File(LagMethods.relative2absolute("src/outputFiles/Dictionary.txt"));
@@ -299,7 +299,7 @@ public class PreProcessTrain {
         Ranker rank = new Ranker();
 	        //threshold -- Set threshold by which attributes can be discarded. Default value results in no attributes being discarded. Use either this option or numToSelect to reduce the attribute set.
 	        //umbral: establece el umbral por el cual se pueden descartar los atributos. El valor predeterminado da como resultado que no se descarten atributos. Utilice esta opción o numToSelect para reducir el conjunto de atributos.
-        	rank.setOptions(new String[] { "-T", "0.00000001" });
+        	rank.setOptions(new String[] { "-T", "0.0001" });
         
     	//Sets the format of the input instances.
         at.setInputFormat(data);

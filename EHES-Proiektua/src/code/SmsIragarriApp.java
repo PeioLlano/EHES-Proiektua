@@ -21,19 +21,19 @@ public class SmsIragarriApp {
 		
         //Lehenengo instantzia da gurea
 		Instance instance = preparedData.instance(0);
-			
+
 		//Gure sailkatzeileak iragarri duen klasearen balioa lortu.
 		Evaluation ev = new Evaluation(preparedData);
         int prediction = (int)ev.evaluateModelOnce(cl, instance);
-            
+
         //Iragarpena indizetik klse nominalaren baliora pasatu
-        emaitza = preparedData.attribute(preparedData.numInstances()-1).value(prediction);
+        emaitza = preparedData.attribute(preparedData.numAttributes()-1).value(prediction);
 		System.out.println("Emaitza hurrengoa da: " + emaitza);
 		return emaitza;
 	}
 	
 	public static Instances string2Intances(String text) throws Exception {
-		String output = LagMethods.relative2absolute("src/files/smsIragarlea.arff");
+		String output = LagMethods.relative2absolute("src/outputFiles/smsIragarlea.arff");
 		
     	//StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters.
 		StringBuilder report = new StringBuilder();

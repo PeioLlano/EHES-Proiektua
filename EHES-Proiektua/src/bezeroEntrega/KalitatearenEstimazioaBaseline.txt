@@ -1,0 +1,96 @@
+#############################################################################################################################################
+#                                                                                                                                           #
+#                                                  ERABAKIAK HARTZEKO EUSKARRI SISTEMAK                                                     #
+#                                                                   -                                                                       #
+#                                             SPAM classification with Multilayer Perceptron                                                #
+#                                                                   -                                                                       #
+#                                            EGILEAK: Jon Blanco, Gorka del Rio eta Peio Llano                                              #
+#                                                                                                                                           #
+#############################################################################################################################################
+
+#############################################################
+#                                                           #
+#                    KALITATEAREN ESTIMAZIOA                #
+#                                                           #
+#############################################################
+
+#########################  ZINTZOA  #########################
+
+ZINTZOA SUMMARY
+Correctly Classified Instances        3285               97.3622 %
+Incorrectly Classified Instances        89                2.6378 %
+Kappa statistic                          0.8854
+Mean absolute error                      0.027 
+Root mean squared error                  0.1461
+Relative absolute error                 11.7724 %
+Root relative squared error             43.1728 %
+Total Number of Instances             3374     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,906    0,016    0,896      0,906    0,901      0,885    0,989     0,964     spam
+                 0,984    0,094    0,986      0,984    0,985      0,885    0,989     0,998     ham
+Weighted Avg.    0,974    0,084    0,974      0,974    0,974      0,885    0,989     0,993     
+
+
+ZINTZOA CONFUSSION MATIX
+    a    b   <-- classified as
+  403   42 |    a = spam
+   47 2882 |    b = ham
+
+
+#########################  HOLD-OUT (70%)  #########################
+
+HOLD-OUT (70%) SUMMARY
+Correctly Classified Instances         993               98.1225 %
+Incorrectly Classified Instances        19                1.8775 %
+Kappa statistic                          0.9099
+Mean absolute error                      0.024 
+Root mean squared error                  0.1327
+Relative absolute error                 10.7538 %
+Root relative squared error             41.2487 %
+Total Number of Instances             1012     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,932    0,012    0,909      0,932    0,921      0,910    0,990     0,958     spam
+                 0,988    0,068    0,991      0,988    0,989      0,910    0,990     0,999     ham
+Weighted Avg.    0,981    0,061    0,981      0,981    0,981      0,910    0,990     0,994     
+
+
+HOLD-OUT (70%) CONFUSSION MATIX
+   a   b   <-- classified as
+ 110   8 |   a = spam
+  11 883 |   b = ham
+
+
+#########################  10-FOLD CROSS VALIDATION  #########################
+
+10-FOLD CROSS VALIDATION SUMMARY
+Correctly Classified Instances        3287               97.4215 %
+Incorrectly Classified Instances        87                2.5785 %
+Kappa statistic                          0.8871
+Mean absolute error                      0.0284
+Root mean squared error                  0.1502
+Relative absolute error                 12.3735 %
+Root relative squared error             44.3798 %
+Total Number of Instances             3374     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,899    0,014    0,905      0,899    0,902      0,887    0,987     0,957     spam
+                 0,986    0,101    0,985      0,986    0,985      0,887    0,987     0,998     ham
+Weighted Avg.    0,974    0,090    0,974      0,974    0,974      0,887    0,987     0,992     
+
+
+10-FOLD CROSS VALIDATION CONFUSSION MATIX
+    a    b   <-- classified as
+  400   45 |    a = spam
+   42 2887 |    b = ham
+

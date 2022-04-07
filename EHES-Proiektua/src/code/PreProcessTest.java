@@ -139,6 +139,13 @@ public class PreProcessTest {
 
         //Pasatutako aukera zerrenda, filtroaren aukera bezala esleitu.
         fixedDictionary.setOptions(testOptions);
+        
+        String stwv = LagMethods.bilatuTFIDF();
+		if(stwv == "TF-IDF") {
+	        fixedDictionary.setTFTransform(true);
+	        fixedDictionary.setIDFTransform(true);
+        }
+
         //Set the dictionary file to read from
         fixedDictionary.setDictionaryFile(new File(LagMethods.relative2absolute("src/outputFiles/DictionaryFSS.txt")));
 		//Sets the format of the input instances.
@@ -151,7 +158,7 @@ public class PreProcessTest {
 
 		//Gorde jarritako fitxategian.
 
-        //LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.test_blind.arff"), dataTestBoW);
+        LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.test_blind.arff"), dataTestBoW);
 				
 		return dataTestBoW;
 	}
