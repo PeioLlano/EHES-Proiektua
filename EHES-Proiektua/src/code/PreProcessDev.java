@@ -7,6 +7,16 @@ import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.FixedDictionaryStringToWordVector;
 import weka.filters.unsupervised.attribute.Reorder;
 
+/**
+ * Klase honek dev datu sortaren aurreprozesamendua aplikatuko du, 'txt' motako fitxategia izatetik 'arff' motako fitxategi bat izatera.
+ * <p>
+ * Date: Mar 30-2022
+ * 
+ * @author Peio Llano
+ * @author Jon Blanco
+ * @author Gorka del Rio
+ *
+ */
 public class PreProcessDev {
 	/**
 	 * Spam eta ham motako SMS-ak dituen fitxategia jaso eta izan behar dituen atributuen hiztegia izanik, Instances motako datu sorta bueltatzen du 'PreProcess'-aren metodo guztiak aplikatu ondoren.

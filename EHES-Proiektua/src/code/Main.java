@@ -64,13 +64,15 @@ public class Main {
 			Classifier baselineModel = (Classifier) SerializationHelper.read("src/models/baseline.model");
 			//Non gordetzen da kalitatearen estimazioa? bezeroEntrega/KalitatearenEstimazioa.txt
 			KalitatearenEstimazioa.kalitateaEstimatu(dataTrain, model, "src/bezeroEntrega/KalitatearenEstimazioa.txt");
-			//Non gordetzen da baselineren kalitatearen estimazioa? bezeroEntrega/KalitatearenEstimazioa.txt
+			//Non gordetzen da baselineren kalitatearen estimazioa? bezeroEntrega/KalitatearenEstimazioaBaseline.txt
 			KalitatearenEstimazioa.kalitateaEstimatu(dataTrain, baselineModel, "src/bezeroEntrega/KalitatearenEstimazioaBaseline.txt");
 			
 		//6. Pausua --> Iragarpenak egitea
 			System.out.println("\n--------------------------------------------------------- IRAGARPENAK SORTZEN ---------------------------------------------------------\n");
 			//Non gordetzen dira iragarpenak? bezeroEntrega/iragarpenak.txt
-			IragarpenSortzailea.eginIragarpenak(dataTest, model, "src/bezeroEntrega/Iragarpenak.txt");	
+			IragarpenSortzailea.eginIragarpenak(dataTest, model, "src/bezeroEntrega/Iragarpenak.txt");
+			//Non gordetzen dira iragarpenak? bezeroEntrega/iragarpenakBaseline.txt
+			IragarpenSortzailea.eginIragarpenak(dataTest, baselineModel, "src/bezeroEntrega/IragarpenakBaseline.txt");	
 			
 		System.out.println("\n--------------------------------------------------------- GEHIGARRIAK ---------------------------------------------------------\n");
 		LagMethods.deleteFiles(outputDir.listFiles(), finalOutputs);

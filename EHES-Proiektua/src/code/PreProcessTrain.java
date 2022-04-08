@@ -53,7 +53,7 @@ public class PreProcessTrain {
 
 	//AURREPROZESAMENDUA
 		
-		String[] garbiketa = {".,/?:-#&Â¼ï¿½ï¿½*|ï¿½~ï¿½ï¿½çºªÃœ"};
+		String[] garbiketa = {".,/?:-#&Â¼”â*|·~¬¨çºªÃœ"};
 
 		String[][] string2vectorOptions = ppt.getOptionsStringToVector();
 		
@@ -319,11 +319,11 @@ public class PreProcessTrain {
 	}
 	
 	/**
-	 * @param data
-	 * @param inputHizt
-	 * @param outputHizt
-	 * @throws Exception
-	 * @throws FileNotFoundException
+	 * Uneko datu-sorta erabiliz, lehendik genuen hiztegia eguneratu beharko dugu, zaharkituta dagoen 4059 lerroko hiztegi bat izatetik, bateragarri izango den 1881 lerroko hiztegi bat izatera.
+	 * 
+	 * @param data Eguneratzeko erabiliko den datu-sorta.
+	 * @param inputHizt Eguneratuko den hiztegia.
+	 * @param outputHizt Eguneratua egongo den hiztegia
 	 */
 	public void hiztegiaEguneratu(Instances data, File inputHizt, String outputHizt) throws Exception, FileNotFoundException {
     	

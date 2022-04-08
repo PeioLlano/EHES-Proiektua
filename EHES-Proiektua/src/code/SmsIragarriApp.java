@@ -10,8 +10,25 @@ import weka.classifiers.Evaluation;
 import weka.core.Instance;
 import weka.core.Instances;
 
+/**
+ * Klase honek interfazea egikarituko du.
+ * <p>
+ * Date: Apr 07-2022
+ * 
+ * @author Peio Llano
+ * @author Jon Blanco
+ * @author Gorka del Rio
+ *
+ */
 public class SmsIragarriApp {
 
+	/**
+	 * Metodo honek interfazea egikarituko du.
+	 * 
+	 * @param text Sailkatuko den mezua.
+	 * @param cl Mezua sailkatuko duen sailkatzailea.
+	 * @return Iragarpena.
+	 */
 	public static String smsIragarri(String text, Classifier cl) throws Exception {
 		String emaitza = "Errorea, ezin izan da iragarri";
 		
@@ -32,7 +49,7 @@ public class SmsIragarriApp {
 		return emaitza;
 	}
 	
-	public static Instances string2Intances(String text) throws Exception {
+	private static Instances string2Intances(String text) throws Exception {
 		String output = LagMethods.relative2absolute("src/outputFiles/smsIragarlea.arff");
 		
     	//StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters.

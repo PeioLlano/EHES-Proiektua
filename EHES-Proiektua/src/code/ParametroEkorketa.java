@@ -1,10 +1,13 @@
 package code;
 
+import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
+import weka.classifiers.bayes.NaiveBayes;
 import weka.classifiers.functions.MultilayerPerceptron;
 import weka.core.Attribute;
 import weka.core.Instance;
 import weka.core.Instances;
+import weka.core.SerializationHelper;
 import weka.core.Utils;
 import weka.core.converters.ConverterUtils.DataSource;
 /**
@@ -137,9 +140,17 @@ public class ParametroEkorketa {
 	        System.out.println("\t\tAtributu kopurua: " + dataF.numAttributes()); 
 	        System.out.println("\t\tInstantzia kopurua: " + dataF.numInstances()); 
 	        
+	        MultilayerPerceptron mpF = new MultilayerPerceptron();
+	        mpF.setHiddenLayers(layer1+" , "+layer2);
+	        mpF.buildClassifier(dataF);
+			SerializationHelper.write("src/models/sailkatzaile.model", mp);
+			NaiveBayes nb = new NaiveBayes();
+			nb.buildClassifier(dataF);
+			SerializationHelper.write("src/models/baseline.model", nb);
+	        
 	        LagMethods.saver(LagMethods.relative2absolute("src/outputFiles/SMS_SpamCollection.dataBuild.arff"), dataF);
 	        
-	        return mp;
+	        return mpF;
 	}
 	
 	// Internetetik hartutako kodea: https://stackoverflow.com/questions/10771558/how-to-merge-two-sets-of-weka-instances-together
