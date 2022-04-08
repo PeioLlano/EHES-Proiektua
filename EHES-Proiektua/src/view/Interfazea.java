@@ -35,7 +35,6 @@ public class Interfazea extends JFrame {
 	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws Exception {
-		//MultilayerPerceptron mp = (MultilayerPerceptron) SerializationHelper.read(args[0]);
 		Classifier cl = (Classifier) SerializationHelper.read("src/models/sailkatzaile.model");
 
 		EventQueue.invokeLater(new Runnable() {

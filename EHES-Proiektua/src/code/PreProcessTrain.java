@@ -25,7 +25,7 @@ import weka.filters.unsupervised.attribute.StringToWordVector;
 
 
 /**
- * Klase honek train datu sortaren aurreprozesamendua aplikatuko dut, 'txt' motako fitxategia izatetik 'arff' motako fitxategi bat izatera.
+ * Klase honek train datu sortaren aurreprozesamendua aplikatuko du, 'txt' motako fitxategia izatetik 'arff' motako fitxategi bat izatera.
  * <p>
  * Date: Mar 30-2022
  * 
@@ -53,7 +53,7 @@ public class PreProcessTrain {
 
 	//AURREPROZESAMENDUA
 		
-		String[] garbiketa = {".,/?:-#&Â¼”â*|·~¬¨çºªÃœ"};
+		String[] garbiketa = {".,/?:-#&Â¼ï¿½ï¿½*|ï¿½~ï¿½ï¿½çºªÃœ"};
 
 		String[][] string2vectorOptions = ppt.getOptionsStringToVector();
 		
@@ -208,7 +208,7 @@ public class PreProcessTrain {
         
 //	      -L
 //	      	Convert all tokens to lowercase before adding to the dictionary.
-//	        	Convierta todos los tokens a minúsculas antes de agregarlos al diccionario.
+//	        	Convierta todos los tokens a minï¿½sculas antes de agregarlos al diccionario.
 //	      Hiztegian sartu baino lehen, izki guztiak letra xehean jarri.
 		optionsBOW[8] = "-L";
         

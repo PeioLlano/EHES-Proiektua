@@ -14,7 +14,7 @@ import weka.filters.unsupervised.attribute.FixedDictionaryStringToWordVector;
 import weka.filters.unsupervised.attribute.Reorder;
 
 /**
- * Klase honek test datu sortaren aurreprozesamendua aplikatuko dut, 'txt' motako fitxategia izatetik 'arff' motako fitxategi bat izatera.
+ * Klase honek test datu sortaren aurreprozesamendua aplikatuko du, 'txt' motako fitxategia izatetik 'arff' motako fitxategi bat izatera.
  * <p>
  * Date: Mar 30-2022
  * 
@@ -26,7 +26,7 @@ import weka.filters.unsupervised.attribute.Reorder;
 public class PreProcessTest {
 
 	/**
-	 * Klasea definituak ez duten SMS-ak dituen fitxategia jaso eta izan behar dituen atributuen hiztegia izanik, Intances motako datu sorta bueltatzen du 'PreProcess'-aren metodo guztiak aplikatu ondoren.
+	 * Klasea definituak ez duten SMS-ak dituen fitxategia jaso eta izan behar dituen atributuen hiztegia izanik, Instances motako datu sorta bueltatzen du 'PreProcess'-aren metodo guztiak aplikatu ondoren.
 	 * @param dataPath Test datu sortaren fitxategia dagoen path-a.
 	 * @return PreProcess osoa aplikatu ondorengo Instances motako data sorta.
 	 */
@@ -108,7 +108,7 @@ public class PreProcessTest {
 	}
 	
 	/**
-	 * Lehenengo arff fitxategia jasota, datu sorta horri atibutuekiko ez-gainbegiratutako 'Fixed Dictionaty String to Word Vector' textu mehatzaritza filtroa aplikatuko zaio eta moldatutako datu sorta bueltatuko da.
+	 * Lehenengo arff fitxategia jasota, datu sorta horri atibutuekiko ez-gainbegiratutako 'Fixed Dictionaty String to Word Vector' testu meatzaritza filtroa aplikatuko zaio eta moldatutako datu sorta bueltatuko da.
 	 * @param Data 'raw'-tik 'arff'-ra pasatutako datu sorta, Intances motako objektua.
 	 * @return Filtroa aplikatu ondorengo datu sorta.
 	 */
@@ -127,7 +127,7 @@ public class PreProcessTest {
         
 //      -L
 //  		Convert all tokens to lowercase before adding to the dictionary.
-//    		Convierta todos los tokens a minúsculas antes de agregarlos al diccionario.
+//    		Convierta todos los tokens a minï¿½sculas antes de agregarlos al diccionario.
 //  	Hiztegian sartu baino lehen, izki guztiak letra xehean jarri.
         testOptions[2] = "-L";
         

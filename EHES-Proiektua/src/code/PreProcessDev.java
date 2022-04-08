@@ -9,7 +9,7 @@ import weka.filters.unsupervised.attribute.Reorder;
 
 public class PreProcessDev {
 	/**
-	 * Spam eta ham motako SMS-ak dituen fitxategia jaso eta izan behar dituen atributuen hiztegia izanik, Intances motako datu sorta bueltatzen du 'PreProcess'-aren metodo guztiak aplikatu ondoren.
+	 * Spam eta ham motako SMS-ak dituen fitxategia jaso eta izan behar dituen atributuen hiztegia izanik, Instances motako datu sorta bueltatzen du 'PreProcess'-aren metodo guztiak aplikatu ondoren.
 	 * @param dataPath dev datu sortaren fitxategia dagoen path-a.
 	 * @return PreProcess osoa aplikatu ondorengo Instances motako data sorta.
 	 */
@@ -61,7 +61,7 @@ public class PreProcessDev {
         
 //      -L
 //  		Convert all tokens to lowercase before adding to the dictionary.
-//    		Convierta todos los tokens a minúsculas antes de agregarlos al diccionario.
+//    		Convierta todos los tokens a minï¿½sculas antes de agregarlos al diccionario.
 //  	Hiztegian sartu baino lehen, izki guztiak letra xehean jarri.
         devOptions[2] = "-L";
         

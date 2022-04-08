@@ -33,7 +33,7 @@ import weka.filters.unsupervised.instance.RemovePercentage;
 public class LagMethods {
 
 	/**
-	 * Proiektua identifikatuko duen goiburua datu-korronte zehatz batean inprimatzea ahalbidetuko duen metodoa.
+	 * Proiektua identifikatuko duen goiburua datu-fluxu zehatz batean inprimatzea ahalbidetuko duen metodoa.
 	 * @param ps Goiburua inprimatuko den datu-korrontea (fluxua).
 	 */
 	public static void printHeader(PrintStream ps) {
