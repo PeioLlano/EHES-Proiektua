@@ -69,54 +69,54 @@ public class ParametroEkorketa {
 			String m = "";
 			mp.setBatchSize("32");
 			int it =0;
-//			for (int i = 0; i < layerAukerak.length; i++) {
-//				for (int k = 0; k < layerAukerak.length; k++) {
-//					mp.setHiddenLayers(layerAukerak[i]+" , "+layerAukerak[k]);
-//					System.out.println("################ "+it+" iterazioa:"+" ################");
-//					if (mp.getHiddenLayers().length()<2) {
-//						System.out.println("Nodo kopurua iterazio honetan: \nLehen geruza: "
-//								+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[0], dataTrain)+"\nBigarren geruza: ez erabilita"
-//								);
-//					}else {
-//						System.out.println("Nodo kopurua iterazio honetan: \nLehen geruza: "
-//								+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[0], dataTrain)+"\nBigarren geruza: "
-//								+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[1], dataTrain));
-//								
-//						
-//					}
-//					System.out.println("\nF-measure iterazio honetan: "+fm);
-//					
-//					
-//					mp.buildClassifier(dataTrain);
-//					
-//					Evaluation eval = new Evaluation(dataTrain);
-//					
-//					eval.evaluateModel(mp, dataDev);
-//					
-//					if (eval.fMeasure(minoritarioa)>fm) {
-//						fm = eval.fMeasure(minoritarioa);
-//						layer1 = layerAukerak[i];
-//						layer2 = layerAukerak[k];
-//						m = eval.toMatrixString("####### NAHASMEN MATRIZEA ######");
-//						
-//					}
-//					
-//					it++;
-//					
-//				}
-//				
-//				
-//			}
-//			
-//			System.out.println("\n!!!!!!!!!!!!!!!!!!! EMAITZAK !!!!!!!!!!!!!!!!!!!\n");
-//			String layerAzalpena = layerTypeToExplanation(layer1, dataTrain);
-//			String layerAzalpena2 = layerTypeToExplanation(layer2, dataTrain);
-//			System.out.println("Lehenengo geruzako nodo kopurua: "+layerAzalpena+"\n");
-//			System.out.println("BIgarren geruzako nodo kopurua: "+layerAzalpena2+"\n");
-//
-//			System.out.println("Klase minoritarioaren f-measure optimoa: "+fm+"\n");
-//			System.out.println(m+"\n");
-//			System.out.println();
+			for (int i = 0; i < layerAukerak.length; i++) {
+				for (int k = 0; k < layerAukerak.length; k++) {
+					mp.setHiddenLayers(layerAukerak[i]+" , "+layerAukerak[k]);
+					System.out.println("################ "+it+" iterazioa:"+" ################");
+					if (mp.getHiddenLayers().length()<2) {
+						System.out.println("Nodo kopurua iterazio honetan: \nLehen geruza: "
+								+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[0], dataTrain)+"\nBigarren geruza: ez erabilita"
+								);
+					}else {
+						System.out.println("Nodo kopurua iterazio honetan: \nLehen geruza: "
+								+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[0], dataTrain)+"\nBigarren geruza: "
+								+layerTypeToExplanation(mp.getHiddenLayers().split(", ")[1], dataTrain));
+								
+						
+					}
+					System.out.println("\nF-measure iterazio honetan: "+fm);
+					
+					
+					mp.buildClassifier(dataTrain);
+					
+					Evaluation eval = new Evaluation(dataTrain);
+					
+					eval.evaluateModel(mp, dataDev);
+					
+					if (eval.fMeasure(minoritarioa)>fm) {
+						fm = eval.fMeasure(minoritarioa);
+						layer1 = layerAukerak[i];
+						layer2 = layerAukerak[k];
+						m = eval.toMatrixString("####### NAHASMEN MATRIZEA ######");
+						
+					}
+					
+					it++;
+					
+				}
+				
+				
+			}
+			
+			System.out.println("\n!!!!!!!!!!!!!!!!!!! EMAITZAK !!!!!!!!!!!!!!!!!!!\n");
+			String layerAzalpena = layerTypeToExplanation(layer1, dataTrain);
+			String layerAzalpena2 = layerTypeToExplanation(layer2, dataTrain);
+			System.out.println("Lehenengo geruzako nodo kopurua: "+layerAzalpena+"\n");
+			System.out.println("BIgarren geruzako nodo kopurua: "+layerAzalpena2+"\n");
+
+			System.out.println("Klase minoritarioaren f-measure optimoa: "+fm+"\n");
+			System.out.println(m+"\n");
+			System.out.println();
 	        
 	        
 	        System.out.println("INSTANTZIA GEHIAGO IZATEAREN NAHI JARRAITUZ, TRAIN ETA DEV MERGEATZEKO PROZESUA\n");
