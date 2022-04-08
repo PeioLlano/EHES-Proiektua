@@ -3,7 +3,7 @@
 
 Hasteko, honako egitura hau mantendu behar da exekutatu aurretik (inputFiles-ak erabiltzaileak sartu behar ditu):
 	
-![Egitura](https://github.com/PeioLlano/EHES-Proiektua/blob/master/EHES-Proiektua/src/view/tree.png#center)
+![Egitura](https://github.com/PeioLlano/EHES-Proiektua/blob/master/EHES-Proiektua/src/view/tree.png)
 
 Soilik exekutagarri bat exekutatu beharko da programa modularra delako eta automatikoki egingo dituelako barne-exekuzioak. Egikaritzeko hurrengo egitura jarraitu:
 
