@@ -7,6 +7,6 @@ Hasteko, honako egitura hau mantendu behar da exekutatu aurretik (inputFiles-ak 
 
 Soilik exekutagarri bat exekutatu beharko da programa modularra delako eta automatikoki egingo dituelako barne-exekuzioak. Egikaritzeko hurrengo egitura jarraitu:
 
-	java -jar  exekutagarri.jar
+	java -jar exekutagarri.jar
 	
 **OHARRA:** ez da parametrorik sartu behar, txt-ak inputFiles karpetan egotearekin balio du.
